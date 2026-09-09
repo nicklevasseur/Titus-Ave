@@ -1,12 +1,12 @@
 const { Document, Packer, Paragraph, TextRun, AlignmentType } = require('docx');
 
 const body = (text, opts={}) => new Paragraph({
-  spacing: { after: 130, line: 320 },
+  spacing: { after: 110, line: 310 },
   children: [ new TextRun({ text, size: 28, ...opts }) ]
 });
 
 const bodyRuns = (runs) => new Paragraph({
-  spacing: { after: 130, line: 320 },
+  spacing: { after: 110, line: 310 },
   children: runs
 });
 
