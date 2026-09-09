@@ -73,7 +73,7 @@ const doc = new Document({
       new Paragraph({
         alignment: AlignmentType.CENTER,
         spacing: { after: 20 },
-        children: [ new TextRun({ text: "STOP THE 13-UNIT APARTMENT COMPLEX", bold: true, size: 32, color: "8B0000" }) ]
+        children: [ new TextRun({ text: "STOP THE 13-UNIT TOWNHOUSE DEVELOPMENT", bold: true, size: 32, color: "8B0000" }) ]
       }),
       new Paragraph({
         alignment: AlignmentType.CENTER,
@@ -111,7 +111,7 @@ const doc = new Document({
         columnWidths: [leftColW, rightColW],
         rows: [
           new TableRow({ height: { value: 1240, rule: HeightRule.ATLEAST }, children: [
-            vStatCell("CONTRARY TO THE PUBLIC INTEREST", "No safety, traffic, parking, or light study", leftColW, false),
+            vStatCell("CONTRARY TO THE PUBLIC INTEREST", "The City just rezoned this corner single-family", leftColW, false),
             new TableCell({
               width: { size: rightColW, type: WidthType.DXA },
               verticalMerge: "restart",
@@ -125,7 +125,7 @@ const doc = new Document({
                 }),
                 new Paragraph({
                   alignment: AlignmentType.CENTER,
-                  children: [ new TextRun({ text: "This complex vs. every surrounding single-family lot", italics: true, size: 14, bold: true, color: "8B0000" }) ]
+                  children: [ new TextRun({ text: "The proposal, surrounded by single-family homes on Mystic St., Titus Ave. and Calef Rd.", italics: true, size: 14, bold: true, color: "8B0000" }) ]
                 }),
               ]
             }),
@@ -135,7 +135,7 @@ const doc = new Document({
             new TableCell({ width: { size: rightColW, type: WidthType.DXA }, verticalMerge: "continue", children: [ new Paragraph({ text: "" }) ] }),
           ]}),
           new TableRow({ height: { value: 1240, rule: HeightRule.ATLEAST }, children: [
-            vStatCell("VALUES OF SURROUNDING PROPERTIES AFFECTED", "Only 20 parking spaces for potentially 40+ residents", leftColW, false),
+            vStatCell("VALUES OF SURROUNDING PROPERTIES AFFECTED", "No appraisal, no market data \u2014 only the developer's say-so", leftColW, false),
             new TableCell({ width: { size: rightColW, type: WidthType.DXA }, verticalMerge: "continue", children: [ new Paragraph({ text: "" }) ] }),
           ]}),
           new TableRow({ height: { value: 1240, rule: HeightRule.ATLEAST }, children: [
@@ -151,13 +151,14 @@ const doc = new Document({
         alignment: AlignmentType.CENTER,
         spacing: { after: 140 },
         children: [ new TextRun({
-          text: "The lot is 49,484 sq ft \u2014 zoning requires 78,000 sq ft for this many units. They're building on about 60% of the land the rules require.",
+          text: "The lot is 49,484 sq ft \u2014 zoning requires 78,000 sq ft for this many units. Even under the ordinance's most generous density rule, this land supports 8 units. They want 13.",
           size: 19, bold: true
         }) ]
       }),
 
       bullet("Townhouses are not permitted in this district \u2014 the City's own zoning review says so directly, and denied the permit on that basis."),
-      bullet("Underparked \u2014 20 spots for 26 bedrooms means overflow parking on Titus Ave, Calef Road, and Mystic Street."),
+      bullet("The City rewrote its zoning ordinance this year (effective March 1, 2026) and kept this corner single-family. The developer bought the lot from the City in 2024 knowing that."),
+      bullet("No traffic or safety analysis for a corner already shared with a 96-unit complex \u2014 the City's review marks intersection visibility \u201CNo Information.\u201D"),
       bullet("Exceeds maximum height restrictions \u2014 38 feet proposed where 35 feet is the max allowed."),
 
       new Paragraph({ text: "", spacing: { after: 30 } }),

@@ -41,8 +41,8 @@ website:
   September 10, 2026 hearing
 
 Only 2 of 17 pages differ between them (the conceptual site plan and zoning
-exhibit, reflecting a minor parking-layout revision); see the Version
-Comparison document for the full diff.
+exhibit, reflecting a minor parking-layout revision, verified by rendering and
+hashing every page); see the Version Comparison document for the full diff.
 
 ## Regenerating documents
 
@@ -64,8 +64,9 @@ npm run comparison
 ```
 
 Each script writes a `.docx` file directly into `documents/`. To get a PDF,
-open the `.docx` in Word/LibreOffice and export, or convert with a tool like
-`libreoffice --headless --convert-to pdf`.
+open the `.docx` in Word/LibreOffice and export, or convert with
+`libreoffice --headless --convert-to pdf --outdir ../documents ../documents/*.docx`
+(requires the `libreoffice-writer` package, not just `libreoffice-core`).
 
 `assets/` holds the two images used in the handout (the developer's own
 building elevation rendering and the site plan aerial, both cropped from the
@@ -74,27 +75,52 @@ official application packet).
 ## Key legal citations
 
 The five statutory variance criteria are RSA 674:33, I(a)(2)(A)–(E); the
-"unnecessary hardship" definition is I(b)(1)–(3). Case law used throughout
-(all independently verified against primary/authoritative sources):
+"unnecessary hardship" definition is I(b)(1)–(3). Case law used throughout:
 
-- *Simplex Technologies, Inc. v. Town of Newington*, 145 N.H. 727 (2001)
-- *Olszak v. Town of New Hampton*, 139 N.H. 723, 726 (1995)
+- *Harrington v. Town of Warner*, 152 N.H. 74 (2005) — applicant bears the burden on all five criteria
+- *Simplex Technologies, Inc. v. Town of Newington*, 145 N.H. 727 (2001) — unified hardship test, codified 2010
+- *Bacon v. Town of Enfield*, 150 N.H. 468 (2004) — "special conditions" means the land itself, not the proposed use
+- *Olszak v. Town of New Hampton*, 139 N.H. 723, 726 (1995) — financial hardship alone is insufficient
 - *Governor's Island Club v. Town of Gilford*, 124 N.H. 126, 130 (1983)
 - *Ryan v. City of Manchester*, 123 N.H. 170, 174 (1983)
+- *Hill v. Town of Chester*, 146 N.H. 291 (2001) — purchase with knowledge is not a bar, but a factor the board may weigh
 - *Chester Rod & Gun Club v. Town of Chester*, 152 N.H. 577, 581 (2005)
 - *Harborside Assocs. v. Parade Residence Hotel*, 162 N.H. 508, 514 (2011)
 - *Malachy Glen Assocs. v. Town of Chichester*, 155 N.H. 102 (2007)
-- *Boccia v. City of Portsmouth*, 151 N.H. 85 (2004)
-- *Bacon v. Town of Enfield* (2004) — "cumulative effect," referenced but never
-  formally adopted by the NH Supreme Court; flagged as lower-confidence
-  wherever it's cited
 
 Full citation-by-citation detail is in the Board Memo and Field Reference
 appendices.
+
+## Core argument (as of the Sept. 9, 2026 revision)
+
+1. **Hardship** — the applicant's own By-Right Subdivision Plan (packet p. 15)
+   and memo (p. 11) admit five conforming single-family lots. No special
+   condition of the land is identified; the only physical feature mentioned
+   (slope) is built on by their own plan. The applicant bought the parcel from
+   the City in July 2024 as vacant R-1B land (p. 7).
+2. **Spirit / public interest** — the Manchester Land Use Code was adopted
+   Dec. 16, 2025 and took effect March 1, 2026, after a process begun in 2021.
+   The City decided then where townhouses and multifamily go and kept this
+   parcel in R-1B. The applicant's "transition" theory is answered by the map.
+3. **Burden of proof** — the record contains no traffic, lighting, or
+   property-value evidence; the applicant's showing on criteria (A) and (D) is
+   assertion only.
+4. **Property values** — no appraisal or market data; the surrounding R-1B lots
+   are single-family homes.
+
+Deliberately *not* argued: parking count (the plan provides ~25–26 spaces vs.
+13 required, so "underparked" is wrong on the record); Planning Board
+site-plan checklist items framed as ZBA "procedural gaps"; the unsettled
+"cumulative effect" idea; the pre-2010 use/area distinction (*Boccia*).
 
 ## Status / open items
 
 - Hearing date and six-variance count confirmed directly with the City's
   Planning & Community Development office.
-- The "cumulative effect" point (Bacon v. Enfield) is explicitly flagged in
-  the documents as a softer, unsettled argument — use with that caveat.
+- To verify before the hearing (city website was unreachable from the drafting
+  environment): the list of districts that permit Townhouse / Multifamily in
+  Tables 4.3-A and 5.3-A of the Land Use Code; the ZBA by-laws' speaker time
+  limit and written-submission deadline; that Robert Breault is still chair.
+- The Board Memo asks staff to confirm whether the 10-ft side/rear setbacks on
+  the site plan (p. 13) require additional relief given that §8.7 Planned
+  Developments is marked "Not Permitted within the District" (p. 6).
