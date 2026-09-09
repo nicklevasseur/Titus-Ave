@@ -79,8 +79,7 @@ const doc = new Document({
 
       body("Thank you."),
 
-      new Paragraph({ text: "", spacing: { after: 60 } }),
-      new Paragraph({ spacing: { after: 160 }, children: [ new TextRun({ text: "Respectfully submitted,", italics: true, size: 24 }) ] }),
+      new Paragraph({ spacing: { before: 40, after: 100 }, children: [ new TextRun({ text: "Respectfully submitted,", italics: true, size: 24 }) ] }),
       new Table({
         width: { size: 10440, type: WidthType.DXA },
         columnWidths: [5220, 5220],
@@ -101,6 +100,10 @@ const doc = new Document({
           ]}),
         ]}) ]
       }),
+      new Paragraph({ spacing: { before: 100, after: 0 }, children: [
+        new TextRun({ text: "Attachments: ", bold: true, size: 22 }),
+        new TextRun({ text: "Memorandum \u2014 citations and case law", size: 22 }),
+      ] }),
     ]
   }]
 });
