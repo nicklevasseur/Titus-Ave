@@ -1,12 +1,12 @@
-const { Document, Packer, Paragraph, TextRun, AlignmentType } = require('docx');
+const { Document, Packer, Paragraph, TextRun, AlignmentType, Table, TableRow, TableCell, WidthType, BorderStyle } = require('docx');
 
 const body = (text, opts={}) => new Paragraph({
-  spacing: { after: 110, line: 310 },
+  spacing: { after: 100, line: 300 },
   children: [ new TextRun({ text, size: 28, ...opts }) ]
 });
 
 const bodyRuns = (runs) => new Paragraph({
-  spacing: { after: 110, line: 310 },
+  spacing: { after: 100, line: 300 },
   children: runs
 });
 
@@ -15,7 +15,7 @@ const doc = new Document({
     properties: {
       page: {
         size: { width: 12240, height: 15840 },
-        margin: { top: 560, bottom: 560, left: 900, right: 900 }
+        margin: { top: 500, bottom: 500, left: 900, right: 900 }
       }
     },
     children: [
@@ -78,6 +78,29 @@ const doc = new Document({
       ]),
 
       body("Thank you."),
+
+      new Paragraph({ text: "", spacing: { after: 60 } }),
+      new Paragraph({ spacing: { after: 160 }, children: [ new TextRun({ text: "Respectfully submitted,", italics: true, size: 24 }) ] }),
+      new Table({
+        width: { size: 10440, type: WidthType.DXA },
+        columnWidths: [5220, 5220],
+        borders: { top: {style: BorderStyle.NONE}, bottom: {style: BorderStyle.NONE}, left: {style: BorderStyle.NONE}, right: {style: BorderStyle.NONE},
+                   insideHorizontal: {style: BorderStyle.NONE}, insideVertical: {style: BorderStyle.NONE} },
+        rows: [ new TableRow({ children: [
+          new TableCell({ width: { size: 5220, type: WidthType.DXA }, children: [
+            new Paragraph({ spacing: { after: 0 }, children: [ new TextRun({ text: "Nickolas Levasseur", bold: true, size: 24 }) ] }),
+            new Paragraph({ spacing: { after: 0 }, children: [ new TextRun({ text: "Former State Representative", size: 24 }) ] }),
+            new Paragraph({ spacing: { after: 0 }, children: [ new TextRun({ text: "Resident, 30 Mystic Street", size: 24 }) ] }),
+            new Paragraph({ spacing: { after: 0 }, children: [ new TextRun({ text: "Manchester, NH 03103", size: 24 }) ] }),
+          ]}),
+          new TableCell({ width: { size: 5220, type: WidthType.DXA }, children: [
+            new Paragraph({ spacing: { after: 0 }, children: [ new TextRun({ text: "Co-signed by:", italics: true, size: 24 }) ] }),
+            new Paragraph({ spacing: { after: 0 }, children: [ new TextRun({ text: "Alison Famisan-Levasseur", bold: true, size: 24 }) ] }),
+            new Paragraph({ spacing: { after: 0 }, children: [ new TextRun({ text: "Resident, 30 Mystic Street", size: 24 }) ] }),
+            new Paragraph({ spacing: { after: 0 }, children: [ new TextRun({ text: "Manchester, NH 03103", size: 24 }) ] }),
+          ]}),
+        ]}) ]
+      }),
     ]
   }]
 });
