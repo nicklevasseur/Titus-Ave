@@ -29,6 +29,7 @@ All final documents are in `documents/`, each as both `.docx` (editable) and
 | `Titus_Ave_Board_Memo.docx/pdf` | Formal written memorandum in opposition, submitted to the Board, with full case law and record citations |
 | `Titus_Ave_Field_Reference.docx/pdf` | Expanded personal-use reference (facts + citations by criterion) for canvassing conversations |
 | `Titus_Ave_Version_Comparison.docx/pdf` | Internal summary comparing the original (June 22, 2026) and current (Sept. 10, 2026) application packets |
+| `Titus_Ave_Executive_Summary.docx/pdf` | One-page overview of the proposal, timeline, argument, materials, and what neighbors can do |
 
 ## Neighbor email tool
 
@@ -63,7 +64,7 @@ package. To regenerate any or all of them:
 ```bash
 cd scripts
 npm install
-npm run build        # regenerates all six .docx files into ../documents
+npm run build        # regenerates all seven .docx files into ../documents
 # or individually:
 npm run handout
 npm run criteria
@@ -71,6 +72,7 @@ npm run testimony
 npm run memo
 npm run fieldref
 npm run comparison
+npm run summary
 ```
 
 Each script writes a `.docx` file directly into `documents/`. To get a PDF,
