@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Titus Avenue Letter Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+  :root {
+    --paper: #ffffff;
+    --field: #f7f4ef;
+    --ink: #1d1a17;
+    --ink-2: #5d5750;
+    --rule: #e3ddd4;
+    --rule-strong: #c9c1b5;
+    --brick: #8b1414;
+    --brick-ink: #ffffff;
+    --brick-soft: #fbeeee;
+    --ok: #2f6b3a;
+    --focus: #b3542e;
+    --shadow: 0 1px 2px rgba(29,26,23,.06), 0 8px 24px rgba(29,26,23,.06);
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #16130f;
+      --field: #201c17;
+      --ink: #ece6dc;
+      --ink-2: #a89f93;
+      --rule: #322c25;
+      --rule-strong: #4a4238;
+      --brick: #d4574a;
+      --brick-ink: #16130f;
+      --brick-soft: #2a1a18;
+      --ok: #7fc48c;
+      --focus: #e8905f;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #16130f;
+    --field: #201c17;
+    --ink: #ece6dc;
+    --ink-2: #a89f93;
+    --rule: #322c25;
+    --rule-strong: #4a4238;
+    --brick: #d4574a;
+    --brick-ink: #16130f;
+    --brick-soft: #2a1a18;
+    --ok: #7fc48c;
+    --focus: #e8905f;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.5;
+    padding-inline: 20px;
+    padding-block: 0 96px;
+  }
+  a { color: var(--brick); }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; }
+
+  header.top {
+    border-bottom: 3px solid var(--brick);
+    padding-block: 22px 18px;
+    display: flex; flex-wrap: wrap; gap: 8px 32px; align-items: flex-end; justify-content: space-between;
+  }
+  .kicker { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 6px; font-weight: 600; }
+  h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(28px, 4.2vw, 40px); line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+  .hearing { font-size: 14px; color: var(--ink-2); max-width: 34ch; }
+  .hearing strong { color: var(--ink); }
+
+  .intro { max-width: 68ch; margin-block: 18px 6px; color: var(--ink-2); }
+
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 36px; margin-top: 22px; align-items: start; }
+  @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+
+  h2 { font-family: var(--serif); font-weight: 600; font-size: 22px; margin: 0; line-height: 1.15; }
+  .step { display: grid; gap: 14px; padding-block: 22px; border-top: 1px solid var(--rule); }
+  .step:first-child { border-top: 0; padding-top: 4px; }
+  .step-head { display: flex; align-items: baseline; gap: 12px; }
+  .step-num { font-family: var(--serif); font-style: italic; color: var(--brick); font-size: 20px; }
+  .hint { color: var(--ink-2); font-size: 14px; margin: 0; max-width: 60ch; }
+
+  .choices { display: grid; gap: 8px; }
+  .choice { position: relative; display: grid; grid-template-columns: 22px 1fr; gap: 12px; padding: 12px 14px; border: 1px solid var(--rule-strong); border-radius: 6px; background: var(--paper); cursor: pointer; }
+  .choice input { margin: 3px 0 0; accent-color: var(--brick); width: 16px; height: 16px; }
+  .choice .t { font-weight: 600; }
+  .choice .d { color: var(--ink-2); font-size: 14px; margin-top: 2px; }
+  .choice:has(input:checked) { border-color: var(--brick); background: var(--brick-soft); }
+  .choice:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 480px) { .grid2 { grid-template-columns: 1fr; } }
+  .f { display: grid; gap: 5px; }
+  .f label { font-size: 13px; font-weight: 600; letter-spacing: .01em; }
+  .f label .opt { font-weight: 400; color: var(--ink-2); }
+  input[type=text], input[type=tel], input[type=number], select, textarea {
+    font: inherit; color: var(--ink); background: var(--field);
+    border: 1px solid var(--rule-strong); border-radius: 5px; padding: 9px 11px; width: 100%;
+  }
+  textarea { min-height: 96px; resize: vertical; line-height: 1.45; }
+  input[type=number] { font-variant-numeric: tabular-nums; }
+  .check { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; }
+  .check input { margin-top: 3px; accent-color: var(--brick); width: 16px; height: 16px; flex: none; }
+  .radios { display: grid; gap: 8px; }
+
+  /* preview */
+  .preview { position: sticky; top: 16px; }
+  @media (max-width: 860px) { .preview { position: static; } }
+  .preview-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 10px; }
+  .mail { border: 1px solid var(--rule-strong); border-radius: 6px; background: var(--paper); box-shadow: var(--shadow); overflow: hidden; }
+  .hdr { display: grid; grid-template-columns: 64px 1fr; border-bottom: 1px solid var(--rule); }
+  .hdr > div { padding: 8px 12px; font-size: 14px; }
+  .hdr .k { color: var(--ink-2); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; padding-top: 10px; font-weight: 600; }
+  .hdr .v { word-break: break-word; }
+  .body { padding: 16px 18px 18px; white-space: pre-wrap; font-size: 15px; line-height: 1.55; max-width: 70ch; }
+  .ph { color: var(--brick); }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; align-items: center; }
+  button { font: inherit; font-weight: 600; border-radius: 6px; padding: 10px 16px; cursor: pointer; border: 1px solid var(--brick); }
+  .primary { background: var(--brick); color: var(--brick-ink); }
+  .ghost { background: transparent; color: var(--brick); }
+  .status { font-size: 14px; color: var(--ok); font-weight: 600; min-height: 1.4em; }
+  .status[data-kind="err"] { color: var(--brick); }
+
+  .send-note { margin-top: 14px; font-size: 14px; color: var(--ink-2); max-width: 60ch; }
+  .send-note strong { color: var(--ink); }
+
+  .float { position: fixed; inset-inline: 0; bottom: 0; padding: 10px 20px calc(10px + env(safe-area-inset-bottom)); background: var(--paper); border-top: 1px solid var(--rule); display: none; justify-content: center; z-index: 5; }
+  @media (max-width: 860px) { .float { display: flex; } }
+
+  footer { margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--ink-2); max-width: 70ch; }
+  @media (prefers-reduced-motion: no-preference) {
+    .choice { transition: background .15s, border-color .15s; }
+  }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <p class="kicker">Manchester Zoning Board of Adjustment · Case #ZBA2026-063</p>
+      <h1>Write to the Board about 26 Titus Avenue</h1>
+    </div>
+    <div class="hearing">Public hearing <strong>Thursday, September 10, 2026, 6:00 PM</strong>, City Hall, 3rd Floor Aldermanic Chambers. Send written comments before the hearing.</div>
+  </header>
+
+  <p class="intro">The Board can approve the 13-unit townhouse variance only if the applicant proves all five tests in state law. Pick the one that bothers you most, add your name and address, and this page writes an email you can copy into your own email app.</p>
+
+  <div class="layout">
+    <form id="form" autocomplete="on" onsubmit="return false">
+      <section class="step">
+        <div class="step-head"><span class="step-num">1</span><h2>Which test does this project fail, in your view?</h2></div>
+        <p class="hint">Pick the one you care about most. You can add a second point below.</p>
+        <div class="choices" id="choices"></div>
+        <div class="f">
+          <label for="second">Also mention <span class="opt">(optional)</span></label>
+          <select id="second"><option value="">None, keep it to one point</option></select>
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-head"><span class="step-num">2</span><h2>About you</h2></div>
+        <div class="grid2">
+          <div class="f"><label for="name">Your name</label><input type="text" id="name" placeholder="Jane Q. Neighbor"></div>
+          <div class="f"><label for="phone">Phone <span class="opt">(optional)</span></label><input type="tel" id="phone" placeholder="(603) 555-0100"></div>
+        </div>
+        <div class="grid2">
+          <div class="f"><label for="street">Street address</label><input type="text" id="street" placeholder="31 Mystic Street"></div>
+          <div class="f"><label for="city">City, state, ZIP</label><input type="text" id="city" value="Manchester, NH 03103"></div>
+        </div>
+        <div class="grid2">
+          <div class="f">
+            <label for="rel">Your connection to the neighborhood</label>
+            <select id="rel">
+              <option value="neighbor">I live in the neighborhood</option>
+              <option value="owner">I own my home nearby</option>
+              <option value="abutter">My property abuts 26 Titus Avenue</option>
+              <option value="ward9">I live in Ward 9</option>
+              <option value="city">I live in Manchester</option>
+            </select>
+          </div>
+          <div class="f"><label for="years">Years here <span class="opt">(optional)</span></label><input type="number" id="years" min="1" max="120" placeholder="12"></div>
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-head"><span class="step-num">3</span><h2>Details</h2></div>
+        <div class="radios" role="radiogroup" aria-label="Attendance">
+          <label class="check"><input type="radio" name="attend" id="attend-no" value="no" checked> I can't attend. Please enter this letter into the record.</label>
+          <label class="check"><input type="radio" name="attend" id="attend-yes" value="yes"> I plan to attend the hearing on September 10.</label>
+        </div>
+        <label class="check"><input type="checkbox" id="housing" checked> Say that I support more housing in Manchester, but not by variance in a district the City just kept single-family.</label>
+        <label class="check"><input type="checkbox" id="cc"> Also send a copy to the Ward 9 and at-large aldermen (adds them on Cc).</label>
+        <div class="f">
+          <label for="note">In your own words <span class="opt">(optional, but the Board reads these most closely)</span></label>
+          <textarea id="note" placeholder="What this corner is like today, how long your family has been here, what you'd expect to change. A sentence or two is plenty."></textarea>
+        </div>
+      </section>
+    </form>
+
+    <aside class="preview" aria-label="Email preview">
+      <div class="preview-head">
+        <h2>Your email</h2>
+        <span class="status" id="status" role="status" aria-live="polite"></span>
+      </div>
+      <div class="mail">
+        <div class="hdr">
+          <div class="k">To</div><div class="v" id="p-to">pcd@manchesternh.gov</div>
+          <div class="k" id="p-cc-k" hidden>Cc</div><div class="v" id="p-cc" hidden></div>
+          <div class="k">Subject</div><div class="v" id="p-subject"></div>
+        </div>
+        <div class="body" id="p-body"></div>
+      </div>
+      <div class="actions">
+        <button type="button" class="primary" id="copy-all">Copy the whole email</button>
+        <button type="button" class="ghost" id="copy-body">Copy the message only</button>
+        <a class="ghost" id="mailto" href="#" style="padding:10px 16px;border:1px solid var(--brick);border-radius:6px;text-decoration:none;font-weight:600">Open in my email app</a>
+      </div>
+      <p class="send-note">Paste it into a new message to <strong>pcd@manchesternh.gov</strong> with the subject line shown. Sending from your own email address matters: the Board treats a letter with a real name and address as public comment on the record.</p>
+    </aside>
+  </div>
+
+  <footer>Facts in the generated text come from the applicant's own filing (packet pages 1–17) and the City's zoning review. Prepared by neighbors on Mystic Street; questions to Nick Levasseur, (603) 361-3828, or Jen Allard, (603) 661-2555. Full case file: manchesternh.gov → Planning and Community Development → Zoning Board → Project Applications.</footer>
+</div>
+
+<div class="float"><button type="button" class="primary" id="copy-float">Copy the whole email</button></div>
+
+<script>
+(function () {
+  const CRITERIA = [
+    {
+      id: "hardship",
+      title: "No hardship. Their own plan shows five conforming house lots.",
+      desc: "The strongest point. The applicant's engineer drew a by-right subdivision plan and their memo admits it works.",
+      label: "unnecessary hardship",
+      text: "Under RSA 674:33, hardship must come from special conditions of the land itself. The applicant identifies none. Its own memo admits that \"the property can support five (5) single family home lots meeting the underlying zoning,\" and its engineer drew that plan (Sheet 3 of 3, the By-Right Subdivision Plan). The only physical feature the applicant mentions is the slope, and the five-lot plan builds on that slope. The applicant bought this parcel from the City in July 2024 as vacant single-family land, knowing how it was zoned. New Hampshire law is clear that a preference for a more profitable project is not a hardship (Olszak v. Town of New Hampton, 139 N.H. 723 (1995)). This Board is not being asked to rescue an unusable lot. It is being asked to approve the more profitable option over the compliant one."
+    },
+    {
+      id: "spirit",
+      title: "It rewrites the ordinance for one lot. Six variances, including the use itself.",
+      desc: "Townhouses and multifamily are not permitted here. The lot is 63% of the required size.",
+      label: "the spirit of the ordinance",
+      text: "The City's own zoning review states that multifamily dwellings are not a permitted use in this district (Section 4.3-A.1.C) and that townhouses are not a permitted building type (Section 5.3.1.E). The applicant is asking for relief from six ordinance sections at once: the underlying use, the building type, lot area, height in stories, height in feet, and parking location. The lot is 49,484 square feet where 78,000 is required for 13 units; even under the ordinance's most generous density rule, this land supports 8 units. That is not a minor adjustment to the ordinance. It is a request to rewrite it for one parcel."
+    },
+    {
+      id: "public",
+      title: "The City just decided what this corner should be.",
+      desc: "The new Land Use Code took effect March 1, 2026 and kept this parcel single-family, knowing what's across the street.",
+      label: "the public interest",
+      text: "The City adopted a new Land Use Code that took effect on March 1, 2026, after a public process that began in 2021. In that rewrite, the Board of Mayor and Aldermen decided district by district where townhouses and multifamily buildings belong, and it kept this corner in the R-1B single-family district with full knowledge of the Laurel Ridge complex across Titus Avenue and the school next door. The applicant calls this project a \"transition,\" but the City already decided where the transition is: the zoning line at this parcel. Granting a variance would move that line by private application six months after the City drew it. The application also contains no traffic, sight-distance, or lighting analysis for this corner; the City's own review marks \"Visibility at Intersections\" as \"No Information.\""
+    },
+    {
+      id: "values",
+      title: "Nothing in the file says what this does to our home values.",
+      desc: "No appraisal, no market data, no comparable sales. One sentence from the developer's engineer.",
+      label: "the effect on surrounding property values",
+      text: "The applicant's entire showing on property values is a single sentence from its engineer that the project \"would not negatively affect surrounding existing properties.\" There is no appraisal, market study, or comparable sale anywhere in the file. The burden of proof on this criterion belongs to the applicant, and an assertion does not carry it. The homes around this parcel on Mystic Street, Titus Avenue, and Calef Road are single-family, and for most of the families who own them the house is the largest thing they will ever own.",
+      ownerExtra: "As the owner of a home at {street}, I believe a three-story, 13-unit development placed in the middle of a single-family neighborhood would reduce the value of my property, and nothing in the application shows otherwise."
+    },
+    {
+      id: "justice",
+      title: "No loss to the owner, real cost to the neighborhood.",
+      desc: "Their memo argues 'the benefits to the applicant.' The Board can't weigh profit, and there's a conforming plan on file.",
+      label: "substantial justice",
+      text: "The applicant's own memo argues substantial justice on the basis of \"the benefits to the applicant.\" The Board cannot weigh an owner's profit. And there is no loss to the owner to balance: the applicant's own engineer drew a by-right plan for five conforming single-family lots. Denying the variance costs the owner only the difference between a permitted project and a preferred one, while granting it shifts the cost of a larger project onto the surrounding neighborhood and sets aside an ordinance the City adopted six months ago after four years of public work."
+    }
+  ];
+
+  const ALDERMEN = "jburkush@manchesternh.gov, jtrisciani@manchesternh.gov, doneil@manchesternh.gov";
+  const TO = "pcd@manchesternh.gov";
+  const SUBJECT = "Opposition to Variance Request, Case #ZBA2026-063, 26 Titus Avenue";
+
+  const $ = (id) => document.getElementById(id);
+  const choices = $("choices"), second = $("second");
+
+  CRITERIA.forEach((c, i) => {
+    const l = document.createElement("label");
+    l.className = "choice";
+    l.innerHTML = '<input type="radio" name="crit" id="crit-' + c.id + '" value="' + c.id + '"' + (i === 0 ? " checked" : "") + '>' +
+      '<span><span class="t">' + c.title + '</span><span class="d" style="display:block">' + c.desc + '</span></span>';
+    choices.appendChild(l);
+    const o = document.createElement("option");
+    o.value = c.id; o.textContent = c.title;
+    second.appendChild(o);
+  });
+
+  const FIELDS = ["name","phone","street","city","rel","years","note","second"];
+  const CHECKS = ["housing","cc"];
+
+  function val(id) { return ($(id).value || "").trim(); }
+  function relSentence(rel, street) {
+    const at = street ? " at " + street : "";
+    switch (rel) {
+      case "owner":   return "I own my home" + at + ", near 26 Titus Avenue";
+      case "abutter": return "I own the property" + at + ", which abuts 26 Titus Avenue";
+      case "ward9":   return "I live" + at + " in Ward 9";
+      case "city":    return "I live" + at + " in Manchester";
+      default:        return "I live" + at + ", in the neighborhood surrounding 26 Titus Avenue";
+    }
+  }
+  function esc(s) { return s.replace(/[&<>]/g, (ch) => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[ch])); }
+  function ph(s) { return '<span class="ph">[' + s + ']</span>'; }
+
+  function build(asHtml) {
+    const name = val("name"), street = val("street"), city = val("city"), phone = val("phone");
+    const rel = $("rel").value, years = val("years"), note = val("note");
+    const primaryId = document.querySelector('input[name="crit"]:checked').value;
+    const primary = CRITERIA.find(c => c.id === primaryId);
+    const secId = second.value && second.value !== primaryId ? second.value : "";
+    const sec = secId ? CRITERIA.find(c => c.id === secId) : null;
+    const attendYes = $("attend-yes").checked;
+    const housing = $("housing").checked;
+
+    const N = (s, p) => s ? (asHtml ? esc(s) : s) : (asHtml ? ph(p) : "[" + p + "]");
+    const nameOut = N(name, "Your name"), streetOut = N(street, "Your street address"), cityOut = N(city, "City, state, ZIP");
+
+    const paras = [];
+    paras.push("Dear Chairman Breault and Members of the Zoning Board of Adjustment,");
+    let intro = "My name is " + nameOut + ". " + relSentence(rel, streetOut);
+    if (years) intro += ", and my family has lived here for " + years + (years === "1" ? " year" : " years");
+    intro += ". I am writing in opposition to the variance application for 26 Titus Avenue, Case #ZBA2026-063, scheduled for the public hearing on September 10, 2026.";
+    paras.push(intro);
+    if (housing) paras.push("I want to be clear that I support more housing in Manchester, and I supported the City's decision this year to rewrite its zoning ordinance to get more of it built. In that process the City decided where townhouses and multifamily buildings belong, and this corner is not one of those places.");
+    paras.push("State law allows the Board to grant a variance only if the applicant proves all five criteria in RSA 674:33. If any one fails, the Board must deny. The criterion that concerns me most is " + primary.label + ".");
+    let pText = primary.text;
+    if (primary.ownerExtra && (rel === "owner" || rel === "abutter")) pText += " " + primary.ownerExtra.replace("{street}", streetOut);
+    paras.push(asHtml ? esc(pText).replace(/\[Your street address\]/g, ph("Your street address")) : pText);
+    if (sec) {
+      let sText = sec.text;
+      if (sec.ownerExtra && (rel === "owner" || rel === "abutter")) sText += " " + sec.ownerExtra.replace("{street}", streetOut);
+      paras.push("I would also ask the Board to consider " + sec.label + ". " + (asHtml ? esc(sText) : sText));
+    }
+    if (note) paras.push(asHtml ? esc(note) : note);
+    paras.push(attendYes
+      ? "I plan to attend the hearing on September 10 and appreciate the Board's attention to these points in advance."
+      : "I am unable to attend the hearing in person and ask that this letter be entered into the record and considered by the Board.");
+    paras.push("For these reasons I respectfully ask the Board to deny the application.");
+    let sig = "Sincerely,\n" + nameOut + "\n" + streetOut + "\n" + cityOut;
+    if (phone) sig += "\n" + (asHtml ? esc(phone) : phone);
+    paras.push(sig);
+    return paras.join("\n\n");
+  }
+
+  function render() {
+    $("p-body").innerHTML = build(true);
+    $("p-subject").textContent = SUBJECT;
+    const cc = $("cc").checked;
+    $("p-cc-k").hidden = !cc; $("p-cc").hidden = !cc; $("p-cc").textContent = ALDERMEN;
+    const plain = build(false);
+    const m = "mailto:" + TO + "?" + (cc ? "cc=" + encodeURIComponent(ALDERMEN) + "&" : "") + "subject=" + encodeURIComponent(SUBJECT) + "&body=" + encodeURIComponent(plain);
+    $("mailto").href = m;
+    save();
+  }
+
+  function fullText() {
+    const cc = $("cc").checked;
+    return "To: " + TO + "\n" + (cc ? "Cc: " + ALDERMEN + "\n" : "") + "Subject: " + SUBJECT + "\n\n" + build(false);
+  }
+
+  let statusTimer;
+  function say(msg, kind) {
+    const s = $("status"); s.textContent = msg; s.dataset.kind = kind || "";
+    clearTimeout(statusTimer); statusTimer = setTimeout(() => { s.textContent = ""; }, 3500);
+  }
+  async function copy(text) {
+    const missing = [];
+    if (!val("name")) missing.push("name"); if (!val("street")) missing.push("street address");
+    try {
+      await navigator.clipboard.writeText(text);
+      say(missing.length ? "Copied. Fill in your " + missing.join(" and ") + " before sending." : "Copied.", missing.length ? "err" : "");
+    } catch (e) {
+      const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta); ta.select();
+      let ok = false; try { ok = document.execCommand("copy"); } catch (_) {}
+      document.body.removeChild(ta);
+      say(ok ? "Copied." : "Couldn't copy automatically. Select the text and copy it by hand.", ok ? "" : "err");
+    }
+  }
+  $("copy-all").addEventListener("click", () => copy(fullText()));
+  $("copy-float").addEventListener("click", () => copy(fullText()));
+  $("copy-body").addEventListener("click", () => copy(build(false)));
+
+  function save() {
+    try {
+      const d = {};
+      FIELDS.forEach(id => d[id] = $(id).value);
+      CHECKS.forEach(id => d[id] = $(id).checked);
+      d.crit = document.querySelector('input[name="crit"]:checked').value;
+      d.attend = $("attend-yes").checked ? "yes" : "no";
+      localStorage.setItem("titus-letter", JSON.stringify(d));
+    } catch (_) {}
+  }
+  function load() {
+    try {
+      const d = JSON.parse(localStorage.getItem("titus-letter") || "null");
+      if (!d) return;
+      FIELDS.forEach(id => { if (d[id] != null) $(id).value = d[id]; });
+      CHECKS.forEach(id => { if (d[id] != null) $(id).checked = !!d[id]; });
+      const c = d.crit && $("crit-" + d.crit); if (c) c.checked = true;
+      if (d.attend === "yes") $("attend-yes").checked = true;
+    } catch (_) {}
+  }
+
+  $("form").addEventListener("input", render);
+  $("form").addEventListener("change", render);
+  load();
+  render();
+})();
+</script>
+
+</body>
+</html>

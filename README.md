@@ -30,6 +30,16 @@ All final documents are in `documents/`, each as both `.docx` (editable) and
 | `Titus_Ave_Field_Reference.docx/pdf` | Expanded personal-use reference (facts + citations by criterion) for canvassing conversations |
 | `Titus_Ave_Version_Comparison.docx/pdf` | Internal summary comparing the original (June 22, 2026) and current (Sept. 10, 2026) application packets |
 
+## Neighbor email tool
+
+`tools/titus_letter_builder.html` is a single self-contained web page (no
+server, no build step) that lets a neighbor pick the variance criterion that
+bothers them most, enter their name and address, and copy a ready-to-send
+email to pcd@manchesternh.gov. Open it directly in any browser, host it
+anywhere static files are served, or share the published link. Its text
+follows the revised argument in the documents above (no parking-count claim,
+no site-plan checklist items).
+
 ## Source materials
 
 `source-materials/` holds the two case file packets pulled from the City's
