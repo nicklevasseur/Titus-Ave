@@ -200,7 +200,6 @@
       <div class="actions">
         <button type="button" class="primary" id="copy-all">Copy the whole email</button>
         <button type="button" class="ghost" id="copy-body">Copy the message only</button>
-        <a class="ghost" id="mailto" href="#" style="padding:10px 16px;border:1px solid var(--brick);border-radius:6px;text-decoration:none;font-weight:600">Open in my email app</a>
       </div>
       <p class="send-note">Paste it into a new message to <strong>pcd@manchesternh.gov</strong> with the subject line shown. Sending from your own email address matters: the Board treats a letter with a real name and address as public comment on the record.</p>
     </aside>
@@ -332,9 +331,6 @@
     $("p-subject").textContent = SUBJECT;
     const cc = $("cc").checked;
     $("p-cc-k").hidden = !cc; $("p-cc").hidden = !cc; $("p-cc").textContent = ALDERMEN;
-    const plain = build(false);
-    const m = "mailto:" + TO + "?" + (cc ? "cc=" + encodeURIComponent(ALDERMEN) + "&" : "") + "subject=" + encodeURIComponent(SUBJECT) + "&body=" + encodeURIComponent(plain);
-    $("mailto").href = m;
     save();
   }
 
