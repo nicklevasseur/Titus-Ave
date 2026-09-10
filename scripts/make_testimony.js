@@ -22,7 +22,7 @@ const doc = new Document({
       new Paragraph({
         alignment: AlignmentType.CENTER,
         spacing: { after: 80 },
-        children: [ new TextRun({ text: "Public Testimony — Nick Levasseur", bold: true, size: 32 }) ]
+        children: [ new TextRun({ text: "Public Testimony — Nickolas Levasseur", bold: true, size: 32 }) ]
       }),
       new Paragraph({
         alignment: AlignmentType.CENTER,
