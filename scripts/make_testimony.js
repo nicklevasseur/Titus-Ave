@@ -61,7 +61,7 @@ const doc = new Document({
       ]),
 
       bodyRuns([
-        new TextRun({ text: "And this ordinance is six months old. The Board of Mayor and Aldermen adopted the new Land Use Code in December, after a process that began in 2021, and it took effect March 1. That code decides, district by district, where townhouses and multifamily buildings belong. This parcel is not one of those places. That wasn't an oversight. The aldermen redrew this map knowing exactly what sits across Titus Avenue and next door. The applicant's engineer calls this project a “transition.” The city already decided where the transition is. It's the zoning line. This application asks you to move that line by private application, six months after the city drew it.", size: 28 }),
+        new TextRun({ text: "And this ordinance is six months old. The Board of Mayor and Aldermen adopted the new Land Use Code in December, after a process that began in 2021, and it took effect March 1. That code decides, district by district, where townhouses and multifamily buildings belong. This parcel is not one of those places. That wasn't an oversight. The aldermen redrew this map knowing exactly what sits across Titus Avenue and next door. The applicant's engineer calls this project a “transition.” The city already decided where the transition is. It's the zoning line. This application asks you to move that line by private application, six months after the city drew it. That's not in the spirit of the ordinance. That's throwing out the ordinance in service of the profitability of the developer.", size: 28 }),
       ]),
 
       bodyRuns([
