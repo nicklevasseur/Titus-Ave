@@ -198,17 +198,19 @@
         <div class="body" id="p-body"></div>
       </div>
       <div class="actions">
-        <button type="button" class="primary" id="copy-all">Copy the whole email</button>
-        <button type="button" class="ghost" id="copy-body">Copy the message only</button>
+        <button type="button" class="primary" id="copy-body">1. Copy the message</button>
+        <button type="button" class="ghost" id="copy-to">2. Copy the To address</button>
+        <button type="button" class="ghost" id="copy-cc" hidden>Copy the Cc addresses</button>
+        <button type="button" class="ghost" id="copy-subject">3. Copy the subject line</button>
       </div>
-      <p class="send-note">Paste it into a new message to <strong>pcd@manchesternh.gov</strong> with the subject line shown. Sending from your own email address matters: the Board treats a letter with a real name and address as public comment on the record.</p>
+      <p class="send-note">Open a new message in your own email app, then paste each piece where it belongs: the message in the body, <strong>pcd@manchesternh.gov</strong> in the To line, and the subject line at the top. Sending from your own email address matters: the Board treats a letter with a real name and address as public comment on the record.</p>
     </aside>
   </div>
 
   <footer>Facts in the generated text come from the applicant's own filing (packet pages 1–17) and the City's zoning review. Prepared by neighbors on Mystic Street; questions to Nick Levasseur, (603) 361-3828, or Jen Allard, (603) 661-2555. Full case file: manchesternh.gov → Planning and Community Development → Zoning Board → Project Applications.</footer>
 </div>
 
-<div class="float"><button type="button" class="primary" id="copy-float">Copy the whole email</button></div>
+<div class="float"><button type="button" class="primary" id="copy-float">Copy the message</button></div>
 
 <script>
 (function () {
@@ -331,12 +333,8 @@
     $("p-subject").textContent = SUBJECT;
     const cc = $("cc").checked;
     $("p-cc-k").hidden = !cc; $("p-cc").hidden = !cc; $("p-cc").textContent = ALDERMEN;
+    $("copy-cc").hidden = !cc;
     save();
-  }
-
-  function fullText() {
-    const cc = $("cc").checked;
-    return "To: " + TO + "\n" + (cc ? "Cc: " + ALDERMEN + "\n" : "") + "Subject: " + SUBJECT + "\n\n" + build(false);
   }
 
   let statusTimer;
@@ -344,22 +342,24 @@
     const s = $("status"); s.textContent = msg; s.dataset.kind = kind || "";
     clearTimeout(statusTimer); statusTimer = setTimeout(() => { s.textContent = ""; }, 3500);
   }
-  async function copy(text) {
+  async function copy(text, what, checkFields) {
     const missing = [];
-    if (!val("name")) missing.push("name"); if (!val("street")) missing.push("street address");
+    if (checkFields) { if (!val("name")) missing.push("name"); if (!val("street")) missing.push("street address"); }
     try {
       await navigator.clipboard.writeText(text);
-      say(missing.length ? "Copied. Fill in your " + missing.join(" and ") + " before sending." : "Copied.", missing.length ? "err" : "");
+      say(missing.length ? "Copied. Fill in your " + missing.join(" and ") + " before sending." : "Copied " + what + ".", missing.length ? "err" : "");
     } catch (e) {
       const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta); ta.select();
       let ok = false; try { ok = document.execCommand("copy"); } catch (_) {}
       document.body.removeChild(ta);
-      say(ok ? "Copied." : "Couldn't copy automatically. Select the text and copy it by hand.", ok ? "" : "err");
+      say(ok ? "Copied " + what + "." : "Couldn't copy automatically. Select the text and copy it by hand.", ok ? "" : "err");
     }
   }
-  $("copy-all").addEventListener("click", () => copy(fullText()));
-  $("copy-float").addEventListener("click", () => copy(fullText()));
-  $("copy-body").addEventListener("click", () => copy(build(false)));
+  $("copy-body").addEventListener("click", () => copy(build(false), "the message", true));
+  $("copy-float").addEventListener("click", () => copy(build(false), "the message", true));
+  $("copy-to").addEventListener("click", () => copy(TO, "the To address"));
+  $("copy-cc").addEventListener("click", () => copy(ALDERMEN, "the Cc addresses"));
+  $("copy-subject").addEventListener("click", () => copy(SUBJECT, "the subject line"));
 
   function save() {
     try {
