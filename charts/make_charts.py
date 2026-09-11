@@ -14,7 +14,7 @@ CATS = [
     ("Own expertise supplied as the applicant's proof",    "#e34948"),
     ("Stated as fact, with no source in the record",       "#eda100"),
     ("Contradicted by the testimony given",                "#4a3aa7"),
-    ("Weighed on a test the statute does not contain",     "#e87ba4"),
+    ("Weighed on a test the statute does not contain",     "#a8559e"),
 ]
 # Counts are computed from the itemized lists in items.py -- never typed in
 # here -- so the pies, the table and the appendix cannot drift apart.
@@ -39,7 +39,7 @@ def polar(cx, cy, r, deg):
     a = math.radians(deg - 90)
     return cx + r * math.cos(a), cy + r * math.sin(a)
 
-def pie(slices, cx, cy, r, total):
+def pie(slices, cx, cy, r, total, labels=True):
     out, ang = [], 0.0
     for idx, val in slices:
         sweep = 360.0 * val / total
@@ -48,6 +48,9 @@ def pie(slices, cx, cy, r, total):
         large = 1 if sweep > 180 else 0
         d = f"M {cx:.2f} {cy:.2f} L {x1:.2f} {y1:.2f} A {r} {r} 0 {large} 1 {x2:.2f} {y2:.2f} Z"
         out.append(f'<path d="{d}" fill="{CATS[idx][1]}" stroke="{SURF}" stroke-width="3"/>')
+        if not labels:
+            ang += sweep
+            continue
         # direct label outside the arc
         lx, ly = polar(cx, cy, r + 22, ang + sweep / 2)
         anchor = "middle"
@@ -146,6 +149,51 @@ def relief_block(key):
     lis = "".join(f"<li>{b}</li>" for b in bullets)
     return f'<p class="rhead">{head}</p><ul class="relief">{lis}</ul>'
 
+
+def case_tally(items, order=None):
+    c = Counter(i[2] for i in items)
+    order = order or [0, 1, 2, 4, 3, 5, 6]
+    return [(k, c[k]) for k in order if c[k]]
+
+POOLED = [i for _, _, _, L in ALL_CASES for i in L]
+N_POOLED = len(POOLED)
+POOLED_SLICES = case_tally(POOLED)
+
+def small_pie(case, addr, items):
+    n = len(items)
+    g = round(100 * sum(1 for i in items if i[2] == 0) / n)
+    hi = " sp-hi" if case == "2026-063" else ""
+    return (f'<div class="sp{hi}">'
+            f'<svg viewBox="-4 -4 208 208" width="120" height="120" role="img" '
+            f'aria-label="statements by category, {addr}">{pie(case_tally(items), 100, 100, 94, n, labels=False)}</svg>'
+            f'<p class="sp-name">{addr}</p>'
+            f'<p class="sp-n">{n} statements &middot; <b>{g}%</b> in record</p></div>')
+
+sp_all = "".join(small_pie(c, a, L) for c, a, _, L in
+                 sorted(ALL_CASES, key=lambda c: -sum(1 for i in c[3] if i[2] == 0) / len(c[3])))
+
+conc = []
+for cat, label in ((3, "own expertise supplied as the applicant&rsquo;s proof"),
+                   (5, "findings contradicted by the testimony given")):
+    tot = sum(1 for i in POOLED if i[2] == cat)
+    tit = sum(1 for i in TITUS_ITEMS if i[2] == cat)
+    conc.append(f"<li><b>{tit} of {tot}</b> &mdash; every one &mdash; {label}</li>")
+tot4 = sum(1 for i in POOLED if i[2] == 4); tit4 = sum(1 for i in TITUS_ITEMS if i[2] == 4)
+conc.append(f"<li><b>{tit4} of {tot4}</b> statements stated as fact with no source in the record</li>")
+conc = "".join(conc)
+
+pooled_rows = []
+for case, addr, _, L in ALL_CASES:
+    c = Counter(i[2] for i in L)
+    tds = "".join(f'<td>{c.get(k, 0) or ""}</td>' for k in range(len(CATS)))
+    hi = ' class="hi"' if case == "2026-063" else ""
+    pooled_rows.append(f'<tr{hi}><th>{addr}</th>{tds}<td class="cc-n">{len(L)}</td></tr>')
+pc = Counter(i[2] for i in POOLED)
+pooled_rows.append('<tr class="tot"><th>All six cases</th>' +
+    "".join(f'<td>{pc.get(k, 0)}</td>' for k in range(len(CATS))) +
+    f'<td class="cc-n">{N_POOLED}</td></tr>')
+pooled_rows = "".join(pooled_rows)
+
 BAR_PX = 300
 
 def stacked(items):
@@ -213,6 +261,22 @@ table.qual td.t {{ background:#fdf4f0; }}
 table td.t {{ background:#fdf4f0; }}
 .key {{ display:flex; gap:16px; font-size:10.5px; margin:0 0 9px; }}
 .key span {{ display:flex; align-items:center; gap:5px; }}
+.pool {{ display:flex; gap:18px; align-items:flex-start; }}
+.pool-pie {{ flex:none; text-align:center; }}
+.pool-txt {{ flex:1; }}
+.pool-txt h2 {{ margin-top:0; }}
+.pool-txt p {{ margin:0 0 6px; font-size:10.4px; }}
+ul.conc {{ margin:0 0 7px; padding-left:15px; font-size:10.4px; }}
+ul.conc li {{ margin:0 0 2px; }}
+.sps {{ display:flex; gap:7px; justify-content:space-between; }}
+.sp {{ flex:1; text-align:center; padding:4px 2px; border-radius:4px; }}
+.sp-hi {{ background:#fdf4f0; }}
+.sp-name {{ font-size:9.4px; font-weight:700; margin:1px 0 0; line-height:1.25; }}
+.sp-n {{ font-size:8.8px; color:#52514e; margin:0; }}
+table.pool-tbl {{ font-size:10px; margin-top:10px; }}
+table.pool-tbl th:first-child {{ width:auto; font-weight:600; }}
+table.pool-tbl td {{ width:30px; text-align:center; }}
+table.pool-tbl thead th {{ text-align:center; }}
 .rhead {{ font-size:10px; font-weight:700; margin:11px 0 3px; text-align:left;
   padding-top:7px; border-top:1px solid #c9c1b5; }}
 ul.relief {{ list-style:none; margin:0; padding:0; text-align:left; font-size:9.6px; }}
@@ -290,19 +354,38 @@ table.app td.q {{ line-height:1.35; }}
 </div>
 
 <div class="page">
-  <h1>The same measure, applied to every case he can be shown to have spoken in</h1>
-  <p class="sub">Six of the thirteen cases heard September 10, 2026. In the other seven the transcript gives no anchor for who stated the findings, so nothing in them is counted.</p>
+  <h1>His comments across the evening, with the outcomes set aside</h1>
+  <p class="sub">The six of thirteen cases in which the transcript anchors who was speaking. Nothing here turns on whether the Board granted or denied &mdash; only on where what he said came from.</p>
   <div class="rule"></div>
 
-  <h2>What share of his statements is grounded in the record</h2>
-  <p class="cap">Ordered by that share. Each bar is one case, scaled to its own total, so the comparison is of composition and not of how much he talked.</p>
+  <div class="pool">
+    <div class="pool-pie">
+      <svg viewBox="-78 -8 456 316" width="300" height="208" role="img" aria-label="all statements by category, six cases pooled">
+        {pie(POOLED_SLICES, 150, 150, 105, N_POOLED)}
+      </svg>
+      <p class="sp-name">All six cases pooled &middot; {N_POOLED} statements</p>
+    </div>
+    <div class="pool-txt">
+      <h2>What the pooled view shows</h2>
+      <p>Across the evening he is, more often than not, working from the file. Fifty-three of ninety-three statements rest on the application, the testimony, or the ordinance &mdash; he reads variance histories, quotes district intents, counts what is on a plan sheet.</p>
+      <p>The exceptions do not spread evenly across the six cases. They concentrate in one:</p>
+      <ul class="conc">{conc}</ul>
+      <p>Titus Avenue accounts for about a third of everything he said in these six cases and for all of two categories entirely. That is the finding, and it holds without reference to any outcome.</p>
+    </div>
+  </div>
+
   <ul class="legend cc-legend">{legend(range(len(CATS)))}</ul>
-  <table class="cc">
-    <thead><tr><th>Case</th><th>Composition of his statements</th><th class="cc-n">N</th><th class="cc-g">In record</th></tr></thead>
-    <tbody>{rows_cc}</tbody>
+
+  <h2 style="margin-top:12px">Case by case</h2>
+  <p class="cap">Each pie is one case, scaled to its own total. Ordered by the share grounded in the record.</p>
+  <div class="sps">{sp_all}</div>
+
+  <table class="pool-tbl">
+    <thead><tr><th>Case</th><th><span class="sw" style="background:#2a78d6"></span></th><th><span class="sw" style="background:#1baf7a"></span></th><th><span class="sw" style="background:#008300"></span></th><th><span class="sw" style="background:#e34948"></span></th><th><span class="sw" style="background:#eda100"></span></th><th><span class="sw" style="background:#4a3aa7"></span></th><th><span class="sw" style="background:#a8559e"></span></th><th class="cc-n">N</th></tr></thead>
+    <tbody>{pooled_rows}</tbody>
   </table>
 
-  <p class="foot">Titus Avenue is the outlier on every measure the chart carries. It has the lowest share grounded in the record, by a margin of seventeen points over the next lowest. It is the only case in which he offered his own expertise as the applicant&rsquo;s proof, and the only one in which any finding is contradicted by testimony given in that same hearing. He denied at Myrtle Street and at South Lincoln Street and granted at Hanover, Thornton and Vinton, so the pattern does not track the outcome he favoured. Attribution and method are set out in analysis/attribution.py and in the appendix that follows; the categories, the counting rule and the exclusions are identical in all six cases.</p>
+  <p class="foot">Columns follow the legend order above. Categories, counting rule and exclusions are identical in all six cases; the seven cases with no speaker anchor are not counted at all. Method and anchors: analysis/attribution.py. Every statement counted appears with its timestamp in the appendices that follow.</p>
 </div>
 
 <div class="page">
