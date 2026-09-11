@@ -33,6 +33,7 @@ All final documents are in `documents/`, each as both `.docx` (editable) and
 | `Titus_Ave_Appeal_Options.docx/pdf` | One-page guide to the rehearing and appeal path after a ZBA vote (RSA 677 / RSA 679) |
 | `Titus_Ave_Motion_for_Rehearing.docx/pdf` | Draft RSA 677:2 motion for rehearing of the Sept. 10, 2026 approval; yellow brackets mark blanks to fill |
 | `Titus_Ave_Records_Request.docx/pdf` | Draft RSA 91-A request for the recording, file, communications, and 2024 sale records |
+| `Titus_Ave_Hearing_Analysis.docx/pdf` | Working paper comparing what was said at both Sept. 10 hearings against the record; not for filing |
 
 ## Neighbor email tool
 
