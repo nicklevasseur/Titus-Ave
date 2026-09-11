@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Builds the hearing-comparison chart page (HTML -> PDF via Chromium)."""
 import math, os, json
+from collections import Counter
+from items import TITUS_ITEMS, LINCOLN_ITEMS
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hearing_charts.html")
 SURF = "#fcfcfb"
@@ -14,9 +16,24 @@ CATS = [
     ("Contradicted by the testimony given",                "#4a3aa7"),
     ("Weighed on a test the statute does not contain",     "#e87ba4"),
 ]
-# slice order chosen so adjacent hues clear the CVD and normal-vision gates
-TITUS   = [(0, 4), (3, 2), (4, 6), (5, 4), (6, 6)]
-LINCOLN = [(0, 13), (1, 7), (2, 2)]
+# Counts are computed from the itemized lists in items.py -- never typed in
+# here -- so the pies, the table and the appendix cannot drift apart.
+# Slice order within each pie is chosen so adjacent hues clear the CVD and
+# normal-vision gates (validated with the dataviz palette checker).
+TITUS_ORDER   = [0, 1, 4, 3, 5, 6]
+LINCOLN_ORDER = [0, 1, 2]
+
+def tally(items, order):
+    c = Counter(i[2] for i in items)
+    assert set(c) <= set(order), "an item carries a category not in the slice order"
+    return [(k, c[k]) for k in order if c[k]]
+
+TITUS   = tally(TITUS_ITEMS, TITUS_ORDER)
+LINCOLN = tally(LINCOLN_ITEMS, LINCOLN_ORDER)
+N_TITUS, N_LINCOLN = len(TITUS_ITEMS), len(LINCOLN_ITEMS)
+
+SHORT = ["In the record", "Question", "Expertise \u2014 against",
+         "Expertise \u2014 as proof", "No source", "Contradicted", "Wrong test"]
 
 def polar(cx, cy, r, deg):
     a = math.radians(deg - 90)
@@ -92,7 +109,17 @@ for i, (label, col) in enumerate(CATS):
     l = dict(LINCOLN).get(i, 0)
     tbl_rows.append(f'<tr><th><span class="sw" style="background:{col}"></span>{label}</th>'
                     f'<td>{l}</td><td class="t">{t}</td></tr>')
-tbl_rows.append('<tr class="tot"><th>Statements classified</th><td>22</td><td class="t">22</td></tr>')
+tbl_rows.append(f'<tr class="tot"><th>Statements classified</th><td>{N_LINCOLN}</td>'
+                f'<td class="t">{N_TITUS}</td></tr>')
+
+
+def appendix(items):
+    out = []
+    for ts, quote, cat in items:
+        label, col = SHORT[cat], CATS[cat][1]
+        out.append(f'<tr><td class="ts">{ts}</td><td class="q">{quote}</td>'
+                   f'<td class="cat"><span class="sw" style="background:{col}"></span>{label}</td></tr>')
+    return ''.join(out)
 
 HTML = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Hearing charts</title>
 <style>
@@ -135,6 +162,13 @@ table.qual td.t {{ background:#fdf4f0; }}
 table td.t {{ background:#fdf4f0; }}
 .key {{ display:flex; gap:16px; font-size:10.5px; margin:0 0 9px; }}
 .key span {{ display:flex; align-items:center; gap:5px; }}
+table.app {{ font-size:9.5px; }}
+table.app th, table.app td {{ padding:3px 6px; vertical-align:top; }}
+table.app td {{ text-align:left; width:auto; }}
+table.app td.ts, table.app th.ts {{ width:46px; white-space:nowrap; font-variant-numeric:tabular-nums; color:#52514e; }}
+table.app td.cat .sw {{ margin-right:4px; }}
+table.app td.cat, table.app th.cat {{ width:106px; white-space:nowrap; color:#52514e; }}
+table.app td.q {{ line-height:1.35; }}
 .foot {{ margin-top:11px; padding-top:6px; border-top:1px solid #c9c1b5; font-size:9.5px; color:#52514e; }}
 </style></head><body>
 
@@ -148,7 +182,7 @@ table td.t {{ background:#fdf4f0; }}
       <h3>218 South Lincoln Street</h3>
       <p class="who">Case ZBA2026-055 &middot; denied, unanimously</p>
       <svg viewBox="-74 -8 448 316" width="300" height="212" role="img" aria-label="Share of statements by category, South Lincoln Street">
-        {pie(LINCOLN, 150, 150, 105, 22)}
+        {pie(LINCOLN, 150, 150, 105, N_LINCOLN)}
       </svg>
       <ul class="legend">{legend([i for i,_ in LINCOLN])}</ul>
     </div>
@@ -156,7 +190,7 @@ table td.t {{ background:#fdf4f0; }}
       <h3>26 Titus Avenue</h3>
       <p class="who">Case ZBA2026-063 &middot; approved, 4 to 1</p>
       <svg viewBox="-74 -8 448 316" width="300" height="212" role="img" aria-label="Share of statements by category, Titus Avenue">
-        {pie(TITUS, 150, 150, 105, 22)}
+        {pie(TITUS, 150, 150, 105, N_TITUS)}
       </svg>
       <ul class="legend">{legend([i for i,_ in TITUS])}</ul>
     </div>
@@ -167,7 +201,7 @@ table td.t {{ background:#fdf4f0; }}
     <tbody>{''.join(tbl_rows)}</tbody>
   </table>
 
-  <p class="foot">Each substantive statement by the Vice Chair in each case was classified once, by hand, against the application file, the testimony given, and the Land Use Code. Purely procedural remarks are excluded. Twenty-two statements were classified in each case; the equal totals are coincidence. The underlying statement-by-statement list is in the accompanying working paper. Source: the City's recording of the September 10, 2026 meeting, machine-transcribed, deliberations transcribed twice. Attributions rest on first names used on the recording and should be confirmed against the video.</p>
+  <p class="foot">Each substantive statement by the Vice Chair in each case is classified once, by hand, against the application file, the testimony given, and the Land Use Code. One entry per distinct assertion, question, or finding. Purely procedural remarks are excluded, as is the bare yes-or-no recitation of a statutory finding that adds no reasoning already counted &mdash; except where the recitation itself misstates the test, which is counted. Every classified statement is listed with its timestamp on the pages that follow, so the counts can be audited line by line and re-argued where a reader disagrees. The two totals differ because he spoke more at Titus Avenue. Source: the City’s recording of the September 10, 2026 meeting, machine-transcribed, deliberations transcribed twice. Attributions rest on first names used on the recording and should be confirmed against the video.</p>
 </div>
 
 <div class="page">
@@ -190,6 +224,30 @@ table td.t {{ background:#fdf4f0; }}
   </table>
 
   <p class="foot">Figures from the City's Zoning Review sheets for each case and from the applications as submitted. South Lincoln: existing floor area 2,963 sq ft and footprint 1,823 sq ft, unchanged by the proposal, which adds one exterior door. Titus Avenue: footprint 5,760 plus 3,600 sq ft, total floor area 19,500 sq ft. Lot area percentages compare buildable lot area to the area the ordinance requires for the use proposed.</p>
+</div>
+
+<div class="page">
+  <h1>Appendix &mdash; every statement counted, 26 Titus Avenue</h1>
+  <p class="sub">Case ZBA2026-063. {N_TITUS} statements. Timestamps are from the City&rsquo;s recording of September 10, 2026.</p>
+  <div class="rule"></div>
+  <table class="app">
+    <thead><tr><th class="ts">Time</th><th>Statement</th><th class="cat">Classified as</th></tr></thead>
+    <tbody>{appendix(TITUS_ITEMS)}</tbody>
+  </table>
+</div>
+
+<div class="page">
+  <h1>Appendix &mdash; every statement counted, 218 South Lincoln Street</h1>
+  <p class="sub">Case ZBA2026-055, heard immediately before Titus Avenue the same evening. {N_LINCOLN} statements.</p>
+  <div class="rule"></div>
+  <table class="app">
+    <thead><tr><th class="ts">Time</th><th>Statement</th><th class="cat">Classified as</th></tr></thead>
+    <tbody>{appendix(LINCOLN_ITEMS)}</tbody>
+  </table>
+  <p class="foot">The contrast is the point of the first page. At South Lincoln Street the Vice Chair worked from
+  the applicant&rsquo;s own exhibit, the district&rsquo;s stated intent, and the evidence in the file, and used his outside
+  knowledge once &mdash; to reject a claim the applicant had made. An hour later, at Titus Avenue, he supplied the
+  applicant the property-value opinion its engineer had told the Board it did not obtain.</p>
 </div>
 
 </body></html>"""

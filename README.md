@@ -34,7 +34,7 @@ All final documents are in `documents/`, each as both `.docx` (editable) and
 | `Titus_Ave_Motion_for_Rehearing.docx/pdf` | Draft RSA 677:2 motion for rehearing of the Sept. 10, 2026 approval; yellow brackets mark blanks to fill |
 | `Titus_Ave_Records_Request.docx/pdf` | Draft RSA 91-A request for the recording, file, communications, and 2024 sale records |
 | `Titus_Ave_Hearing_Analysis.docx/pdf` | Working paper comparing what was said at both Sept. 10 hearings against the record; not for filing |
-| `Titus_Ave_Hearing_Charts.pdf` | Two-page visual companion to the working paper: how the Vice Chair's statements in each case break down, and the scale of relief each applicant sought |
+| `Titus_Ave_Hearing_Charts.pdf` | Four-page visual companion to the working paper: how the Vice Chair's statements in each case break down, the scale of relief each applicant sought, and an appendix listing every statement counted with its timestamp |
 
 ## Neighbor email tool
 
@@ -101,9 +101,12 @@ chromium --headless --disable-gpu --no-pdf-header-footer \
   file://$PWD/charts/hearing_charts.html
 ```
 
-The category counts for the two pie charts and every figure on the second
-page are literal data structures at the top of `make_charts.py` (`CATS`,
-`TITUS`, `LINCOLN`, `MEASURES`, `QUAL`); edit them there, never in the HTML.
+`charts/items.py` holds every classified statement — timestamp, quotation,
+category — and the pie counts, the summary table, and the two appendix pages
+are all computed from it, so they cannot drift apart. To change a
+classification, edit the item; never type a count. The counting rule and its
+exclusions are documented at the top of that file and restated on page 1.
+Everything on page 2 comes from `MEASURES` and `QUAL` in `make_charts.py`.
 The categorical palette was checked for colorblind separation before use.
 
 `assets/` holds the two images used in the handout (the developer's own
