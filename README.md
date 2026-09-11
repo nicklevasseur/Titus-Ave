@@ -34,6 +34,7 @@ All final documents are in `documents/`, each as both `.docx` (editable) and
 | `Titus_Ave_Motion_for_Rehearing.docx/pdf` | Draft RSA 677:2 motion for rehearing of the Sept. 10, 2026 approval; yellow brackets mark blanks to fill |
 | `Titus_Ave_Records_Request.docx/pdf` | Draft RSA 91-A request for the recording, file, communications, and 2024 sale records |
 | `Titus_Ave_Hearing_Analysis.docx/pdf` | Working paper comparing what was said at both Sept. 10 hearings against the record; not for filing |
+| `Titus_Ave_Applicant_Record.pdf` | Research memorandum on the applicant's public record: the 2024 City auction purchase, what the buyer said at the time, and the prior variance on land from the same auction |
 | `Titus_Ave_Hearing_Charts.pdf` | Four-page visual companion to the working paper: how the Vice Chair's statements in each case break down, the scale of relief each applicant sought, and an appendix listing every statement counted with its timestamp |
 
 ## Neighbor email tool
@@ -108,6 +109,21 @@ classification, edit the item; never type a count. The counting rule and its
 exclusions are documented at the top of that file and restated on page 1.
 Everything on page 2 comes from `MEASURES` and `QUAL` in `make_charts.py`.
 The categorical palette was checked for colorblind separation before use.
+
+## Regenerating the research memorandum
+
+`Titus_Ave_Applicant_Record.pdf` is built the same way as the charts:
+
+```bash
+python3 research/make_applicant_memo.py
+chromium --headless --disable-gpu --no-pdf-header-footer \
+  --print-to-pdf=documents/Titus_Ave_Applicant_Record.pdf \
+  file://$PWD/research/applicant_record.html
+```
+
+Source URLs live in the `SOURCES` list at the top of the generator. They are
+rendered both as links and as visible addresses so the memorandum can be
+checked from a printed copy.
 
 `assets/` holds the two images used in the handout (the developer's own
 building elevation rendering and the site plan aerial, both cropped from the
