@@ -169,8 +169,7 @@ def small_pie(case, addr, items):
             f'<p class="sp-name">{addr}</p>'
             f'<p class="sp-n">{n} statements &middot; <b>{g}%</b> in record</p></div>')
 
-sp_all = "".join(small_pie(c, a, L) for c, a, _, L in
-                 sorted(ALL_CASES, key=lambda c: -sum(1 for i in c[3] if i[2] == 0) / len(c[3])))
+sp_all = "".join(small_pie(c, a, L) for c, a, _, L in ALL_CASES)
 
 conc = []
 for cat, label in ((3, "own expertise supplied as the applicant&rsquo;s proof"),
@@ -270,7 +269,7 @@ ul.conc {{ margin:0 0 7px; padding-left:15px; font-size:10.4px; }}
 ul.conc li {{ margin:0 0 2px; }}
 .sps {{ display:flex; gap:7px; justify-content:space-between; }}
 .sp {{ flex:1; text-align:center; padding:4px 2px; border-radius:4px; }}
-.sp-hi {{ background:#fdf4f0; }}
+.sp-hi {{ background:#f6e2d9; box-shadow:inset 0 0 0 1px #e4c3b6; }}
 .sp-name {{ font-size:9.4px; font-weight:700; margin:1px 0 0; line-height:1.25; }}
 .sp-n {{ font-size:8.8px; color:#52514e; margin:0; }}
 table.pool-tbl {{ font-size:10px; margin-top:10px; }}
@@ -293,7 +292,7 @@ td.cc-bar .bar i {{ display:flex; align-items:center; justify-content:center; he
   overflow:hidden; }}
 td.cc-n, th.cc-n {{ width:26px; text-align:right; }}
 td.cc-g, th.cc-g {{ width:52px; text-align:right; font-weight:700; }}
-tr.hi th, tr.hi td {{ background:#fdf4f0; }}
+tr.hi th, tr.hi td {{ background:#f6e2d9; }}
 ul.cc-legend {{ columns:2; margin:8px 0 0; font-size:10px; }}
 ul.cc-legend li {{ break-inside:avoid; }}
 table.app {{ font-size:9.5px; }}
@@ -305,53 +304,6 @@ table.app td.cat, table.app th.cat {{ width:106px; white-space:nowrap; color:#52
 table.app td.q {{ line-height:1.35; }}
 .foot {{ margin-top:11px; padding-top:6px; border-top:1px solid #c9c1b5; font-size:9.5px; color:#52514e; }}
 </style></head><body>
-
-<div class="page">
-  <h1>Vice Chair St. Pierre's statements, measured against the record</h1>
-  <p class="sub">Manchester Zoning Board of Adjustment, public hearing of September 10, 2026. Both cases heard the same evening, South Lincoln Street first.</p>
-  <div class="rule"></div>
-
-  <div class="pies">
-    <div class="pie-card">
-      <h3>218 South Lincoln Street</h3>
-      <p class="who">Case ZBA2026-055 &middot; denied, unanimously</p>
-      <svg viewBox="-74 -8 448 316" width="300" height="212" role="img" aria-label="Share of statements by category, South Lincoln Street">
-        {pie(LINCOLN, 150, 150, 105, N_LINCOLN)}
-      </svg>
-      <ul class="legend">{legend([i for i,_ in LINCOLN])}</ul>
-      {relief_block("lincoln")}
-    </div>
-    <div class="pie-card">
-      <h3>26 Titus Avenue</h3>
-      <p class="who">Case ZBA2026-063 &middot; approved, 4 to 1</p>
-      <svg viewBox="-74 -8 448 316" width="300" height="212" role="img" aria-label="Share of statements by category, Titus Avenue">
-        {pie(TITUS, 150, 150, 105, N_TITUS)}
-      </svg>
-      <ul class="legend">{legend([i for i,_ in TITUS])}</ul>
-      {relief_block("titus")}
-    </div>
-  </div>
-
-  <table>
-    <thead><tr><th>Category</th><th>S. Lincoln</th><th class="t">Titus Ave</th></tr></thead>
-    <tbody>{''.join(tbl_rows)}</tbody>
-  </table>
-
-  <p class="foot">Each substantive statement is classified once, by hand, against the application file, the testimony given, and the Land Use Code &mdash; one entry per distinct assertion, question, or finding. Excluded are procedural remarks and the closing recitation he uses in nearly every case (public interest, spirit, no one benefits more from a denial, values not diminished, hardship &ldquo;for the applicant&rdquo;), which he gave that same evening at Delia Drive, Hanover Street, Thornton Street, Gold Street and Vinton Street: it is a habit of the Board&rsquo;s practice, not something done to this applicant. A figure derivable from the City&rsquo;s own review sheet counts as grounded even where no witness spoke it aloud. Every statement counted is listed with its timestamp in the appendices, so the totals can be audited line by line. Source: the City&rsquo;s recording of September 10, 2026, machine-transcribed, deliberations transcribed twice; attributions rest on first names used on the recording and should be confirmed against the video.</p>
-</div>
-
-<div class="page">
-  <h1>The two cases side by side</h1>
-  <p class="sub">Both heard the evening of September 10, 2026, both seeking relief from the same ordinance section &sect;4.3-A.1.C. South Lincoln Street was heard first.</p>
-  <div class="rule"></div>
-
-  <table class="qual">
-    <thead><tr><th></th><th>218 South Lincoln Street</th><th class="t">26 Titus Avenue</th></tr></thead>
-    <tbody>{qual_rows}</tbody>
-  </table>
-
-  <p class="foot">Figures from the City's Zoning Review sheets for each case and from the applications as submitted. South Lincoln: existing floor area 2,963 sq ft and footprint 1,823 sq ft, unchanged by the proposal, which adds one exterior door. Titus Avenue: footprint 5,760 plus 3,600 sq ft, total floor area 19,500 sq ft. Lot area percentages compare buildable lot area to the area the ordinance requires for the use proposed.</p>
-</div>
 
 <div class="page">
   <h1>His comments across the evening, with the outcomes set aside</h1>
@@ -377,7 +329,7 @@ table.app td.q {{ line-height:1.35; }}
   <ul class="legend cc-legend">{legend(range(len(CATS)))}</ul>
 
   <h2 style="margin-top:12px">Case by case</h2>
-  <p class="cap">Each pie is one case, scaled to its own total. Ordered by the share grounded in the record.</p>
+  <p class="cap">Each pie is one case, scaled to its own total, in the same order as the table below.</p>
   <div class="sps">{sp_all}</div>
 
   <table class="pool-tbl">

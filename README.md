@@ -35,7 +35,7 @@ All final documents are in `documents/`, each as both `.docx` (editable) and
 | `Titus_Ave_Records_Request.docx/pdf` | Draft RSA 91-A request for the recording, file, communications, and 2024 sale records |
 | `Titus_Ave_Hearing_Analysis.docx/pdf` | Working paper comparing what was said at both Sept. 10 hearings against the record; not for filing |
 | `Titus_Ave_Applicant_Record.pdf` | Research memorandum on the applicant's public record: the 2024 City auction purchase, what the buyer said at the time, and the prior variance on land from the same auction |
-| `Titus_Ave_Hearing_Charts.pdf` | Five-page visual companion to the working paper: how the Vice Chair's statements in each case break down, a side-by-side comparison of the two cases, the same measure applied to all six cases where the Vice Chair can be shown to have spoken, and an appendix listing every statement counted with its timestamp |
+| `Titus_Ave_Hearing_Charts.pdf` | Three-page visual companion to the working paper: every statement by the Vice Chair in the six cases where the transcript anchors him as the speaker, classified against the record and charted with the outcomes set aside, plus appendices listing each statement with its timestamp |
 
 ## Neighbor email tool
 
@@ -107,8 +107,9 @@ category — and the pie counts, the summary table, and the two appendix pages
 are all computed from it, so they cannot drift apart. To change a
 classification, edit the item; never type a count. The counting rule and its
 exclusions are documented at the top of that file and restated on page 1.
-The relief sought under each pie comes from `RELIEF`, and the side-by-side
-table from `QUAL`, both in `make_charts.py`.
+`make_charts.py` still defines `RELIEF`, `QUAL` and `MEASURES` from the
+earlier two-case pages, which are no longer rendered; they are kept because
+those comparisons may be wanted again for the motion.
 The categorical palette was checked for colorblind separation before use.
 
 ## Regenerating the research memorandum
