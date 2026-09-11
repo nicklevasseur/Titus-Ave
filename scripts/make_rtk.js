@@ -5,6 +5,14 @@ const N = (runs) => new Paragraph({ numbering: { reference: "nums", level: 0 }, 
 const r = (t) => new TextRun({ text: t, size: FS });
 const b = (t) => new TextRun({ text: t, bold: true, size: FS });
 const blank = (t) => new TextRun({ text: "[" + t + "]", bold: true, size: FS, highlight: "yellow" });
+// Multi-line block: real line breaks inside one paragraph
+const Block = (lines, opts={}) => new Paragraph({
+  spacing: { after: opts.after === undefined ? 130 : opts.after, line: 280 },
+  children: lines.flatMap((ln, i) => {
+    const run = { text: ln, size: FS, bold: !!opts.bold };
+    return i === 0 ? [ new TextRun(run) ] : [ new TextRun({ ...run, break: 1 }) ];
+  })
+});
 
 const doc = new Document({
   numbering: { config: [{ reference: "nums", levels: [{ level: 0, format: LevelFormat.DECIMAL, text: "%1.", alignment: AlignmentType.LEFT,
@@ -12,10 +20,10 @@ const doc = new Document({
   sections: [{
     properties: { page: { size: { width: 12240, height: 15840 }, margin: { top: 1200, bottom: 1100, left: 1300, right: 1300 } } },
     children: [
-      P("Nickolas J. Levasseur\n30 Mystic Street\nManchester, NH 03103\n(603) 361-3828"),
+      Block(["Nickolas J. Levasseur", "30 Mystic Street", "Manchester, NH 03103", "(603) 361-3828"]),
       P([ r("Date: "), blank("date") ]),
-      P("City Clerk, City of Manchester\nOne City Hall Plaza\nManchester, NH 03101"),
-      P("Planning and Community Development Department\nOne City Hall Plaza, West Wing\nManchester, NH 03101\npcd@manchesternh.gov"),
+      Block(["City Clerk, City of Manchester", "One City Hall Plaza", "Manchester, NH 03101"]),
+      Block(["Jeffrey D. Belanger, AICP, Director", "Planning and Community Development Department", "One City Hall Plaza, West Wing", "Manchester, NH 03101", "pcd@manchesternh.gov"]),
       P([ b("Re: Request for Governmental Records under RSA 91-A — Zoning Board of Adjustment Case No. ZBA2026-063, 26 Titus Avenue (Map 554, Lot 17C)") ]),
       P("Dear City Clerk and Director Belanger:"),
       P("Under RSA 91-A:4, I request to inspect and obtain copies of the following governmental records. Electronic copies by email are preferred where the records exist in electronic form."),
@@ -31,8 +39,9 @@ const doc = new Document({
       P("A motion for rehearing in this matter is due within 30 days of the Board's September 10 vote. I would be grateful for the recording and the written decision as early as possible for that reason."),
       P("Thank you for your assistance."),
       P("Sincerely,"),
-      new Paragraph({ text: "", spacing: { after: 300 } }),
-      P("______________________________\nNickolas J. Levasseur"),
+      new Paragraph({ text: "", spacing: { after: 420 } }),
+      new Paragraph({ spacing: { after: 40 }, children: [ new TextRun({ text: "______________________________", size: FS }) ] }),
+      Block(["Nickolas J. Levasseur", "30 Mystic Street, Manchester, NH 03103", "(603) 361-3828", "agoodhighdea@gmail.com"], { after: 0 }),
     ]
   }]
 });
