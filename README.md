@@ -30,6 +30,7 @@ All final documents are in `documents/`, each as both `.docx` (editable) and
 | `Titus_Ave_Field_Reference.docx/pdf` | Expanded personal-use reference (facts + citations by criterion) for canvassing conversations |
 | `Titus_Ave_Version_Comparison.docx/pdf` | Internal summary comparing the original (June 22, 2026) and current (Sept. 10, 2026) application packets |
 | `Titus_Ave_Executive_Summary.docx/pdf` | One-page overview of the proposal, timeline, argument, materials, and what neighbors can do |
+| `Titus_Ave_Appeal_Options.docx/pdf` | One-page guide to the rehearing and appeal path after a ZBA vote (RSA 677 / RSA 679) |
 
 ## Neighbor email tool
 
@@ -64,7 +65,7 @@ package. To regenerate any or all of them:
 ```bash
 cd scripts
 npm install
-npm run build        # regenerates all seven .docx files into ../documents
+npm run build        # regenerates all eight .docx files into ../documents
 # or individually:
 npm run handout
 npm run criteria
@@ -73,6 +74,7 @@ npm run memo
 npm run fieldref
 npm run comparison
 npm run summary
+npm run appeal
 ```
 
 Each script writes a `.docx` file directly into `documents/`. To get a PDF,
