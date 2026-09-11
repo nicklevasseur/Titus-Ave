@@ -2,7 +2,7 @@
 """Builds the hearing-comparison chart page (HTML -> PDF via Chromium)."""
 import math, os, json
 from collections import Counter
-from items import TITUS_ITEMS, LINCOLN_ITEMS
+from items import TITUS_ITEMS, LINCOLN_ITEMS, ALL_CASES
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hearing_charts.html")
 SURF = "#fcfcfb"
@@ -121,6 +121,32 @@ def appendix(items):
                    f'<td class="cat"><span class="sw" style="background:{col}"></span>{label}</td></tr>')
     return ''.join(out)
 
+BAR_PX = 300
+
+def stacked(items):
+    """One composition bar: a segment per category, 2px of surface between."""
+    n = len(items)
+    counts = Counter(i[2] for i in items)
+    segs = []
+    for cat in range(len(CATS)):
+        v = counts.get(cat, 0)
+        if not v: continue
+        w = BAR_PX * v / n
+        txt = str(v) if w >= 17 else ""
+        segs.append(f'<i style="width:{w:.2f}px;background:{CATS[cat][1]}">{txt}</i>')
+    return "".join(segs)
+
+rows_cc = []
+for case, addr, outcome, items in sorted(ALL_CASES, key=lambda c: -sum(1 for i in c[3] if i[2] == 0) / len(c[3])):
+    segs = stacked(items)
+    g = round(100 * sum(1 for i in items if i[2] == 0) / len(items))
+    hi = ' class="hi"' if case == "2026-063" else ""
+    rows_cc.append(
+        f'<tr{hi}><th>{addr}<br><span class="cc-sub">{case} &middot; {outcome}</span></th>'
+        f'<td class="cc-bar"><span class="bar">{segs}</span></td>'
+        f'<td class="cc-n">{len(items)}</td><td class="cc-g">{g}%</td></tr>')
+rows_cc = "".join(rows_cc)
+
 HTML = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Hearing charts</title>
 <style>
 @page {{ size: letter portrait; margin: 0.5in; }}
@@ -162,6 +188,20 @@ table.qual td.t {{ background:#fdf4f0; }}
 table td.t {{ background:#fdf4f0; }}
 .key {{ display:flex; gap:16px; font-size:10.5px; margin:0 0 9px; }}
 .key span {{ display:flex; align-items:center; gap:5px; }}
+table.cc {{ font-size:10px; margin-top:6px; }}
+table.cc th {{ width:150px; font-weight:600; vertical-align:middle; }}
+table.cc td {{ vertical-align:middle; }}
+.cc-sub {{ font-weight:400; color:#52514e; font-size:9px; }}
+td.cc-bar {{ width:{BAR_PX + 16}px; padding-top:9px; padding-bottom:9px; }}
+td.cc-bar .bar {{ display:flex; gap:2px; width:{BAR_PX}px; }}
+td.cc-bar .bar i {{ display:flex; align-items:center; justify-content:center; height:16px;
+  border-radius:2px; font-size:9px; font-weight:700; color:#fff; font-style:normal;
+  overflow:hidden; }}
+td.cc-n, th.cc-n {{ width:26px; text-align:right; }}
+td.cc-g, th.cc-g {{ width:52px; text-align:right; font-weight:700; }}
+tr.hi th, tr.hi td {{ background:#fdf4f0; }}
+ul.cc-legend {{ columns:2; margin:8px 0 0; font-size:10px; }}
+ul.cc-legend li {{ break-inside:avoid; }}
 table.app {{ font-size:9.5px; }}
 table.app th, table.app td {{ padding:3px 6px; vertical-align:top; }}
 table.app td {{ text-align:left; width:auto; }}
@@ -224,6 +264,22 @@ table.app td.q {{ line-height:1.35; }}
   </table>
 
   <p class="foot">Figures from the City's Zoning Review sheets for each case and from the applications as submitted. South Lincoln: existing floor area 2,963 sq ft and footprint 1,823 sq ft, unchanged by the proposal, which adds one exterior door. Titus Avenue: footprint 5,760 plus 3,600 sq ft, total floor area 19,500 sq ft. Lot area percentages compare buildable lot area to the area the ordinance requires for the use proposed.</p>
+</div>
+
+<div class="page">
+  <h1>The same measure, applied to every case he can be shown to have spoken in</h1>
+  <p class="sub">Six of the thirteen cases heard September 10, 2026. In the other seven the transcript gives no anchor for who stated the findings, so nothing in them is counted.</p>
+  <div class="rule"></div>
+
+  <h2>What share of his statements is grounded in the record</h2>
+  <p class="cap">Ordered by that share. Each bar is one case, scaled to its own total, so the comparison is of composition and not of how much he talked.</p>
+  <ul class="legend cc-legend">{legend(range(len(CATS)))}</ul>
+  <table class="cc">
+    <thead><tr><th>Case</th><th>Composition of his statements</th><th class="cc-n">N</th><th class="cc-g">In record</th></tr></thead>
+    <tbody>{rows_cc}</tbody>
+  </table>
+
+  <p class="foot">Titus Avenue is the outlier on every measure the chart carries. It has the lowest share grounded in the record, by a margin of seventeen points over the next lowest. It is the only case in which he offered his own expertise as the applicant&rsquo;s proof, and the only one in which any finding is contradicted by testimony given in that same hearing. He denied at Myrtle Street and at South Lincoln Street and granted at Hanover, Thornton and Vinton, so the pattern does not track the outcome he favoured. Attribution and method are set out in analysis/attribution.py and in the appendix that follows; the categories, the counting rule and the exclusions are identical in all six cases.</p>
 </div>
 
 <div class="page">

@@ -86,3 +86,66 @@ LINCOLN_ITEMS = [
  ("1:03:48", "Findings: “this is not in the spirit of the ordinance and substantial justice is not done by creating the density of a three family in this district”", 0),
  ("1:04:18", "Findings: “I tend to agree that a three family may not diminish the values of the property around it. So … I don’t believe that the property values will be diminished”", 0),
 ]
+
+
+# ---------------------------------------------------------------------------
+# The other four cases where the Vice Chair is anchored as the speaker
+# (see analysis/attribution.py). Same seven categories, same counting rule,
+# same exclusions -- the instrument does not change between cases or the
+# comparison measures the instrument instead of the conduct.
+# ---------------------------------------------------------------------------
+
+HANOVER_ITEMS = [  # ZBA2026-076, 801 Hanover Street -- granted, unanimously
+ ("2:45:20", "“it’s been a gas station for a long time” — the assessor card in the packet reads FORMER GAS STATION", 0),
+ ("2:45:24", "“I believe the original gas station is now a residential garage that’s been moved off site to the side there” — not in the packet, and hedged", 4),
+ ("2:45:29", "“it’s been denied for variances from 94, 95. We were part of the 2024 one” — the packet’s Variance History lists 46-ZO-1994, 03-ZO-1995 and ZBA2024-032, all denied", 0),
+ ("2:45:36", "“I think it’s a great plan. I’m happy to also see redeveloped”", 6),
+ ("2:45:41", "“with the residential properties around it, can you let us know the hours that those would be lit?”", 1),
+ ("2:57:06", "“is like a 5 p.m. to 10 p.m. reasonable for that then and it gives you some leeway so you’re not over constrained?”", 1),
+ ("2:57:18", "Findings: “it’s been vacant for over 20 years with a number of attempts to revitalize it that have not met zoning criteria”", 0),
+ ("2:57:33", "Findings: “This area is the entrance to downtown both via Lake and Hanover from coming off the exit there”", 0),
+ ("2:57:44", "Findings: “It’s important that this is a business that is done well and in keeping with the spirit of the ordinance for the area”", 6),
+ ("2:57:52", "Findings: “The use as proposed is not intense and the parking as proposed removes a lot of the impermeable surface”", 0),
+ ("2:58:04", "Findings: “The design is attractive and again repairs a blighted area”", 6),
+]
+
+MYRTLE_ITEMS = [  # ZBA2026-077, 58 Myrtle Street -- denied
+ ("3:17:05", "“how does he have five if you look at the plan”", 0),
+ ("3:17:42", "“you could allow them to keep a three foot walkway of pavement but then the pavement for spaces one and two should be removed”", 0),
+ ("3:17:52", "“there’s not a piece of grass left on the lot at this point, is that fair?”", 1),
+ ("3:18:22", "“it’s a tremendous amount of pavement here”", 0),
+ ("3:23:46", "“I don’t want to over constrain it and make it that it’s unreasonable for him to do. But I do want to make it clear for enforcement.”", 0),
+ ("3:24:43", "Findings: “what’s been created here was done without benefit of permit and it was done in a way that creates a safety hazard with the sidewalks and the maneuvering”", 0),
+ ("3:25:02", "Findings: “It also creates an environmental issue by removing all of the impermeable area almost entirely on the lot to 99%”", 0),
+ ("3:25:12", "Findings: “We certainly can’t approve anything that’s unsafe and the spirit is not observed”", 0),
+ ("3:25:20", "Findings: “An entirely paved lot here is out of keeping with the neighborhood”", 0),
+ ("3:25:25", "Findings: “and I feel does diminish the value of this property and perhaps the ones around it” — no evidence, and no credential claimed", 4),
+ ("3:26:02", "Findings: “the parking needing to be accessed through driven over the sidewalk is unsafe and a material hazard to the public”", 0),
+]
+
+THORNTON_ITEMS = [  # ZBA2026-080, 374 Thornton Street -- granted
+ ("4:07:53", "Findings: “another very unique lot in its current state”", 4),
+ ("4:07:59", "Findings: “It’s large and it has tremendous grade change that goes through the majority of it” — the Zoning Review deducts 12,143 SF of slopes from 13,955 SF gross", 0),
+ ("4:08:06", "Findings: “As proposed, the only ask here is for minimum buildable lot area”", 0),
+ ("4:08:13", "Findings: “The property as presented is within setbacks and is conforming to what is allowed in the area”", 0),
+ ("4:08:29", "Findings: “I think the condition above, vegetation and screening” — crafting the condition attached to the grant", 0),
+ ("4:09:36", "“I’d like the entire terrace so that it doesn’t stand out from the hillside”", 6),
+]
+
+VINTON_ITEMS = [  # ZBA2026-083, 248 Vinton Street -- granted, unanimously
+ ("3:54:20", "Findings: “Certainly a unique lot. Yours and the one directly next to you. Both flag lots, sets you quite a bit away from the street.”", 0),
+ ("3:54:36", "Findings: “The structures that you have here are as our chair said mostly pre-existing or with minor modifications”", 0),
+ ("3:54:42", "Findings: “There’s no feedback from neighbours [that] is adverse” — staff had reported no correspondence", 0),
+ ("3:54:45", "Findings: “They don’t appear to impact any values” — no evidence, and no credential claimed", 4),
+ ("3:54:48", "Findings: “We appreciate you taking the time to clean this up and do it appropriately with the city”", 6),
+ ("3:55:08", "Findings: “The deck or any of the other pieces here are all ordinary components to a residential property”", 0),
+]
+
+ALL_CASES = [
+    ("2026-055", "218 South Lincoln St", "denied, unanimously", LINCOLN_ITEMS),
+    ("2026-063", "26 Titus Avenue",      "approved, 4 to 1",    TITUS_ITEMS),
+    ("2026-076", "801 Hanover Street",   "granted, unanimously", HANOVER_ITEMS),
+    ("2026-077", "58 Myrtle Street",     "denied",              MYRTLE_ITEMS),
+    ("2026-080", "374 Thornton Street",  "granted",             THORNTON_ITEMS),
+    ("2026-083", "248 Vinton Street",    "granted, unanimously", VINTON_ITEMS),
+]
