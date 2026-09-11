@@ -34,6 +34,7 @@ All final documents are in `documents/`, each as both `.docx` (editable) and
 | `Titus_Ave_Motion_for_Rehearing.docx/pdf` | Draft RSA 677:2 motion for rehearing of the Sept. 10, 2026 approval; yellow brackets mark blanks to fill |
 | `Titus_Ave_Records_Request.docx/pdf` | Draft RSA 91-A request for the recording, file, communications, and 2024 sale records |
 | `Titus_Ave_Hearing_Analysis.docx/pdf` | Working paper comparing what was said at both Sept. 10 hearings against the record; not for filing |
+| `Titus_Ave_Case_File.pdf` | The whole picture front to back: what was decided, the case against the variance on the applicant's own record, what the rest of the meeting shows, the developer's public record, what will not work and why, the available paths and the deadline |
 | `Titus_Ave_Applicant_Record.pdf` | Research memorandum on the applicant's public record: the 2024 City auction purchase, what the buyer said at the time, and the prior variance on land from the same auction |
 | `Titus_Ave_Hearing_Charts.pdf` | Three-page visual companion to the working paper: every statement by the Vice Chair in the six cases where the transcript anchors him as the speaker, classified against the record and charted with the outcomes set aside, plus appendices listing each statement with its timestamp |
 
@@ -112,9 +113,11 @@ earlier two-case pages, which are no longer rendered; they are kept because
 those comparisons may be wanted again for the motion.
 The categorical palette was checked for colorblind separation before use.
 
-## Regenerating the research memorandum
+## Regenerating the research documents
 
-`Titus_Ave_Applicant_Record.pdf` is built the same way as the charts:
+`Titus_Ave_Applicant_Record.pdf` and `Titus_Ave_Case_File.pdf` are built the
+same way as the charts, from `research/make_applicant_memo.py` and
+`research/make_case_file.py`:
 
 ```bash
 python3 research/make_applicant_memo.py
