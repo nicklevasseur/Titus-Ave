@@ -31,7 +31,7 @@ All final documents are in `documents/`, each as both `.docx` (editable) and
 | `Titus_Ave_Version_Comparison.docx/pdf` | Internal summary comparing the original (June 22, 2026) and current (Sept. 10, 2026) application packets |
 | `Titus_Ave_Executive_Summary.docx/pdf` | One-page overview of the proposal, timeline, argument, materials, and what neighbors can do |
 | `Titus_Ave_Appeal_Options.docx/pdf` | One-page guide to the rehearing and appeal path after a ZBA vote (RSA 677 / RSA 679) |
-| `Titus_Ave_Motion_for_Rehearing.docx/pdf` | Draft RSA 677:2 motion for rehearing of the Sept. 10, 2026 approval; yellow brackets mark blanks to fill |
+| `Titus_Ave_Motion_for_Rehearing.pdf` | Draft RSA 677:2 motion for rehearing; eight grounds, the in-case defects first and the cross-case comparison preserved at the back; yellow brackets mark blanks to fill |
 | `Titus_Ave_Records_Request.docx/pdf` | Draft RSA 91-A request for the recording, file, communications, and 2024 sale records |
 | `Titus_Ave_Hearing_Analysis.docx/pdf` | Working paper comparing what was said at both Sept. 10 hearings against the record; not for filing |
 | `Titus_Ave_Case_File.pdf` | The whole picture front to back: what was decided, the case against the variance on the applicant's own record, what the rest of the meeting shows, the developer's public record, what will not work and why, the available paths and the deadline |
@@ -81,7 +81,6 @@ npm run fieldref
 npm run comparison
 npm run summary
 npm run appeal
-npm run rehearing
 npm run rtk
 ```
 
@@ -116,8 +115,8 @@ The categorical palette was checked for colorblind separation before use.
 ## Regenerating the research documents
 
 `Titus_Ave_Applicant_Record.pdf` and `Titus_Ave_Case_File.pdf` are built the
-same way as the charts, from `research/make_applicant_memo.py` and
-`research/make_case_file.py`:
+same way as the charts, from `research/make_applicant_memo.py`,
+`research/make_case_file.py` and `research/make_motion.py`:
 
 ```bash
 python3 research/make_applicant_memo.py

@@ -4,7 +4,7 @@
   "description": "Generation scripts for ZBA2026-063 (26 Titus Avenue) opposition documents",
   "private": true,
   "scripts": {
-    "build": "node make_handout.js && node make_criteria_sheet.js && node make_testimony.js && node make_boardmemo.js && node make_fieldref.js && node make_comparison.js && node make_summary.js && node make_appeal.js && node make_rehearing.js && node make_rtk.js && node make_analysis.js",
+    "build": "node make_handout.js && node make_criteria_sheet.js && node make_testimony.js && node make_boardmemo.js && node make_fieldref.js && node make_comparison.js && node make_summary.js && node make_appeal.js && node make_rtk.js && node make_analysis.js",
     "handout": "node make_handout.js",
     "criteria": "node make_criteria_sheet.js",
     "testimony": "node make_testimony.js",
@@ -13,7 +13,6 @@
     "comparison": "node make_comparison.js",
     "summary": "node make_summary.js",
     "appeal": "node make_appeal.js",
-    "rehearing": "node make_rehearing.js",
     "rtk": "node make_rtk.js",
     "analysis": "node make_analysis.js"
   },
