@@ -176,9 +176,9 @@ for cat, label in ((3, "own expertise supplied as the applicant&rsquo;s proof"),
                    (5, "findings contradicted by the testimony given")):
     tot = sum(1 for i in POOLED if i[2] == cat)
     tit = sum(1 for i in TITUS_ITEMS if i[2] == cat)
-    conc.append(f"<li><b>{tit} of {tot}</b> &mdash; every one &mdash; {label}</li>")
+    conc.append(f"<li><b>{tit} of {tot} in Titus</b> &mdash; every one &mdash; {label}</li>")
 tot4 = sum(1 for i in POOLED if i[2] == 4); tit4 = sum(1 for i in TITUS_ITEMS if i[2] == 4)
-conc.append(f"<li><b>{tit4} of {tot4}</b> statements stated as fact with no source in the record</li>")
+conc.append(f"<li><b>{tit4} of {tot4} in Titus</b> &mdash; statements stated as fact with no source in the record</li>")
 conc = "".join(conc)
 
 pooled_rows = []
