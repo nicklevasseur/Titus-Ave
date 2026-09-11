@@ -5,8 +5,18 @@ these lists, so the counts and the appendix can never drift apart.
 Counting rule: one entry per distinct assertion, question, or finding. Excluded
 are purely procedural remarks (recognizing a speaker, stating the motion, "I got
 you later") and the bare yes/no recitation of a statutory finding that adds no
-reasoning beyond what is already counted -- except where the recitation itself
-misstates the test, which is substantive and is counted.
+reasoning beyond what is already counted.
+
+The Vice Chair states the findings of fact in nearly every case, and he does it
+from a fixed script: the variance is not contrary to the public interest, the
+spirit is observed, no one benefits more from a denial than the applicant will
+from the approval, property values will not be diminished, and literal
+enforcement creates an unnecessary hardship "for the applicant." He recited that
+same formula at 50 Delia Drive, 801 Hanover Street, 374 Thornton Street, 800
+Gold Street and 248 Vinton Street on the same evening. It is therefore excluded
+in BOTH cases -- it shows a habit of the Board's practice, not anything done to
+this applicant. Excluding it at South Lincoln but counting it at Titus Avenue
+would have measured the instrument instead of the conduct.
 
 Category indexes match CATS in make_charts.py.
 Timestamps are hours:minutes:seconds from the start of the City's recording.
@@ -45,7 +55,6 @@ TITUS_ITEMS = [
  ("1:59:07", "Findings: “I’m not aware of any circumstance where a development of this nature in Manchester has diminished a property around it. I’ve never seen a report or evidence of that”", 3),
  ("1:59:16", "Findings: “In general, reasonably well thought out development increases values”", 3),
  ("1:59:18", "Findings: “a tremendous amount of thought has been put into this, further evidenced by the applicant taking an additional month to rework and reduce counts”", 6),
- ("1:59:41", "Findings: “I do believe literal enforcement creates an unnecessary hardship for the applicant”", 6),
 ]
 
 LINCOLN_ITEMS = [
