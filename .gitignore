@@ -3,3 +3,5 @@ node_modules/
 .DS_Store
 __pycache__/
 *.pyc
+analysis/transcript_full.txt
+analysis/by_case/
