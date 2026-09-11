@@ -121,6 +121,31 @@ def appendix(items):
                    f'<td class="cat"><span class="sw" style="background:{col}"></span>{label}</td></tr>')
     return ''.join(out)
 
+
+RELIEF = {
+ "lincoln": ("One section of the Land Use Code", [
+   "<b>4.3-A.1.C</b> Multifamily Dwelling &mdash; convert an existing two-family to a three-family",
+   "<b>One</b> dwelling unit added, inside an existing compliant building",
+   "<b>No</b> new building, no new footprint, no new floor area",
+   "Lot area <b>15,366 sq ft where 10,000 is required</b> &mdash; 154% of the requirement",
+ ]),
+ "titus": ("Six sections of the Land Use Code", [
+   "<b>4.3-A.1.C</b> Multifamily Dwellings &mdash; a use the R-1B district does not permit",
+   "<b>8.1.2</b> Planned Development Lot Area",
+   "<b>5.3.1.E</b> Townhouse Building Type &mdash; districts permitted",
+   "<b>5.3.1.E.5.B</b> Maximum height in stories &mdash; 3 where 2.5 is allowed",
+   "<b>5.3.1.E.5.C</b> Maximum height in feet &mdash; 38 ft where 35 ft is allowed",
+   "<b>8.7.2.F.2</b> Parking location for planned developments",
+   "<b>Thirteen</b> dwelling units in <b>two</b> new buildings, 19,500 sq ft of new floor area",
+   "Lot area <b>49,484 sq ft where 78,000 is required</b> &mdash; 63% of the requirement",
+ ]),
+}
+
+def relief_block(key):
+    head, bullets = RELIEF[key]
+    lis = "".join(f"<li>{b}</li>" for b in bullets)
+    return f'<p class="rhead">{head}</p><ul class="relief">{lis}</ul>'
+
 BAR_PX = 300
 
 def stacked(items):
@@ -188,6 +213,11 @@ table.qual td.t {{ background:#fdf4f0; }}
 table td.t {{ background:#fdf4f0; }}
 .key {{ display:flex; gap:16px; font-size:10.5px; margin:0 0 9px; }}
 .key span {{ display:flex; align-items:center; gap:5px; }}
+.rhead {{ font-size:10px; font-weight:700; margin:11px 0 3px; text-align:left;
+  padding-top:7px; border-top:1px solid #c9c1b5; }}
+ul.relief {{ list-style:none; margin:0; padding:0; text-align:left; font-size:9.6px; }}
+ul.relief li {{ margin:0 0 2.5px; padding-left:9px; position:relative; line-height:1.35; }}
+ul.relief li:before {{ content:"\\2013"; position:absolute; left:0; color:#8a8681; }}
 table.cc {{ font-size:10px; margin-top:6px; }}
 table.cc th {{ width:150px; font-weight:600; vertical-align:middle; }}
 table.cc td {{ vertical-align:middle; }}
@@ -225,6 +255,7 @@ table.app td.q {{ line-height:1.35; }}
         {pie(LINCOLN, 150, 150, 105, N_LINCOLN)}
       </svg>
       <ul class="legend">{legend([i for i,_ in LINCOLN])}</ul>
+      {relief_block("lincoln")}
     </div>
     <div class="pie-card">
       <h3>26 Titus Avenue</h3>
@@ -233,6 +264,7 @@ table.app td.q {{ line-height:1.35; }}
         {pie(TITUS, 150, 150, 105, N_TITUS)}
       </svg>
       <ul class="legend">{legend([i for i,_ in TITUS])}</ul>
+      {relief_block("titus")}
     </div>
   </div>
 
@@ -241,23 +273,14 @@ table.app td.q {{ line-height:1.35; }}
     <tbody>{''.join(tbl_rows)}</tbody>
   </table>
 
-  <p class="foot">Each substantive statement by the Vice Chair in each case is classified once, by hand, against the application file, the testimony given, and the Land Use Code. One entry per distinct assertion, question, or finding. Purely procedural remarks are excluded, as is the bare yes-or-no recitation of a statutory finding that adds no reasoning already counted &mdash; except where the recitation itself misstates the test, which is counted. A figure that can be derived from the City&rsquo;s own review sheet counts as grounded in the record even where no witness spoke it aloud. Every classified statement is listed with its timestamp on the pages that follow, so the counts can be audited line by line and re-argued where a reader disagrees. The Vice Chair states the findings in nearly every case from a fixed script &mdash; public interest, spirit, no one benefits more from a denial, values not diminished, literal enforcement a hardship &ldquo;for the applicant&rdquo; &mdash; recited that same evening at Delia Drive, Hanover Street, Thornton Street, Gold Street and Vinton Street. That recitation is excluded in both cases: it is a habit of the Board&rsquo;s practice, not something done to this applicant. The two totals differ because he spoke more at Titus Avenue. Source: the City’s recording of the September 10, 2026 meeting, machine-transcribed, deliberations transcribed twice. Attributions rest on first names used on the recording and should be confirmed against the video.</p>
+  <p class="foot">Each substantive statement is classified once, by hand, against the application file, the testimony given, and the Land Use Code &mdash; one entry per distinct assertion, question, or finding. Excluded are procedural remarks and the closing recitation he uses in nearly every case (public interest, spirit, no one benefits more from a denial, values not diminished, hardship &ldquo;for the applicant&rdquo;), which he gave that same evening at Delia Drive, Hanover Street, Thornton Street, Gold Street and Vinton Street: it is a habit of the Board&rsquo;s practice, not something done to this applicant. A figure derivable from the City&rsquo;s own review sheet counts as grounded even where no witness spoke it aloud. Every statement counted is listed with its timestamp in the appendices, so the totals can be audited line by line. Source: the City&rsquo;s recording of September 10, 2026, machine-transcribed, deliberations transcribed twice; attributions rest on first names used on the recording and should be confirmed against the video.</p>
 </div>
 
 <div class="page">
-  <h1>Scale of the relief requested</h1>
-  <p class="sub">What each applicant asked the Board to set aside, on the same evening, under the same ordinance section &sect;4.3-A.1.C.</p>
+  <h1>The two cases side by side</h1>
+  <p class="sub">Both heard the evening of September 10, 2026, both seeking relief from the same ordinance section &sect;4.3-A.1.C. South Lincoln Street was heard first.</p>
   <div class="rule"></div>
 
-  <h2>What was being added</h2>
-  <p class="cap">Each measure is drawn to its own scale. Bars compare the two cases within a row, never across rows.</p>
-  <div class="key">
-    <span><i class="sw" style="background:{L_COL}"></i> 218 South Lincoln Street</span>
-    <span><i class="sw" style="background:{T_COL}"></i> 26 Titus Avenue</span>
-  </div>
-  {''.join(measure_block(*m) for m in MEASURES)}
-
-  <h2 style="margin-top:14px">Everything else</h2>
   <table class="qual">
     <thead><tr><th></th><th>218 South Lincoln Street</th><th class="t">26 Titus Avenue</th></tr></thead>
     <tbody>{qual_rows}</tbody>

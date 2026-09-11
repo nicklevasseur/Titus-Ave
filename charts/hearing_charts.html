@@ -39,6 +39,11 @@ table.qual td.t { background:#fdf4f0; }
 table td.t { background:#fdf4f0; }
 .key { display:flex; gap:16px; font-size:10.5px; margin:0 0 9px; }
 .key span { display:flex; align-items:center; gap:5px; }
+.rhead { font-size:10px; font-weight:700; margin:11px 0 3px; text-align:left;
+  padding-top:7px; border-top:1px solid #c9c1b5; }
+ul.relief { list-style:none; margin:0; padding:0; text-align:left; font-size:9.6px; }
+ul.relief li { margin:0 0 2.5px; padding-left:9px; position:relative; line-height:1.35; }
+ul.relief li:before { content:"\2013"; position:absolute; left:0; color:#8a8681; }
 table.cc { font-size:10px; margin-top:6px; }
 table.cc th { width:150px; font-weight:600; vertical-align:middle; }
 table.cc td { vertical-align:middle; }
@@ -83,6 +88,7 @@ table.app td.q { line-height:1.35; }
       <ul class="legend"><li><span class="sw" style="background:#2a78d6"></span>Grounded in the record or the ordinance</li>
 <li><span class="sw" style="background:#1baf7a"></span>Questions testing the applicant's case</li>
 <li><span class="sw" style="background:#008300"></span>Own expertise used against the applicant's claim</li></ul>
+      <p class="rhead">One section of the Land Use Code</p><ul class="relief"><li><b>4.3-A.1.C</b> Multifamily Dwelling &mdash; convert an existing two-family to a three-family</li><li><b>One</b> dwelling unit added, inside an existing compliant building</li><li><b>No</b> new building, no new footprint, no new floor area</li><li>Lot area <b>15,366 sq ft where 10,000 is required</b> &mdash; 154% of the requirement</li></ul>
     </div>
     <div class="pie-card">
       <h3>26 Titus Avenue</h3>
@@ -107,6 +113,7 @@ table.app td.q { line-height:1.35; }
 <li><span class="sw" style="background:#e34948"></span>Own expertise supplied as the applicant's proof</li>
 <li><span class="sw" style="background:#4a3aa7"></span>Contradicted by the testimony given</li>
 <li><span class="sw" style="background:#e87ba4"></span>Weighed on a test the statute does not contain</li></ul>
+      <p class="rhead">Six sections of the Land Use Code</p><ul class="relief"><li><b>4.3-A.1.C</b> Multifamily Dwellings &mdash; a use the R-1B district does not permit</li><li><b>8.1.2</b> Planned Development Lot Area</li><li><b>5.3.1.E</b> Townhouse Building Type &mdash; districts permitted</li><li><b>5.3.1.E.5.B</b> Maximum height in stories &mdash; 3 where 2.5 is allowed</li><li><b>5.3.1.E.5.C</b> Maximum height in feet &mdash; 38 ft where 35 ft is allowed</li><li><b>8.7.2.F.2</b> Parking location for planned developments</li><li><b>Thirteen</b> dwelling units in <b>two</b> new buildings, 19,500 sq ft of new floor area</li><li>Lot area <b>49,484 sq ft where 78,000 is required</b> &mdash; 63% of the requirement</li></ul>
     </div>
   </div>
 
@@ -115,23 +122,14 @@ table.app td.q { line-height:1.35; }
     <tbody><tr><th><span class="sw" style="background:#2a78d6"></span>Grounded in the record or the ordinance</th><td>22</td><td class="t">9</td></tr><tr><th><span class="sw" style="background:#1baf7a"></span>Questions testing the applicant's case</th><td>4</td><td class="t">2</td></tr><tr><th><span class="sw" style="background:#008300"></span>Own expertise used against the applicant's claim</th><td>1</td><td class="t">0</td></tr><tr><th><span class="sw" style="background:#e34948"></span>Own expertise supplied as the applicant's proof</th><td>0</td><td class="t">4</td></tr><tr><th><span class="sw" style="background:#eda100"></span>Stated as fact, with no source in the record</th><td>0</td><td class="t">7</td></tr><tr><th><span class="sw" style="background:#4a3aa7"></span>Contradicted by the testimony given</th><td>0</td><td class="t">6</td></tr><tr><th><span class="sw" style="background:#e87ba4"></span>Weighed on a test the statute does not contain</th><td>0</td><td class="t">4</td></tr><tr class="tot"><th>Statements classified</th><td>27</td><td class="t">32</td></tr></tbody>
   </table>
 
-  <p class="foot">Each substantive statement by the Vice Chair in each case is classified once, by hand, against the application file, the testimony given, and the Land Use Code. One entry per distinct assertion, question, or finding. Purely procedural remarks are excluded, as is the bare yes-or-no recitation of a statutory finding that adds no reasoning already counted &mdash; except where the recitation itself misstates the test, which is counted. A figure that can be derived from the City&rsquo;s own review sheet counts as grounded in the record even where no witness spoke it aloud. Every classified statement is listed with its timestamp on the pages that follow, so the counts can be audited line by line and re-argued where a reader disagrees. The Vice Chair states the findings in nearly every case from a fixed script &mdash; public interest, spirit, no one benefits more from a denial, values not diminished, literal enforcement a hardship &ldquo;for the applicant&rdquo; &mdash; recited that same evening at Delia Drive, Hanover Street, Thornton Street, Gold Street and Vinton Street. That recitation is excluded in both cases: it is a habit of the Board&rsquo;s practice, not something done to this applicant. The two totals differ because he spoke more at Titus Avenue. Source: the City’s recording of the September 10, 2026 meeting, machine-transcribed, deliberations transcribed twice. Attributions rest on first names used on the recording and should be confirmed against the video.</p>
+  <p class="foot">Each substantive statement is classified once, by hand, against the application file, the testimony given, and the Land Use Code &mdash; one entry per distinct assertion, question, or finding. Excluded are procedural remarks and the closing recitation he uses in nearly every case (public interest, spirit, no one benefits more from a denial, values not diminished, hardship &ldquo;for the applicant&rdquo;), which he gave that same evening at Delia Drive, Hanover Street, Thornton Street, Gold Street and Vinton Street: it is a habit of the Board&rsquo;s practice, not something done to this applicant. A figure derivable from the City&rsquo;s own review sheet counts as grounded even where no witness spoke it aloud. Every statement counted is listed with its timestamp in the appendices, so the totals can be audited line by line. Source: the City&rsquo;s recording of September 10, 2026, machine-transcribed, deliberations transcribed twice; attributions rest on first names used on the recording and should be confirmed against the video.</p>
 </div>
 
 <div class="page">
-  <h1>Scale of the relief requested</h1>
-  <p class="sub">What each applicant asked the Board to set aside, on the same evening, under the same ordinance section &sect;4.3-A.1.C.</p>
+  <h1>The two cases side by side</h1>
+  <p class="sub">Both heard the evening of September 10, 2026, both seeking relief from the same ordinance section &sect;4.3-A.1.C. South Lincoln Street was heard first.</p>
   <div class="rule"></div>
 
-  <h2>What was being added</h2>
-  <p class="cap">Each measure is drawn to its own scale. Bars compare the two cases within a row, never across rows.</p>
-  <div class="key">
-    <span><i class="sw" style="background:#2a78d6"></i> 218 South Lincoln Street</span>
-    <span><i class="sw" style="background:#eb6834"></i> 26 Titus Avenue</span>
-  </div>
-  <div class="measure"><div class="mlabel">Ordinance sections relief was sought from</div><div class="mrow"><span class="mname">S. Lincoln</span><span class="mbar"><i style="width:44.7px;background:#2a78d6"></i></span><span class="mval">1</span></div><div class="mrow"><span class="mname">Titus Ave</span><span class="mbar"><i style="width:268.0px;background:#eb6834"></i></span><span class="mval">6</span></div></div><div class="measure"><div class="mlabel">Dwelling units added</div><div class="mrow"><span class="mname">S. Lincoln</span><span class="mbar"><i style="width:20.6px;background:#2a78d6"></i></span><span class="mval">1</span></div><div class="mrow"><span class="mname">Titus Ave</span><span class="mbar"><i style="width:268.0px;background:#eb6834"></i></span><span class="mval">13</span></div></div><div class="measure"><div class="mlabel">New principal buildings</div><div class="mrow"><span class="mname">S. Lincoln</span><span class="mbar"><i style="width:2.0px;background:#2a78d6"></i></span><span class="mval">0</span></div><div class="mrow"><span class="mname">Titus Ave</span><span class="mbar"><i style="width:268.0px;background:#eb6834"></i></span><span class="mval">2</span></div></div><div class="measure"><div class="mlabel">New building footprint, sq ft</div><div class="mrow"><span class="mname">S. Lincoln</span><span class="mbar"><i style="width:2.0px;background:#2a78d6"></i></span><span class="mval">0</span></div><div class="mrow"><span class="mname">Titus Ave</span><span class="mbar"><i style="width:268.0px;background:#eb6834"></i></span><span class="mval">9,360</span></div></div><div class="measure"><div class="mlabel">New floor area, all floors, sq ft</div><div class="mrow"><span class="mname">S. Lincoln</span><span class="mbar"><i style="width:2.0px;background:#2a78d6"></i></span><span class="mval">0</span></div><div class="mrow"><span class="mname">Titus Ave</span><span class="mbar"><i style="width:268.0px;background:#eb6834"></i></span><span class="mval">19,500</span></div></div>
-
-  <h2 style="margin-top:14px">Everything else</h2>
   <table class="qual">
     <thead><tr><th></th><th>218 South Lincoln Street</th><th class="t">26 Titus Avenue</th></tr></thead>
     <tbody><tr><th>Use sought in the district</th><td>Two-family permitted by right;<br>third unit sought</td><td class="t">Only single-family detached<br>permitted; multifamily sought</td></tr>
