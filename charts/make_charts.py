@@ -164,7 +164,7 @@ def small_pie(case, addr, items):
     g = round(100 * sum(1 for i in items if i[2] == 0) / n)
     hi = " sp-hi" if case == "2026-063" else ""
     return (f'<div class="sp{hi}">'
-            f'<svg viewBox="-4 -4 208 208" width="120" height="120" role="img" '
+            f'<svg viewBox="-4 -4 208 208" width="92" height="92" role="img" '
             f'aria-label="statements by category, {addr}">{pie(case_tally(items), 100, 100, 94, n, labels=False)}</svg>'
             f'<p class="sp-name">{addr}</p>'
             f'<p class="sp-n">{n} statements &middot; <b>{g}%</b> in record</p></div>')
@@ -229,20 +229,20 @@ body {{ margin:0; background:{SURF}; color:#0b0b0b;
 .page:last-child {{ page-break-after: auto; }}
 h1 {{ font-size:19px; margin:0 0 3px; letter-spacing:-.01em; }}
 .sub {{ font-size:11px; color:#52514e; margin:0 0 4px; }}
-.rule {{ height:3px; background:#8B1414; margin:7px 0 13px; }}
-h2 {{ font-size:13.5px; margin:0 0 2px; }}
-.cap {{ font-size:10px; color:#52514e; margin:0 0 6px; }}
+.rule {{ height:3px; background:#8B1414; margin:6px 0 10px; }}
+h2 {{ font-size:13px; margin:0 0 2px; }}
+.cap {{ font-size:10px; color:#52514e; margin:0 0 4px; }}
 .pies {{ display:flex; gap:16px; justify-content:space-between; }}
 .pie-card {{ flex:1; text-align:center; }}
 .pie-card h3 {{ font-size:12.5px; margin:0 0 1px; }}
 .pie-card .who {{ font-size:10px; color:#52514e; margin:0 0 2px; }}
 .slice-lab {{ font-size:16px; font-weight:600; fill:#0b0b0b; font-family:inherit; }}
 .slice-pct {{ font-size:13.5px; font-weight:400; fill:#52514e; }}
-ul.legend {{ list-style:none; margin:12px 0 0; padding:0; columns:1; font-size:10.5px; }}
+ul.legend {{ list-style:none; margin:8px 0 0; padding:0; columns:1; font-size:10.5px; }}
 ul.legend li {{ margin:0 0 3px; display:flex; align-items:flex-start; gap:6px; }}
 .sw {{ display:inline-block; width:9px; height:9px; border-radius:2px; flex:none; margin-top:3px; }}
-table {{ border-collapse:collapse; width:100%; font-size:10.5px; margin-top:10px; }}
-th, td {{ text-align:left; padding:3.5px 6px; border-bottom:1px solid #e3ddd4; vertical-align:top; }}
+table {{ border-collapse:collapse; width:100%; font-size:10.5px; margin-top:7px; }}
+th, td {{ text-align:left; padding:2.9px 6px; border-bottom:1px solid #e3ddd4; vertical-align:top; }}
 thead th {{ font-size:9.5px; text-transform:uppercase; letter-spacing:.05em; color:#52514e; border-bottom:1.5px solid #c9c1b5; }}
 td {{ text-align:right; font-variant-numeric:tabular-nums; width:62px; }}
 th .sw {{ margin-right:2px; }}
@@ -264,12 +264,19 @@ table td.t {{ background:#fdf4f0; }}
 .pool-pie {{ flex:none; text-align:center; }}
 .pool-txt {{ flex:1; }}
 .pool-txt h2 {{ margin-top:0; }}
-.pool-txt p {{ margin:0 0 6px; font-size:10.4px; }}
-ul.conc {{ margin:0 0 7px; padding-left:15px; font-size:10.4px; }}
+.pool-txt p {{ margin:0 0 5px; font-size:10.2px; }}
+ul.conc {{ margin:0 0 6px; padding-left:15px; font-size:10.2px; }}
 ul.conc li {{ margin:0 0 2px; }}
-.sps {{ display:flex; gap:7px; justify-content:space-between; }}
+.sps {{ display:flex; gap:6px; justify-content:space-between; margin-top:2px; }}
 .sp {{ flex:1; text-align:center; padding:4px 2px; border-radius:4px; }}
 .sp-hi {{ background:#f6e2d9; box-shadow:inset 0 0 0 1px #e4c3b6; }}
+.style2 {{ display:flex; gap:12px; align-items:stretch; margin-top:3px; }}
+.scol {{ flex:1; padding:6px 8px; border-radius:4px; background:#f4f1ec; }}
+.scol-hi {{ background:#f6e2d9; box-shadow:inset 0 0 0 1px #e4c3b6; }}
+.scol p {{ margin:0 0 4px; font-size:9px; line-height:1.34; }}
+.scol p:last-child {{ margin-bottom:0; }}
+.shead {{ font-weight:700; font-size:9.8px !important; margin-bottom:3px !important; }}
+.sconc {{ margin:5px 0 0; font-size:9.3px; font-weight:600; }}
 .sp-name {{ font-size:9.4px; font-weight:700; margin:1px 0 0; line-height:1.25; }}
 .sp-n {{ font-size:8.8px; color:#52514e; margin:0; }}
 table.pool-tbl {{ font-size:10px; margin-top:10px; }}
@@ -302,34 +309,34 @@ table.app td.ts, table.app th.ts {{ width:46px; white-space:nowrap; font-variant
 table.app td.cat .sw {{ margin-right:4px; }}
 table.app td.cat, table.app th.cat {{ width:106px; white-space:nowrap; color:#52514e; }}
 table.app td.q {{ line-height:1.35; }}
-.foot {{ margin-top:11px; padding-top:6px; border-top:1px solid #c9c1b5; font-size:9.5px; color:#52514e; }}
+.foot {{ margin-top:7px; padding-top:4px; border-top:1px solid #c9c1b5; font-size:9.5px; color:#52514e; }}
 </style></head><body>
 
 <div class="page">
   <h1>His comments across the evening, with the outcomes set aside</h1>
-  <p class="sub">The six of thirteen cases in which the transcript anchors who was speaking. Nothing here turns on whether the Board granted or denied &mdash; only on where what he said came from.</p>
+  <p class="sub">The six of thirteen cases in which the transcript anchors who was speaking. Categories, counting rule and exclusions are identical in all six; the other seven are not counted. Nothing here turns on whether the Board granted or denied &mdash; only on where what he said came from.</p>
   <div class="rule"></div>
 
   <div class="pool">
     <div class="pool-pie">
-      <svg viewBox="-78 -8 456 316" width="300" height="208" role="img" aria-label="all statements by category, six cases pooled">
+      <svg viewBox="-78 -8 456 316" width="248" height="171" role="img" aria-label="all statements by category, six cases pooled">
         {pie(POOLED_SLICES, 150, 150, 105, N_POOLED)}
       </svg>
       <p class="sp-name">All six cases pooled &middot; {N_POOLED} statements</p>
     </div>
     <div class="pool-txt">
       <h2>What the pooled view shows</h2>
-      <p>Across the evening he is, more often than not, working from the file. Fifty-three of ninety-three statements rest on the application, the testimony, or the ordinance &mdash; he reads variance histories, quotes district intents, counts what is on a plan sheet.</p>
+      <p>Across the evening he is, more often than not, working from the file: fifty-three of ninety-three statements rest on the application, the testimony, or the ordinance.</p>
       <p>The exceptions do not spread evenly across the six cases. They concentrate in one:</p>
       <ul class="conc">{conc}</ul>
-      <p>Titus Avenue accounts for about a third of everything he said in these six cases and for all of two categories entirely. That is the finding, and it holds without reference to any outcome.</p>
+      <p>Titus Avenue is about a third of everything he said in these six cases, and the whole of two categories. That holds without reference to any outcome.</p>
     </div>
   </div>
 
   <ul class="legend cc-legend">{legend(range(len(CATS)))}</ul>
 
   <h2 style="margin-top:12px">Case by case</h2>
-  <p class="cap">Each pie is one case, scaled to its own total, in the same order as the table below.</p>
+  <p class="cap">Each pie is one case, scaled to its own total, in the same order as the table below; the table&rsquo;s columns follow the legend order. Anchors and method: analysis/attribution.py, with every statement timestamped in the appendices.</p>
   <div class="sps">{sp_all}</div>
 
   <table class="pool-tbl">
@@ -337,7 +344,22 @@ table.app td.q {{ line-height:1.35; }}
     <tbody>{pooled_rows}</tbody>
   </table>
 
-  <p class="foot">Columns follow the legend order above. Categories, counting rule and exclusions are identical in all six cases; the seven cases with no speaker anchor are not counted at all. Method and anchors: analysis/attribution.py. Every statement counted appears with its timestamp in the appendices that follow.</p>
+
+  <h2 style="margin-top:9px">How he speaks in the other five cases, and how he speaks at Titus Avenue</h2>
+  <div class="style2">
+    <div class="scol">
+      <p class="shead">In the other five</p>
+      <p>He works from paper. At South Lincoln Street he counted the applicant&rsquo;s own exhibit &mdash; 41 single-family, five two-family, one three-family &mdash; against the district&rsquo;s stated intent. At Hanover Street he recited the variance history, 1994, 1995 and 2024, all denials, off the page of the packet that lists them. At Myrtle Street he fixed lot coverage at 99% from the plan, then dictated the remediation space by space.</p>
+      <p>His questions can change the answer &mdash; whether three panels could serve four units, whether the house was really owner-occupied &mdash; and he attaches conditions: lights off by ten; vegetation across the full terrace; five spaces at 8.5 by 18.5 feet. When he does reach outside the file, he reaches against the applicant and says so: &ldquo;that&rsquo;s not gonna fly with me either.&rdquo;</p>
+    </div>
+    <div class="scol scol-hi">
+      <p class="shead">At Titus Avenue</p>
+      <p>The sources change. The enforced buffer he relies on has no landscape plan anywhere in the file. What makes the lot unique is his own memory of the bench: &ldquo;I don&rsquo;t think we&rsquo;ve ever seen in my years on zoning another instance.&rdquo; The property-value finding rests on his licence: &ldquo;Also, I am a real estate broker.&rdquo;</p>
+      <p>Findings run against testimony taken minutes earlier &mdash; on-street parking two neighbours had just said does not exist on Calef, twenty-five feet an abutter had just said her family won in court, a cemetery counted as high-density after the applicant&rsquo;s own engineer said no homes would be built there. The questions stop testing: two of thirty-two are questions, and both confirm what the applicant had already said. And nothing is conditioned.</p>
+    </div>
+  </div>
+  <p class="sconc">The difference is not that he was warmer to this applicant. He was warm to the Hanover Street applicant too, and conditioned that grant anyway. The difference is that at Titus Avenue the record stops being where his findings come from.</p>
+
 </div>
 
 <div class="page">
