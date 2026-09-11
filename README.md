@@ -34,6 +34,7 @@ All final documents are in `documents/`, each as both `.docx` (editable) and
 | `Titus_Ave_Motion_for_Rehearing.docx/pdf` | Draft RSA 677:2 motion for rehearing of the Sept. 10, 2026 approval; yellow brackets mark blanks to fill |
 | `Titus_Ave_Records_Request.docx/pdf` | Draft RSA 91-A request for the recording, file, communications, and 2024 sale records |
 | `Titus_Ave_Hearing_Analysis.docx/pdf` | Working paper comparing what was said at both Sept. 10 hearings against the record; not for filing |
+| `Titus_Ave_Hearing_Charts.pdf` | Two-page visual companion to the working paper: how the Vice Chair's statements in each case break down, and the scale of relief each applicant sought |
 
 ## Neighbor email tool
 
@@ -86,6 +87,24 @@ Each script writes a `.docx` file directly into `documents/`. To get a PDF,
 open the `.docx` in Word/LibreOffice and export, or convert with
 `libreoffice --headless --convert-to pdf --outdir ../documents ../documents/*.docx`
 (requires the `libreoffice-writer` package, not just `libreoffice-core`).
+
+## Regenerating the charts
+
+`Titus_Ave_Hearing_Charts.pdf` comes from a separate generator that does not
+use the `docx` package. `charts/make_charts.py` writes a self-contained
+`charts/hearing_charts.html`, which is printed to PDF with headless Chromium:
+
+```bash
+python3 charts/make_charts.py
+chromium --headless --disable-gpu --no-pdf-header-footer \
+  --print-to-pdf=documents/Titus_Ave_Hearing_Charts.pdf \
+  file://$PWD/charts/hearing_charts.html
+```
+
+The category counts for the two pie charts and every figure on the second
+page are literal data structures at the top of `make_charts.py` (`CATS`,
+`TITUS`, `LINCOLN`, `MEASURES`, `QUAL`); edit them there, never in the HTML.
+The categorical palette was checked for colorblind separation before use.
 
 `assets/` holds the two images used in the handout (the developer's own
 building elevation rendering and the site plan aerial, both cropped from the
