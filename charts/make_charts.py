@@ -164,7 +164,7 @@ def small_pie(case, addr, items):
     g = round(100 * sum(1 for i in items if i[2] == 0) / n)
     hi = " sp-hi" if case == "2026-063" else ""
     return (f'<div class="sp{hi}">'
-            f'<svg viewBox="-4 -4 208 208" width="92" height="92" role="img" '
+            f'<svg viewBox="-4 -4 208 208" width="85" height="85" role="img" '
             f'aria-label="statements by category, {addr}">{pie(case_tally(items), 100, 100, 94, n, labels=False)}</svg>'
             f'<p class="sp-name">{addr}</p>'
             f'<p class="sp-n">{n} statements &middot; <b>{g}%</b> in record</p></div>')
@@ -276,7 +276,7 @@ ul.conc li {{ margin:0 0 2px; }}
 .scol p {{ margin:0 0 4px; font-size:9px; line-height:1.34; }}
 .scol p:last-child {{ margin-bottom:0; }}
 .shead {{ font-weight:700; font-size:9.8px !important; margin-bottom:3px !important; }}
-.sconc {{ margin:5px 0 0; font-size:9.3px; font-weight:600; }}
+.slead {{ margin:0 0 5px; font-size:9.6px; }}
 .sp-name {{ font-size:9.4px; font-weight:700; margin:1px 0 0; line-height:1.25; }}
 .sp-n {{ font-size:8.8px; color:#52514e; margin:0; }}
 table.pool-tbl {{ font-size:10px; margin-top:10px; }}
@@ -319,7 +319,7 @@ table.app td.q {{ line-height:1.35; }}
 
   <div class="pool">
     <div class="pool-pie">
-      <svg viewBox="-78 -8 456 316" width="248" height="171" role="img" aria-label="all statements by category, six cases pooled">
+      <svg viewBox="-78 -8 456 316" width="226" height="156" role="img" aria-label="all statements by category, six cases pooled">
         {pie(POOLED_SLICES, 150, 150, 105, N_POOLED)}
       </svg>
       <p class="sp-name">All six cases pooled &middot; {N_POOLED} statements</p>
@@ -329,7 +329,6 @@ table.app td.q {{ line-height:1.35; }}
       <p>Across the evening he is, more often than not, working from the file: fifty-three of ninety-three statements rest on the application, the testimony, or the ordinance.</p>
       <p>The exceptions do not spread evenly across the six cases. They concentrate in one:</p>
       <ul class="conc">{conc}</ul>
-      <p>Titus Avenue is about a third of everything he said in these six cases, and the whole of two categories. That holds without reference to any outcome.</p>
     </div>
   </div>
 
@@ -345,20 +344,21 @@ table.app td.q {{ line-height:1.35; }}
   </table>
 
 
-  <h2 style="margin-top:9px">How he speaks in the other five cases, and how he speaks at Titus Avenue</h2>
+  <h2 style="margin-top:9px">Investigator in the other five cases, advocate at Titus Avenue</h2>
+  <p class="slead">The test is not whether he favoured the application &mdash; it is whether he was testing a case or building one, and where the material came from. He liked the Hanover Street plan too, and still asked when the signs would go dark and conditioned the grant; an investigator can favour an application and test it anyway. At Titus Avenue he stopped testing and started supplying.</p>
   <div class="style2">
     <div class="scol">
-      <p class="shead">In the other five</p>
-      <p>He works from paper. At South Lincoln Street he counted the applicant&rsquo;s own exhibit &mdash; 41 single-family, five two-family, one three-family &mdash; against the district&rsquo;s stated intent. At Hanover Street he recited the variance history, 1994, 1995 and 2024, all denials, off the page of the packet that lists them. At Myrtle Street he fixed lot coverage at 99% from the plan, then dictated the remediation space by space.</p>
-      <p>His questions can change the answer &mdash; whether three panels could serve four units, whether the house was really owner-occupied &mdash; and he attaches conditions: lights off by ten; vegetation across the full terrace; five spaces at 8.5 by 18.5 feet. When he does reach outside the file, he reaches against the applicant and says so: &ldquo;that&rsquo;s not gonna fly with me either.&rdquo;</p>
+      <p class="shead">The investigator &mdash; the other five cases</p>
+      <p>He tests the case, from paper. At South Lincoln Street he counted the applicant&rsquo;s own exhibit &mdash; 41 single-family, five two-family, one three-family &mdash; against the district&rsquo;s stated intent. At Hanover Street he recited the variance history, 1994, 1995 and 2024, all denials, off the page of the packet that lists them. At Myrtle Street he fixed lot coverage at 99% from the plan and dictated the remediation himself.</p>
+      <p>His questions can change the answer &mdash; whether three panels could serve four units, whether the house was really owner-occupied &mdash; He attaches conditions: lights off by ten; vegetation across the terrace; five spaces at 8.5 by 18.5 feet. And when he does reach outside the file, he reaches against the applicant: &ldquo;that&rsquo;s not gonna fly with me either.&rdquo;</p>
     </div>
     <div class="scol scol-hi">
-      <p class="shead">At Titus Avenue</p>
-      <p>The sources change. The enforced buffer he relies on has no landscape plan anywhere in the file. What makes the lot unique is his own memory of the bench: &ldquo;I don&rsquo;t think we&rsquo;ve ever seen in my years on zoning another instance.&rdquo; The property-value finding rests on his licence: &ldquo;Also, I am a real estate broker.&rdquo;</p>
-      <p>Findings run against testimony taken minutes earlier &mdash; on-street parking two neighbours had just said does not exist on Calef, twenty-five feet an abutter had just said her family won in court, a cemetery counted as high-density after the applicant&rsquo;s own engineer said no homes would be built there. The questions stop testing: two of thirty-two are questions, and both confirm what the applicant had already said. And nothing is conditioned.</p>
+      <p class="shead">The advocate &mdash; 26 Titus Avenue</p>
+      <p>He builds the case instead, and the sources change with the role. The buffer he relies on has no landscape plan in the file. What makes the lot unique is his own memory of the bench: &ldquo;I don&rsquo;t think we&rsquo;ve ever seen in my years on zoning another instance.&rdquo; The property-value finding rests on his licence: &ldquo;Also, I am a real estate broker.&rdquo;</p>
+      <p>Findings run against testimony taken minutes earlier &mdash; on-street parking two neighbours had just said does not exist on Calef, twenty-five feet an abutter had just said her family won in court, a cemetery counted as high-density after the engineer said no homes would be built there. The questions stop testing &mdash; two of thirty-two, both confirming what the applicant had already said. And nothing is conditioned.</p>
     </div>
   </div>
-  <p class="sconc">The difference is not that he was warmer to this applicant. He was warm to the Hanover Street applicant too, and conditioned that grant anyway. The difference is that at Titus Avenue the record stops being where his findings come from.</p>
+
 
 </div>
 
