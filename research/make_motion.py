@@ -77,7 +77,7 @@ Height in Stories); &sect;5.3.1.E.5.C (Maximum Height in Feet); and &sect;8.7.2.
 Location for Planned Developments). The vote was four to one, Member Carnevale dissenting. No
 condition was attached to the grant.</p>
 
-<h2>III. THE GOVERNING STANDARD</h2>
+<h2>III. THE GOVERNING STANDARD, AND THE DECISION&rsquo;S STATED BASIS</h2>
 
 <p class="pnum">6. A variance may be granted only upon affirmative findings on all five criteria of
 RSA 674:33, I(a)(2)(A) through (E). The burden of proof on every criterion rests upon the
@@ -94,10 +94,7 @@ personal to the owner, and the owner&rsquo;s preferred or more profitable use, a
 conditions of the land. <i>Bacon v. Town of Enfield</i>, 150 N.H. 468, 471 (2004); <i>Olszak v.
 Town of New Hampton</i>, 139 N.H. 723, 726 (1995).</p>
 
-<h2>IV. GROUNDS FOR REHEARING</h2>
-
-<h3>Ground 1. The findings upon which the decision rests were recited by a single member,
-adopted without deliberation, and are the Board&rsquo;s stated basis for the grant.</h3>
+<h3>The decision&rsquo;s stated basis</h3>
 
 <p class="pnum">9. At the close of the hearing the Chair asked Vice Chair St. Pierre to state the
 findings of fact. He did so, speaking without interruption for approximately two minutes, and then
@@ -114,7 +111,9 @@ findings of fact the Board adopted, by the same vote that granted the relief, an
 statement of reasons the record contains. If the findings are unsupported by the record, or are
 contradicted by it, the decision they were given to justify cannot stand.</p>
 
-<h3>Ground 2. The applicant offered no evidence whatever on RSA 674:33, I(a)(2)(D), and the only
+<h2>IV. GROUNDS FOR REHEARING</h2>
+
+<h3>Ground 1. The applicant offered no evidence whatever on RSA 674:33, I(a)(2)(D), and the only
 evidence supporting that finding was supplied from the bench by the member who recited it.</h3>
 
 <p class="pnum">12. Member Carnevale asked the applicant directly whether it had obtained a broker
@@ -155,7 +154,7 @@ member had put the question of property-value evidence to the applicant directly
 answer that none existed. The criterion was live, it was contested, and the only material before
 the Board upon it came from a member of the Board.</p>
 
-<h3>Ground 3. The findings adopted by the Board are contradicted by the testimony given at the same
+<h3>Ground 2. The findings adopted by the Board are contradicted by the testimony given at the same
 hearing, or rest upon matter not in the record.</h3>
 
 <p class="pnum">18. The findings recited and adopted include the following. Each is set against what
@@ -217,10 +216,7 @@ other case a member has heard is private knowledge. It cannot be examined, contr
 tested, and it was offered as the ground for finding the parcel unique.</p>
 
 <p class="pnum">26. <b>Uniqueness of size.</b> The findings state the parcel &ldquo;is singularly
-unique in its size at 1.1 acre.&rdquo; Nothing in the record compares this parcel to others in the
-area. The applicant&rsquo;s own exhibit describes the development across the street as
-approximately two acres, which is larger. A larger parcel also cuts against hardship rather than
-for it.</p>
+unique in its size at 1.1 acre.&rdquo; The applicant&rsquo;s own engineer had told the Board, of the 96-unit development across the street, that &ldquo;that lot is approximately two acres. So slightly larger than our lot, but obviously with a substantial amount of density on it.&rdquo; A larger parcel nearby also cuts against hardship rather than for it.</p>
 
 <p class="pnum">27. <b>Traffic safety.</b> The Vice Chair stated that &ldquo;by removing curb cuts
 into Calef, I think we improve safety tremendously,&rdquo; and found the entrance to be
@@ -262,67 +258,29 @@ whether the property can be reasonably used in conformance with the ordinance.</
 they constitute the whole of the Board&rsquo;s stated reasoning, and the decision was voted
 immediately upon their recitation without any other member offering findings of his or her own.</p>
 
-<h3>Ground 4. The lot area on which every dimensional calculation rests was enlarged by
-litigation against these abutters, and the application disclosed none of it.</h3>
-
-<p class="pnum">32. On February 20, 2026 the Court approved the Settlement Stipulation in
-No. 216-2025-CV-01014 and, under its Schedules A and B, title to <b>7,786 square feet</b> of the
-former Bourne Street roadway was vested in T &amp; L 2018, LLC &ldquo;and added to Map 554,
-Lot 17C&rdquo; &mdash; the subject parcel.</p>
-
-<p class="pnum">33. The Zoning Review for this application states the area of the lot as 60,406
-square feet gross, less 10,922 square feet of slope, leaving 49,484 square feet buildable. Those
-figures come from the applicant&rsquo;s By-Right Subdivision Plan, dated May 21, 2026 &mdash; three
-months after the settlement &mdash; whose five lots total exactly 60,406 square feet gross and
-exactly 49,484 square feet buildable. That plan depicts no Bourne Street. It draws the parcel as
-running directly to the rear lines of the Mystic Street properties.</p>
-
-<p class="pnum">34. The 7,786 square feet acquired by settlement is therefore carried within the
-lot area on which every calculation before the Board was performed. It is 12.9% of the gross area
-of the lot. Without it the parcel is 52,620 square feet gross rather than 60,406.</p>
-
-<p class="pnum">35. That matters directly to the relief granted. Section 8.1.2 requires 6,000
-square feet of lot area per planned-development unit. On 49,484 square feet the standard yields
-eight units. Reduced by the area acquired in the litigation, to whatever extent that area is
-buildable, it yields six. The applicant&rsquo;s suit against its abutters is what moved the
-arithmetic, and the Board was asked for thirteen.</p>
-
-<p class="pnum">36. Nothing in the application, the Zoning Review, the memorandum of May 20, 2026,
-or any testimony given at the hearing discloses the existence of the action, the Court&rsquo;s
-order, or the acquisition. The Board was not told that the northern boundary of the parcel had been
-fixed by court order six months earlier. It was not told that the land it was measuring included
-ground obtained from the abutting owners. And it was not told, while weighing the testimony of
-Jennifer Allard and her neighbours in opposition, that those same neighbours had been defendants in
-a suit brought by the applicant now before it, in which three of them had been obliged to move to
-intervene to protect their own titles.</p>
-
-<p class="pnum">37. A board cannot test a lot area it does not know has changed, nor weigh the
-credibility of witnesses whose relationship to the applicant has not been disclosed to it. The
-decision rests on a factual predicate the record before the Board did not contain.</p>
-
-<h3>Ground 5. No special condition of the property was identified, and the hardship claim is
+<h3>Ground 3. No special condition of the property was identified, and the hardship claim is
 contradicted by the applicant&rsquo;s own sealed exhibit.</h3>
 
-<p class="pnum">38. The applicant&rsquo;s written memorandum states that the parcel &ldquo;can
+<p class="pnum">32. The applicant&rsquo;s written memorandum states that the parcel &ldquo;can
 support five (5) single family home lots meeting the underlying zoning.&rdquo; Its By-Right
 Subdivision Plan, submitted with the application, depicts five conforming lots, each having more
 than the 6,000 square feet of buildable area the ordinance requires.</p>
 
-<p class="pnum">39. At the hearing the applicant told the Board the opposite. Its engineer asked:
+<p class="pnum">33. At the hearing the applicant told the Board the opposite. Its engineer asked:
 &ldquo;If you could have nine single family homes here by right and you can&rsquo;t get more than
 one or two, is that a reasonable use of the property?&rdquo; Its principal stated: &ldquo;the
 hardship is the steep slopes. We can&rsquo;t essentially build the houses.&rdquo;</p>
 
-<p class="pnum">40. No drawing, grading analysis, soils report, or cost estimate was offered in
+<p class="pnum">34. No drawing, grading analysis, soils report, or cost estimate was offered in
 support of the oral claim. Minutes earlier the same engineer had conceded that the arithmetic runs
 the other way: &ldquo;this lot would support more than what we&rsquo;re showing here, just
 physically based on buildable area divided by 6,000.&rdquo;</p>
 
-<p class="pnum">41. The Board was asked to disbelieve the applicant&rsquo;s own stamped plan upon
+<p class="pnum">35. The Board was asked to disbelieve the applicant&rsquo;s own stamped plan upon
 the applicant&rsquo;s unsupported say-so, and did so. A finding of unnecessary hardship that rests
 upon an assertion the applicant&rsquo;s own submitted exhibit refutes is unreasonable.</p>
 
-<p class="pnum">42. Further, the only physical feature identified &mdash; slope &mdash; is not a
+<p class="pnum">36. Further, the only physical feature identified &mdash; slope &mdash; is not a
 special condition distinguishing this parcel. The City&rsquo;s Zoning Review deducted 10,922 square
 feet of slope from 60,406 square feet gross, leaving 49,484 square feet of buildable area. That is
 the ordinance operating as written. It leaves more than eight times the 6,000 square feet the
@@ -330,7 +288,7 @@ ordinance requires per planned-development unit. A deduction that leaves a parce
 buildable is not a hardship arising from special conditions of the land within the meaning of RSA
 674:33, I(b). <i>Bacon</i>, 150 N.H. at 471.</p>
 
-<p class="pnum">43. What the applicant in truth advanced was that a conforming five-lot subdivision
+<p class="pnum">37. What the applicant in truth advanced was that a conforming five-lot subdivision
 would be less profitable or less convenient than thirteen townhouse units. That is not unnecessary
 hardship. <i>Olszak</i>, 139 N.H. at 726. The applicant acquired the parcel as vacant land at
 public auction in 2024, a circumstance the Board may weigh. <i>Hill v. Town of Chester</i>, 146
@@ -338,42 +296,55 @@ N.H. 291, 294 (2001).</p>
 
 
 
-<h3>Ground 6. The relief granted exceeds what the ordinance&rsquo;s own planned-development
-standard permits, and that standard was never addressed.</h3>
+<h3>Ground 4. The relief granted is twice what the ordinance&rsquo;s own lot-area standard
+allows, and that standard was never addressed.</h3>
 
-<p class="pnum">44. Section 8.1.2 requires 6,000 square feet of lot area per planned-development
-unit. Upon 49,484 square feet of buildable area, that standard yields <b>eight units</b>. Thirteen
-were granted.</p>
+<p class="pnum">38. The City&rsquo;s Zoning Review states the requirement for this proposal as 78,000
+square feet of lot area for thirteen dwelling units. That is 6,000 square feet per unit. The same
+sheet states the lot has 49,484 square feet of buildable area. At the standard the City itself
+applied, this lot supports <b>eight units</b>.</p>
 
-<p class="pnum">45. Neither the applicant nor the Board addressed &sect;8.1.2 on the record. The
-applicant argued instead from the standards of the R-M district, under which it asserted seventeen
-units would be permitted, and from the heights allowed for townhouses in districts where townhouses
-are permitted. This parcel lies in neither. An argument that a parcel should be governed by the
-standards of a different district is an argument for reclassification under RSA 675, a legislative
-act of the Board of Mayor and Aldermen. It is not a ground for a variance, and this Board has no
-jurisdiction to grant it.</p>
+<p class="pnum">39. Thirteen were granted. Neither the applicant nor the Board addressed &sect;8.1.2
+on the record, and no finding states why relief of that magnitude was warranted.</p>
 
-<h3>Ground 7. The variances are contrary to the public interest and violate the spirit of the
+<p class="pnum">40. The lot area itself warrants examination on rehearing. The By-Right Subdivision
+Plan gives the applicant&rsquo;s title as Book 9788, Page 1181, the deed of July 10, 2024. By the
+applicant&rsquo;s own pleading in Hillsborough County Superior Court No. 216-2025-CV-01014, the
+parcel conveyed by that deed was &ldquo;abutted entirely by the land known as Bourne Street&rdquo;
+&mdash; it ran to the street and did not include it. The 7,786 square feet of former Bourne Street
+vested in the applicant by the Court&rsquo;s order of February 20, 2026 is nonetheless carried
+within the 60,406 square feet the plan depicts. The instrument establishing that boundary is not in
+the file, and the lot area on which every calculation rests therefore cannot be verified against the
+title the plan cites.</p>
+
+<p class="pnum">41. The applicant argued instead from the standards of the R-M district, under which
+it asserted seventeen units would be permitted, and from the heights allowed for townhouses in
+districts where townhouses are permitted. This parcel lies in neither. An argument that a parcel
+should be governed by the standards of a different district is an argument for reclassification
+under RSA 675, a legislative act of the Board of Mayor and Aldermen. It is not a ground for a
+variance, and this Board has no jurisdiction to grant it.</p>
+
+<h3>Ground 5. The variances are contrary to the public interest and violate the spirit of the
 ordinance, RSA 674:33, I(a)(2)(A) and (B).</h3>
 
-<p class="pnum">46. The stated intent of the R-1B district under Table 3.3-A of the Land Use Code
+<p class="pnum">42. The stated intent of the R-1B district under Table 3.3-A of the Land Use Code
 is &ldquo;to maintain higher-density neighborhoods of single-family, detached dwellings.&rdquo; The
 applicant quoted the first half of that sentence and omitted the operative half.</p>
 
-<p class="pnum">47. The findings describe the area as a &ldquo;transitional area.&rdquo; That is not
+<p class="pnum">43. The findings describe the area as a &ldquo;transitional area.&rdquo; That is not
 a designation this parcel carries. Table 3.3-A assigns the transitional role to the R-2 district,
 which &ldquo;forms a loose band around the more densely developed areas of the City, transitioning
 between mixed-use centers and the lower densities of the single-family districts.&rdquo; Deciding
 the case as though the parcel were in R-2 applies the wrong district&rsquo;s purpose.</p>
 
-<p class="pnum">48. Granting a use the district does not permit, in a building type the district
+<p class="pnum">44. Granting a use the district does not permit, in a building type the district
 does not permit, at a density twice what the planned-development standard allows, upon a lot with
 63% of the required area, alters the essential character of the locality and conflicts with the
 ordinance&rsquo;s basic objectives to a marked degree.</p>
 
-<h3>Ground 8. Substantial justice was not weighed, RSA 674:33, I(a)(2)(C).</h3>
+<h3>Ground 6. Substantial justice was not weighed, RSA 674:33, I(a)(2)(C).</h3>
 
-<p class="pnum">49. The applicant&rsquo;s entire written showing on this criterion is that
+<p class="pnum">45. The applicant&rsquo;s entire written showing on this criterion is that
 &ldquo;[t]he benefits to the applicant in constructing residential which is far more conducive to
 the property provides substantial justice.&rdquo; The governing question is whether any loss to the
 individual is outweighed by a gain to the general public. The applicant weighed only its own
@@ -381,13 +352,13 @@ benefit, which is the one interest this criterion does not measure. The showing 
 self-defeating: on the applicant&rsquo;s own plan the parcel yields five conforming lots, so there
 is no loss to weigh.</p>
 
-<h3>Ground 9. Preserved: the Board applied a different standard to comparable applications heard
+<h3>Ground 7. Preserved: the Board applied a different standard to comparable applications heard
 the same evening.</h3>
 
-<p class="pnum">50. The Movants state this ground to preserve it under RSA 677:3, I, and do not
+<p class="pnum">46. The Movants state this ground to preserve it under RSA 677:3, I, and do not
 urge it as the principal basis for rehearing.</p>
 
-<p class="pnum">51. In Case No. ZBA2026-078 (26 Sullivan Street), heard the same evening, the Board
+<p class="pnum">47. In Case No. ZBA2026-078 (26 Sullivan Street), heard the same evening, the Board
 declined to vote upon requested variances because an elevation on the applicant&rsquo;s plan set
 was mislabeled, a member stating that he was &ldquo;not comfortable voting on anything that&rsquo;s
 been represented here on paper&rdquo; and &ldquo;not comfortable&hellip; granting variances on
@@ -395,20 +366,20 @@ something that&rsquo;s incomplete.&rdquo; The case was continued. In the present
 applicant&rsquo;s oral hardship claim was contradicted by its own sealed subdivision plan, and no
 continuance was sought or granted.</p>
 
-<p class="pnum">52. In Case No. ZBA2026-080 (374 Thornton Street), also heard the same evening, the
+<p class="pnum">48. In Case No. ZBA2026-080 (374 Thornton Street), also heard the same evening, the
 same slope provision reduced a parcel to 1,812 square feet of buildable area out of 13,955 square
 feet gross &mdash; a deduction of 87% &mdash; and relief was required because the remainder fell
 below the minimum. Here the deduction was 18% and left 49,484 square feet. The applicant in that
 case stated in its written narrative that &ldquo;[t]he intent of the steep slope section of the
 ordinance is to prevent creating lots that cannot be built on.&rdquo;</p>
 
-<p class="pnum">53. The Board conditioned its grants that evening in cases far smaller than this
+<p class="pnum">49. The Board conditioned its grants that evening in cases far smaller than this
 one, including hours of illumination for signage and vegetative screening of retaining walls. The
 present grant, the largest of the evening, carries no condition of any kind.</p>
 
 <h2>V. THE RECORD</h2>
 
-<p class="pnum">54. The Movants incorporate by reference the complete case file in ZBA2026-063,
+<p class="pnum">50. The Movants incorporate by reference the complete case file in ZBA2026-063,
 including the application, the Zoning Review, the By-Right Subdivision Plan, the applicant&rsquo;s
 memorandum of May 20, 2026, and the City&rsquo;s audio and video recording of the public hearing of
 September 10, 2026. Quotations above are drawn from that recording. The Movants have requested the
