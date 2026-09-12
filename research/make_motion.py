@@ -101,10 +101,9 @@ findings of fact. He did so, speaking without interruption for approximately two
 immediately moved that relief be granted from all six sections. The motion was seconded and carried
 four to one.</p>
 
-<p class="pnum">10. No other member stated findings. No other member discussed the findings recited.
-When one member asked him to repeat a point because he was &ldquo;going really fast,&rdquo; he
-answered &ldquo;I got you later&rdquo; and continued. The point was not repeated, and the findings
-were never read back or deliberated upon before the vote.</p>
+<p class="pnum">10. No other member stated findings of fact. No other member discussed the findings
+recited. A request from the bench that one of the findings be repeated was not met, and the findings
+were neither read back nor deliberated upon before the motion was put and carried.</p>
 
 <p class="pnum">11. Those statements are therefore not stray commentary from the bench. They are the
 findings of fact the Board adopted, by the same vote that granted the relief, and they are the only
@@ -296,16 +295,21 @@ N.H. 291, 294 (2001).</p>
 
 
 
-<h3>Ground 4. The relief granted is twice what the ordinance&rsquo;s own lot-area standard
-allows, and that standard was never addressed.</h3>
+<h3>Ground 4. Relief was granted from &sect;8.1.2 without any evidence or finding addressing that
+standard.</h3>
 
-<p class="pnum">38. The City&rsquo;s Zoning Review states the requirement for this proposal as 78,000
-square feet of lot area for thirteen dwelling units. That is 6,000 square feet per unit. The same
-sheet states the lot has 49,484 square feet of buildable area. At the standard the City itself
-applied, this lot supports <b>eight units</b>.</p>
+<p class="pnum">38. Section 8.1.2 of the Land Use Code governs lot area in a planned development,
+and was among the sections from which relief was granted. The applicant offered no evidence directed
+to that standard, and the Board adopted no finding that mentions it. Nothing in the record states
+what the standard requires on this parcel, by how much the proposal departs from it, or why a
+departure of that size satisfies any of the five criteria.</p>
 
-<p class="pnum">39. Thirteen were granted. Neither the applicant nor the Board addressed &sect;8.1.2
-on the record, and no finding states why relief of that magnitude was warranted.</p>
+<p class="pnum">39. The departure is not marginal. The City&rsquo;s Zoning Review states the
+requirement for this proposal as 78,000 square feet of lot area for thirteen dwelling units, which
+is 6,000 square feet per unit, and states the lot has 49,484 square feet of buildable area. At the
+standard the City itself applied, this lot supports eight units. Thirteen were granted.</p>
+
+
 
 <p class="pnum">40. The lot area itself warrants examination on rehearing. The By-Right Subdivision
 Plan gives the applicant&rsquo;s title as Book 9788, Page 1181, the deed of July 10, 2024. By the
@@ -317,12 +321,12 @@ within the 60,406 square feet the plan depicts. The instrument establishing that
 the file, and the lot area on which every calculation rests therefore cannot be verified against the
 title the plan cites.</p>
 
-<p class="pnum">41. The applicant argued instead from the standards of the R-M district, under which
-it asserted seventeen units would be permitted, and from the heights allowed for townhouses in
-districts where townhouses are permitted. This parcel lies in neither. An argument that a parcel
-should be governed by the standards of a different district is an argument for reclassification
-under RSA 675, a legislative act of the Board of Mayor and Aldermen. It is not a ground for a
-variance, and this Board has no jurisdiction to grant it.</p>
+<p class="pnum">41. What the applicant did offer on density was directed to the standards of the
+R-M district, under which it asserted seventeen units would be permitted, and to the heights allowed
+for townhouses in districts where townhouses are permitted. This parcel lies in neither. An argument
+that a parcel should be governed by the standards of a different district is an argument for
+reclassification under RSA 675, a legislative act of the Board of Mayor and Aldermen. It is not
+evidence upon any of the five criteria, and this Board has no jurisdiction to grant it.</p>
 
 <h3>Ground 5. The variances are contrary to the public interest and violate the spirit of the
 ordinance, RSA 674:33, I(a)(2)(A) and (B).</h3>
@@ -373,13 +377,11 @@ below the minimum. Here the deduction was 18% and left 49,484 square feet. The a
 case stated in its written narrative that &ldquo;[t]he intent of the steep slope section of the
 ordinance is to prevent creating lots that cannot be built on.&rdquo;</p>
 
-<p class="pnum">49. The Board conditioned its grants that evening in cases far smaller than this
-one, including hours of illumination for signage and vegetative screening of retaining walls. The
-present grant, the largest of the evening, carries no condition of any kind.</p>
+
 
 <h2>V. THE RECORD</h2>
 
-<p class="pnum">50. The Movants incorporate by reference the complete case file in ZBA2026-063,
+<p class="pnum">49. The Movants incorporate by reference the complete case file in ZBA2026-063,
 including the application, the Zoning Review, the By-Right Subdivision Plan, the applicant&rsquo;s
 memorandum of May 20, 2026, and the City&rsquo;s audio and video recording of the public hearing of
 September 10, 2026. Quotations above are drawn from that recording. The Movants have requested the
