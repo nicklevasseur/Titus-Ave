@@ -336,8 +336,13 @@ any depth.</p>
 no evidence in the record supported the buffer finding. Here the point is that even if the finding
 be taken as made, the relief granted secures nothing that the finding assumes. Where a board approves an application subject to
 conditions, RSA 676:3, I requires the written decision to describe those conditions in detail;
-here there are none to describe. Deferral to &ldquo;the plan review process&rdquo; does not supply
-it, that process having no authority to impose what the variances themselves do not require.</p>
+here there are none to describe. Deferral of concerns to &ldquo;the plan
+review process&rdquo; does not answer this. The findings did not rest upon whatever buffer the
+Planning Board might later require under its site plan regulations. They rested expressly upon
+buffers &ldquo;beyond what the plan development requires in itself,&rdquo; which by the
+finding&rsquo;s own terms are buffers that nothing requires. The criteria of RSA 674:33, I(a)(2)
+had to be satisfied upon the record before this Board when it voted, and not upon the prospect of
+later action by another body which this decision does not compel.</p>
 
 
 <h3>Ground 8. No written decision containing specific written findings of fact has been issued,
