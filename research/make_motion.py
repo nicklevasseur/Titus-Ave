@@ -133,18 +133,17 @@ contradicted by it, the decision they were given to justify cannot stand.</p>
 <h3>Ground 1. The applicant offered no evidence whatever on RSA 674:33, I(a)(2)(D), and the only
 evidence supporting that finding was supplied from the bench by the member who recited it.</h3>
 
-<p class="pnum">12. Member Carnevale asked the applicant directly whether it had obtained a broker
-price opinion to support its assertion that surrounding property values would not be diminished.
-The applicant&rsquo;s engineer answered: &ldquo;so no, we did not,&rdquo; and offered to obtain one
-if the Board wished. The Board did not ask him to do so.</p>
+<p class="pnum">12. Member Carnevale asked the applicant whether it had obtained a broker price
+opinion to support its assertion that surrounding property values would not be diminished. Its
+engineer answered: &ldquo;so no, we did not,&rdquo; and offered to obtain one if the Board wished.
+The Board did not ask him to.</p>
 
 <p class="pnum">13. The applicant produced no appraisal, no market study, no comparable sale, and no
 opinion of any person qualified to give one. Its entire written submission on this criterion is
 that there is &ldquo;ample buffering&rdquo; and that the project &ldquo;would not negatively affect
-surrounding existing properties.&rdquo; The buffer relied upon is approximately 130 to 135 feet of
-woods lying upon the rear yards of the Mystic Street owners, land the applicant does not own and
-which its own engineer conceded those owners &ldquo;have the right to develop&hellip; or expand&hellip;
-or cut.&rdquo;</p>
+surrounding existing properties.&rdquo; That buffer is 130 to 135 feet of woods on the Mystic
+Street owners&rsquo; rear yards &mdash; land the applicant does not own, and which its own engineer
+conceded those owners &ldquo;have the right to develop&hellip; or expand&hellip; or cut.&rdquo;</p>
 
 <p class="pnum">14. Approximately eight minutes after that concession, and in the course of reciting
 the findings of fact, Vice Chair St. Pierre stated:</p>
@@ -153,38 +152,33 @@ where a development of this nature in Manchester has diminished a property aroun
 never seen a report or evidence of that. In general, reasonably well thought out development
 increases values.&rdquo;</p></blockquote>
 
-<p class="pnum">15. This was not evidence. Article XIV of this Board&rsquo;s By-Laws provides
-that at a public hearing an &ldquo;[o]ath [is] taken by those wishing to give testimony,&rdquo; and
-the Chair administered that oath at the opening of the September 10 meeting. The statement was not
-given under oath, because it was not given as testimony at all. </p>
+<p class="pnum">15. This was not evidence. Article XIV of this Board&rsquo;s By-Laws provides that
+an &ldquo;[o]ath [is] taken by those wishing to give testimony,&rdquo; and the Chair administered
+that oath at the opening of the meeting. The statement was not sworn, because it was not offered as
+testimony at all.</p>
 
 <p class="pnum">16. The Movants do not suggest that a member must set aside what he knows of the
-City. A zoning board is a lay body drawn from the community in part because its members know the
-community, and a member who observes that a street carries no parking, or that a slope drains
-poorly, tells the Board something any person in the room can confirm or contradict on the spot.
-Local knowledge of that kind equips a board to test the case put before it. It is a capacity every
-member has and every abutter may answer.</p>
+City. A zoning board is a lay body drawn from the community precisely because its members know it. A
+member who observes that a street carries no parking, or that a slope drains poorly, tells the
+Board something any person in the room can confirm or contradict on the spot &mdash; a capacity
+every member shares and every abutter may answer.</p>
 
 <p class="pnum">17. The statement at issue is of another order. It described no condition of this
 locality. It announced a general conclusion about the effect of development upon market values,
-resting upon a professional credential the speaker holds and the other members do not, and upon
-transactions and experience found nowhere in the file. Nothing in it could be confirmed by driving
-to Titus Avenue. That is no accident of phrasing: RSA 674:33, I(a)(2)(D) asks whether the values of
-surrounding properties will be diminished, which is a prediction about a market and not an
-observation about a place. Evidence upon that criterion is necessarily opinion evidence, and
+resting upon a professional credential the other members do not hold and upon transactions found
+nowhere in the file. Nothing in it could be confirmed by driving to Titus Avenue. Nor could it be:
+RSA 674:33, I(a)(2)(D) asks whether surrounding values will be diminished, which is a prediction
+about a market, not an observation about a place. Evidence upon that criterion is necessarily opinion evidence, and
 opinion evidence is precisely the kind that must be open to examination.</p>
 
-<p class="pnum">18. The distinction is therefore not one of status but of function. Knowledge of the
-area helps a board weigh a case; expert opinion from the bench makes one. The practical test is
-this. Had the applicant filed this same statement over a broker&rsquo;s signature, it would have
-been evidence upon criterion (D), and the Movants could have met it &mdash; with an appraisal, with
-cross-examination, with an inquiry into which comparable developments the opinion rested upon.
-Offered instead from the bench, it carried the same weight and admitted of no answer. It came
-twenty-five minutes after the Chair had asked for the last time whether anyone wished to speak in
-opposition, in the course of reciting the findings, and less than a minute before the motion to
-grant. The burden upon this criterion was the applicant&rsquo;s; the applicant had just told the
-Board it had nothing; and what the Board treated as discharging that burden came from a member of
-the Board, at a moment when no one could reply to it.</p>
+<p class="pnum">18. The distinction is therefore not one of status but of function: knowledge of
+the area helps a board weigh a case; expert opinion from the bench makes one. Had the applicant
+filed this same statement over a broker&rsquo;s signature, it would have been evidence upon
+criterion (D), and the Movants could have answered it &mdash; with an appraisal, with
+cross-examination, with an inquiry into which comparables it rested upon. Offered from the bench,
+it carried the same weight and admitted of no answer. It came twenty-five minutes after the last
+call for opposition, in the course of reciting the findings, and less than a minute before the
+motion to grant.</p>
 
 <p class="pnum">19. The defect is not merely that opinion took the place of evidence. A member
 furnished the very proof the applicant had conceded, minutes earlier, that it did not possess; he
@@ -192,10 +186,9 @@ then recited it as a finding of fact; he then moved to grant the relief; and he 
 sufficiency of what he had himself supplied. The applicant&rsquo;s burden under <i>Harrington</i>
 was not carried. It was relieved.</p>
 
-<p class="pnum">20. That this was material is established by the record itself. The dissenting
-member had put the question of property-value evidence to the applicant directly and received the
-answer that none existed. The criterion was live, it was contested, and the only material before
-the Board upon it came from a member of the Board.</p>
+<p class="pnum">20. The criterion was neither incidental nor conceded. It was put in question by a
+member of the Board, answered in the negative by the applicant, and then supplied by the member who
+recited the findings and moved the relief.</p>
 
 <h3>Ground 2. The findings on the public interest and the spirit of the ordinance were measured
 against the stated intent of a district in which this parcel does not lie, and no finding was made
