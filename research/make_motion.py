@@ -81,8 +81,7 @@ condition was attached to the grant.</p>
 
 <p class="pnum">6. A variance may be granted only upon affirmative findings on all five criteria of
 RSA 674:33, I(a)(2)(A) through (E). The burden of proof on every criterion rests upon the
-applicant, and upon the applicant alone. <i>Harrington v. Town of Warner</i>, 152 N.H. 74, 78
-(2005). A failure of proof on any one criterion requires denial.</p>
+applicant, and upon the applicant alone. <i>Harrington v. Town of Warner</i>, 152 N.H. 74 (2005). A failure of proof on any one criterion requires denial.</p>
 
 <p class="pnum">7. It follows from that allocation that a criterion the applicant has not
 supported cannot be found satisfied on the strength of a statement made from the bench. Whatever a
@@ -92,8 +91,8 @@ not discharged by the body deciding whether the applicant has carried it.</p>
 <p class="pnum">8. &ldquo;Unnecessary hardship&rdquo; under RSA 674:33, I(b) requires special
 conditions of <i>the property</i> that distinguish it from other properties in the area. Conditions
 personal to the owner, and the owner&rsquo;s preferred or more profitable use, are not special
-conditions of the land. <i>Bacon v. Town of Enfield</i>, 150 N.H. 468, 471 (2004); <i>Olszak v.
-Town of New Hampton</i>, 139 N.H. 723, 726 (1995).</p>
+conditions of the land. <i>Bacon v. Town of Enfield</i>, 150 N.H. 468 (2004); <i>Olszak v.
+Town of New Hampton</i>, 139 N.H. 723 (1995).</p>
 
 <h3>The decision&rsquo;s stated basis</h3>
 
@@ -234,13 +233,12 @@ ordinance requires per planned-development unit. The applicant&rsquo;s own By-Ri
 was drawn upon this same land after this same deduction and still shows five conforming lots. A
 deduction that leaves a parcel abundantly buildable, and that the applicant&rsquo;s own engineer
 worked around successfully on paper, is not a hardship arising from special conditions of the land
-within the meaning of RSA 674:33, I(b). <i>Bacon</i>, 150 N.H. at 471.</p>
+within the meaning of RSA 674:33, I(b). <i>Bacon</i>, supra.</p>
 
 <p class="pnum">31. What the applicant in truth advanced was that a conforming five-lot subdivision
 would be less profitable or less convenient than thirteen townhouse units. That is not unnecessary
-hardship. <i>Olszak</i>, 139 N.H. at 726. The applicant acquired the parcel as vacant land at
-public auction in 2024, a circumstance the Board may weigh. <i>Hill v. Town of Chester</i>, 146
-N.H. 291, 294 (2001).</p>
+hardship. <i>Olszak</i>, supra. The applicant acquired the parcel as vacant land at
+public auction in 2024, a circumstance the Board may weigh. <i>Hill v. Town of Chester</i>, 146 N.H. 291 (2001).</p>
 
 
 
