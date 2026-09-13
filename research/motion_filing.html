@@ -1,19 +1,4 @@
-#!/usr/bin/env python3
-"""Motion for Rehearing, RSA 677:2. Writes HTML; print to PDF with Chromium.
-Bracketed yellow text marks a blank that must be filled before filing."""
-import os
-
-FINAL = os.environ.get("FINAL") == "1"
-_name = "motion_filing.html" if FINAL else "motion.html"
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), _name)
-
-DRAFTING_NOTE = """<p class="small" style="margin-top:22px; color:#444">Highlighted bracketed text marks a blank to be
-completed before filing. Quotations are taken from a machine transcript of the City&rsquo;s
-recording and should be verified against that recording before this motion is filed. This document
-was prepared by the Movants and is not legal advice; the Movants may wish to have counsel review it
-before filing.</p>"""
-
-HTML = """<!doctype html><html lang="en"><head><meta charset="utf-8">
+<!doctype html><html lang="en"><head><meta charset="utf-8">
 <title>Motion for Rehearing &mdash; ZBA2026-063</title>
 <style>
 @page { margin:1in 1in 0.9in; }
@@ -484,11 +469,6 @@ Londonderry, New Hampshire 03053, by
 <p class="small" style="margin-top:16px">______________________________<br>Nickolas J. Levasseur</p>
 </div>
 
-__DRAFTING_NOTE__
 
-</body></html>"""
 
-HTML = HTML.replace("__DRAFTING_NOTE__", "" if FINAL else DRAFTING_NOTE)
-assert "__DRAFTING_NOTE__" not in HTML
-open(OUT, "w").write(HTML)
-print("wrote", OUT, len(HTML), "bytes", "(FILING COPY)" if FINAL else "(working draft)")
+</body></html>
