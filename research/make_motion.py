@@ -17,6 +17,8 @@ body { margin:0; background:#fff; color:#000; font-size:11.6px; line-height:1.62
 .caprule { border-bottom:1.5px solid #000; margin:9px 0 12px; }
 h2 { font-size:11.9px; margin:15px 0 5px; text-transform:none; break-after:avoid; }
 h3 { font-size:11.6px; margin:12px 0 4px; font-weight:700; break-after:avoid; }
+.bucket { font-size:11.6px; margin:16px 0 2px; font-weight:700; font-style:italic;
+  break-after:avoid; text-align:left; }
 p { margin:0 0 8px; text-align:justify; }
 .pnum { margin:0 0 8px; text-align:justify; }
 ol.g { margin:0; padding-left:0; list-style:none; }
@@ -112,181 +114,13 @@ contradicted by it, the decision they were given to justify cannot stand.</p>
 
 <h2>IV. GROUNDS FOR REHEARING</h2>
 
-<h3>Ground 1. The applicant offered no evidence whatever on RSA 674:33, I(a)(2)(D), and the only
-evidence supporting that finding was supplied from the bench by the member who recited it.</h3>
+<p class="bucket">A. Grounds addressed to the criteria of RSA 674:33, I(a)(2).</p>
 
-<p class="pnum">12. Member Carnevale asked the applicant directly whether it had obtained a broker
-price opinion to support its assertion that surrounding property values would not be diminished.
-The applicant&rsquo;s engineer answered: &ldquo;so no, we did not,&rdquo; and offered to obtain one
-if the Board wished. The Board did not ask him to do so.</p>
-
-<p class="pnum">13. The applicant produced no appraisal, no market study, no comparable sale, and no
-opinion of any person qualified to give one. Its entire written submission on this criterion is
-that there is &ldquo;ample buffering&rdquo; and that the project &ldquo;would not negatively affect
-surrounding existing properties.&rdquo; The buffer relied upon is approximately 130 to 135 feet of
-woods lying upon the rear yards of the Mystic Street owners, land the applicant does not own and
-which its own engineer conceded those owners &ldquo;have the right to develop&hellip; or expand&hellip;
-or cut.&rdquo;</p>
-
-<p class="pnum">14. Approximately eight minutes after that concession, and in the course of reciting
-the findings of fact, Vice Chair St. Pierre stated:</p>
-<blockquote><p>&ldquo;Also, I am a real estate broker, and I&rsquo;m not aware of any circumstance
-where a development of this nature in Manchester has diminished a property around it. I&rsquo;ve
-never seen a report or evidence of that. In general, reasonably well thought out development
-increases values.&rdquo;</p></blockquote>
-
-<p class="pnum">15. This was not evidence. It was not given under oath. The Movants had no
-opportunity to cross-examine it, to offer a contrary opinion, or to inquire into its basis. It was
-not a description of any observable condition of this locality; it was a general opinion about the
-effect of development upon market values, offered on the strength of the speaker&rsquo;s
-professional standing. The Movants do not suggest that a member may not draw upon his familiarity
-with the area in deliberating. The point is narrower and is not answered by that principle: the
-burden on this criterion was the applicant&rsquo;s, the applicant had just told the Board it had
-nothing, and what the Board treated as satisfying that burden came from a member of the Board.</p>
-
-<p class="pnum">16. The defect is not merely that opinion took the place of evidence. A member
-furnished the very proof the applicant had conceded, minutes earlier, that it did not possess; he
-then recited it as a finding of fact; he then moved to grant the relief; and he then voted upon the
-sufficiency of what he had himself supplied. The applicant&rsquo;s burden under <i>Harrington</i>
-was not carried. It was relieved.</p>
-
-<p class="pnum">17. That this was material is established by the record itself. The dissenting
-member had put the question of property-value evidence to the applicant directly and received the
-answer that none existed. The criterion was live, it was contested, and the only material before
-the Board upon it came from a member of the Board.</p>
-
-<h3>Ground 2. The findings adopted by the Board are contradicted by the testimony given at the same
-hearing, or rest upon matter not in the record.</h3>
-
-<p class="pnum">18. The findings recited and adopted include the following. Each is set against what
-the record before the Board actually contained.</p>
-
-<p class="pnum">19. <b>On-street parking.</b> The findings state that the plan &ldquo;reduces the
-need for curb cuts on Calef Road and preserves existing on street parking.&rdquo; Two witnesses had
-told the Board there is no on-street parking on Calef Road to preserve. Kate Marquis: &ldquo;Anything
-south of that, you&rsquo;ll notice if you drive there, there&rsquo;s big no parking signs.&rdquo;
-Jennifer Allard: &ldquo;No one can park on Calef. You&rsquo;re not allowed to park on Calef.&rdquo;</p>
-
-<p class="pnum">20. <b>The enforced buffer.</b> The findings rely upon an &ldquo;enforced
-buffer&rdquo; and upon &ldquo;additional buffers&hellip; beyond what the plan development requires
-in itself.&rdquo; No landscape plan and no buffer design was submitted with the application. The
-City&rsquo;s Zoning Review records a Type 2 buffer as &ldquo;Can comply,&rdquo; which states a
-possibility and not a proposal. An abutter had asked the Board minutes earlier: &ldquo;There&rsquo;s
-no plan that shows how far back he&rsquo;s going to go. Is he going to go right up to that 25 feet
-and take all the trees there?&rdquo;</p>
-
-<p class="pnum">21. <b>Traffic safety.</b> The Vice Chair stated that &ldquo;by removing curb cuts
-into Calef, I think we improve safety tremendously,&rdquo; and found the entrance to be
-&ldquo;off of Titus Avenue, which is in general safer to turn on to than the busier Calef.&rdquo;
-No traffic count, sight-distance analysis, crash history, or professional opinion of any kind
-appears in the file. The comparison between the two streets was made by no witness.</p>
-
-<p class="pnum">22. These are not incidental remarks. They span three of the five statutory criteria,
-they constitute the whole of the Board&rsquo;s stated reasoning, and the decision was voted
-immediately upon their recitation without any other member offering findings of his or her own.</p>
-
-<h3>Ground 3. No special condition of the property was identified, and the hardship claim is
-contradicted by the applicant&rsquo;s own sealed exhibit.</h3>
-
-<p class="pnum">23. The applicant&rsquo;s written memorandum states that the parcel &ldquo;can
-support five (5) single family home lots meeting the underlying zoning.&rdquo; Its By-Right
-Subdivision Plan, submitted with the application, depicts five conforming lots, each having more
-than the 6,000 square feet of buildable area the ordinance requires.</p>
-
-<p class="pnum">24. At the hearing the applicant told the Board the opposite. Its engineer asked:
-&ldquo;If you could have nine single family homes here by right and you can&rsquo;t get more than
-one or two, is that a reasonable use of the property?&rdquo; Its principal stated: &ldquo;the
-hardship is the steep slopes. We can&rsquo;t essentially build the houses.&rdquo;</p>
-
-<p class="pnum">25. No drawing, grading analysis, soils report, or cost estimate was offered in
-support of the oral claim. Minutes earlier the same engineer had conceded that the arithmetic runs
-the other way: &ldquo;this lot would support more than what we&rsquo;re showing here, just
-physically based on buildable area divided by 6,000.&rdquo;</p>
-
-<p class="pnum">26. The Board was asked to disbelieve the applicant&rsquo;s own stamped plan upon
-the applicant&rsquo;s unsupported say-so, and did so. A finding of unnecessary hardship that rests
-upon an assertion the applicant&rsquo;s own submitted exhibit refutes is unreasonable.</p>
-
-<p class="pnum">27. Further, the principal physical feature identified &mdash; slope &mdash; is not a
-special condition distinguishing this parcel. The City&rsquo;s Zoning Review deducted 10,922 square
-feet of slope from 60,406 square feet gross, leaving 49,484 square feet of buildable area. That is
-the ordinance operating as written. It leaves more than eight times the 6,000 square feet the
-ordinance requires per planned-development unit. The applicant&rsquo;s own By-Right Subdivision Plan
-was drawn upon this same land after this same deduction and still shows five conforming lots. A
-deduction that leaves a parcel abundantly buildable, and that the applicant&rsquo;s own engineer
-worked around successfully on paper, is not a hardship arising from special conditions of the land
-within the meaning of RSA 674:33, I(b). <i>Bacon</i>, supra.</p>
-
-<p class="pnum">28. What the applicant in truth advanced was that a conforming five-lot subdivision
-would be less profitable or less convenient than thirteen townhouse units. That is not unnecessary
-hardship. <i>Olszak</i>, supra. The applicant acquired the parcel as vacant land at
-public auction in 2024, a circumstance the Board may weigh. <i>Hill v. Town of Chester</i>, 146 N.H. 291 (2001).</p>
-
-
-
-<h3>Ground 4. The Board weighed the application against tests the statute does not contain,
-and never reached the test it does, RSA 674:33, I(a)(2) and I(b).</h3>
-
-<p class="pnum">29. In reciting the findings the Vice Chair stated, &ldquo;my overall thought on this
-is that I do believe this is the best plan for this lot.&rdquo; He framed the weighing itself as a
-choice between the application and the conforming five-lot subdivision shown on the applicant&rsquo;s
-own plan: &ldquo;so when I weigh these, I look at, if they&rsquo;re allowed to do or say they did do
-those five houses, is that more in benefit of safety? Is it more in benefit of the neighbors, of the
-spirit?&rdquo; No member offered a different frame, and the vote was taken upon those findings.</p>
-
-<p class="pnum">30. Neither question appears in the statute. RSA 674:33, I(a)(2) enumerates five
-criteria, and whether an application is the best available plan for a lot is not among them. Nor is
-the comparative question. Unnecessary hardship under RSA 674:33, I(b) asks, in both of its branches,
-whether special conditions of the property that distinguish it from other properties in the area
-make conformance unreasonable: under I(b)(1), whether &ldquo;no fair and substantial relationship
-exists between the general public purposes of the ordinance provision and the specific application
-of that provision to the property&rdquo; and whether &ldquo;the proposed use is a reasonable one&rdquo;;
-and, if that is not established, under I(b)(2), whether &ldquo;the property cannot be reasonably used
-in strict conformance with the ordinance.&rdquo; A board that has decided it prefers one lawful
-development to another has answered neither question.</p>
-
-<p class="pnum">31. The substitution was not harmless. Measured against the five-lot subdivision, a
-proposal may appear to reduce curb cuts, add buffers, or concentrate development away from a slope,
-and the findings recite each of those comparisons. Measured against the statute, the same record
-shows a parcel the applicant&rsquo;s own stamped plan proves can be used in conformance with the
-ordinance. The comparative frame permitted the Board to find hardship without ever asking whether
-conformance was unreasonable, which is the only question I(b) puts to it. That is an error of law,
-and it is independent of the sufficiency of the evidence addressed in the grounds above.</p>
-
-
-<h3>Ground 5. Relief was granted from &sect;8.1.2 without any evidence or finding addressing that
-standard.</h3>
-
-<p class="pnum">32. Section 8.1.2 of the Land Use Code governs lot area in a planned development,
-and was among the sections from which relief was granted. The applicant offered no evidence directed
-to that standard, and the Board adopted no finding that mentions it. Nothing in the record states
-what the standard requires on this parcel, by how much the proposal departs from it, or why a
-departure of that size satisfies any of the five criteria.</p>
-
-<p class="pnum">33. The departure is not marginal. The City&rsquo;s Zoning Review states the
-requirement for this proposal as 78,000 square feet of lot area for thirteen dwelling units, which
-is 6,000 square feet per unit, and states the lot has 49,484 square feet of buildable area. At the
-standard the City itself applied, this lot supports eight units. Thirteen were granted.</p>
-
-
-
-<p class="pnum">34. What the applicant did offer on density was directed to the standards of the
-R-M district, under which it asserted seventeen units would be permitted, and to the heights allowed
-for townhouses in districts where townhouses are permitted. This parcel lies in neither. The Board&rsquo;s variance power is not in
-question. RSA 674:33, I(a)(2) authorizes a variance from the terms of the ordinance, and RSA
-674:33, I(b)(3) applies the same definition of unnecessary hardship whether the provision from
-which relief is sought is &ldquo;a restriction on use, a dimensional or other limitation on a
-permitted use, or any other requirement of the ordinance.&rdquo; What the Board cannot do is
-substitute another district&rsquo;s standards for those of the district in which the parcel lies.
-That is reclassification, and under RSA 675 it is reserved to the local legislative body, in
-Manchester the Board of Mayor and Aldermen. Evidence of what the R-M district would permit is
-therefore not evidence upon any of the five criteria as applied to this parcel.</p>
-
-<h3>Ground 6. The findings on the public interest and the spirit of the ordinance were measured
+<h3>Ground 1. The findings on the public interest and the spirit of the ordinance were measured
 against the stated intent of a district in which this parcel does not lie, and no finding was made
 against the intent of the district in which it does, RSA 674:33, I(a)(2)(A) and (B).</h3>
 
-<p class="pnum">35. The statement of the district&rsquo;s intent that reached the Board was not the
+<p class="pnum">12. The statement of the district&rsquo;s intent that reached the Board was not the
 one the Land Use Code contains. Table 3.3-A states the intent of the R-1B district as &ldquo;to
 maintain higher-density neighborhoods of single-family, detached dwellings located in
 outlying areas of the City.&rdquo; The
@@ -299,14 +133,14 @@ words that decide whether a thirteen-unit townhouse development observes the dis
 intent. No accurate statement of the R-1B intent appears anywhere in the record, and the Board was
 not directed to one.</p>
 
-<p class="pnum">36. The findings recited and adopted place the parcel in &ldquo;a transitional
+<p class="pnum">13. The findings recited and adopted place the parcel in &ldquo;a transitional
 area.&rdquo; R-1B carries no such designation. Table 3.3-A assigns the transitional role to the R-2
 district, which &ldquo;forms a loose band around the more densely developed areas of the City,
 transitioning between mixed-use centers and the lower densities of the single-family
 districts.&rdquo; The spirit of the ordinance was therefore weighed against the stated purpose of a
 district other than the one that governs this parcel.</p>
 
-<p class="pnum">37. The defect is an absent finding rather than a disputed one. RSA 674:33,
+<p class="pnum">14. The defect is an absent finding rather than a disputed one. RSA 674:33,
 I(a)(2)(A) and (B) require affirmative findings that the variance is not contrary to the public
 interest and that the spirit of the ordinance is observed, and the spirit of an ordinance is
 measured by that ordinance&rsquo;s own statement of intent for the district in which the parcel
@@ -315,15 +149,199 @@ intent with the relief granted. Upon this record the Board could not have made s
 only statement of R-1B&rsquo;s intent before it having been the applicant&rsquo;s altered one.</p>
 
 
-<h3>Ground 7. The relief granted was unconditional, while the findings supporting it rest upon
+<h3>Ground 2. Substantial justice was not weighed, RSA 674:33, I(a)(2)(C).</h3>
+
+<p class="pnum">15. The applicant&rsquo;s entire written showing on this criterion is that
+&ldquo;[t]he benefits to the applicant in constructing residential which is far more conducive to
+the property provides substantial justice.&rdquo; The governing question is whether any loss to the
+individual is outweighed by a gain to the general public. The applicant weighed only its own
+benefit, which is the one interest this criterion does not measure. The showing is also
+self-defeating: on the applicant&rsquo;s own plan the parcel yields five conforming lots, so there
+is no loss to weigh.</p>
+
+<h3>Ground 3. The applicant offered no evidence whatever on RSA 674:33, I(a)(2)(D), and the only
+evidence supporting that finding was supplied from the bench by the member who recited it.</h3>
+
+<p class="pnum">16. Member Carnevale asked the applicant directly whether it had obtained a broker
+price opinion to support its assertion that surrounding property values would not be diminished.
+The applicant&rsquo;s engineer answered: &ldquo;so no, we did not,&rdquo; and offered to obtain one
+if the Board wished. The Board did not ask him to do so.</p>
+
+<p class="pnum">17. The applicant produced no appraisal, no market study, no comparable sale, and no
+opinion of any person qualified to give one. Its entire written submission on this criterion is
+that there is &ldquo;ample buffering&rdquo; and that the project &ldquo;would not negatively affect
+surrounding existing properties.&rdquo; The buffer relied upon is approximately 130 to 135 feet of
+woods lying upon the rear yards of the Mystic Street owners, land the applicant does not own and
+which its own engineer conceded those owners &ldquo;have the right to develop&hellip; or expand&hellip;
+or cut.&rdquo;</p>
+
+<p class="pnum">18. Approximately eight minutes after that concession, and in the course of reciting
+the findings of fact, Vice Chair St. Pierre stated:</p>
+<blockquote><p>&ldquo;Also, I am a real estate broker, and I&rsquo;m not aware of any circumstance
+where a development of this nature in Manchester has diminished a property around it. I&rsquo;ve
+never seen a report or evidence of that. In general, reasonably well thought out development
+increases values.&rdquo;</p></blockquote>
+
+<p class="pnum">19. This was not evidence. It was not given under oath. The Movants had no
+opportunity to cross-examine it, to offer a contrary opinion, or to inquire into its basis. It was
+not a description of any observable condition of this locality; it was a general opinion about the
+effect of development upon market values, offered on the strength of the speaker&rsquo;s
+professional standing. The Movants do not suggest that a member may not draw upon his familiarity
+with the area in deliberating. The point is narrower and is not answered by that principle: the
+burden on this criterion was the applicant&rsquo;s, the applicant had just told the Board it had
+nothing, and what the Board treated as satisfying that burden came from a member of the Board.</p>
+
+<p class="pnum">20. The defect is not merely that opinion took the place of evidence. A member
+furnished the very proof the applicant had conceded, minutes earlier, that it did not possess; he
+then recited it as a finding of fact; he then moved to grant the relief; and he then voted upon the
+sufficiency of what he had himself supplied. The applicant&rsquo;s burden under <i>Harrington</i>
+was not carried. It was relieved.</p>
+
+<p class="pnum">21. That this was material is established by the record itself. The dissenting
+member had put the question of property-value evidence to the applicant directly and received the
+answer that none existed. The criterion was live, it was contested, and the only material before
+the Board upon it came from a member of the Board.</p>
+
+<h3>Ground 4. No special condition of the property was identified, and the hardship claim is
+contradicted by the applicant&rsquo;s own sealed exhibit.</h3>
+
+<p class="pnum">22. The applicant&rsquo;s written memorandum states that the parcel &ldquo;can
+support five (5) single family home lots meeting the underlying zoning.&rdquo; Its By-Right
+Subdivision Plan, submitted with the application, depicts five conforming lots, each having more
+than the 6,000 square feet of buildable area the ordinance requires.</p>
+
+<p class="pnum">23. At the hearing the applicant told the Board the opposite. Its engineer asked:
+&ldquo;If you could have nine single family homes here by right and you can&rsquo;t get more than
+one or two, is that a reasonable use of the property?&rdquo; Its principal stated: &ldquo;the
+hardship is the steep slopes. We can&rsquo;t essentially build the houses.&rdquo;</p>
+
+<p class="pnum">24. No drawing, grading analysis, soils report, or cost estimate was offered in
+support of the oral claim. Minutes earlier the same engineer had conceded that the arithmetic runs
+the other way: &ldquo;this lot would support more than what we&rsquo;re showing here, just
+physically based on buildable area divided by 6,000.&rdquo;</p>
+
+<p class="pnum">25. The Board was asked to disbelieve the applicant&rsquo;s own stamped plan upon
+the applicant&rsquo;s unsupported say-so, and did so. A finding of unnecessary hardship that rests
+upon an assertion the applicant&rsquo;s own submitted exhibit refutes is unreasonable.</p>
+
+<p class="pnum">26. Further, the principal physical feature identified &mdash; slope &mdash; is not a
+special condition distinguishing this parcel. The City&rsquo;s Zoning Review deducted 10,922 square
+feet of slope from 60,406 square feet gross, leaving 49,484 square feet of buildable area. That is
+the ordinance operating as written. It leaves more than eight times the 6,000 square feet the
+ordinance requires per planned-development unit. The applicant&rsquo;s own By-Right Subdivision Plan
+was drawn upon this same land after this same deduction and still shows five conforming lots. A
+deduction that leaves a parcel abundantly buildable, and that the applicant&rsquo;s own engineer
+worked around successfully on paper, is not a hardship arising from special conditions of the land
+within the meaning of RSA 674:33, I(b). <i>Bacon</i>, supra.</p>
+
+<p class="pnum">27. What the applicant in truth advanced was that a conforming five-lot subdivision
+would be less profitable or less convenient than thirteen townhouse units. That is not unnecessary
+hardship. <i>Olszak</i>, supra. The applicant acquired the parcel as vacant land at
+public auction in 2024, a circumstance the Board may weigh. <i>Hill v. Town of Chester</i>, 146 N.H. 291 (2001).</p>
+
+
+
+<p class="bucket">B. Errors of fact in the findings adopted.</p>
+
+<h3>Ground 5. The findings adopted by the Board are contradicted by the testimony given at the same
+hearing, or rest upon matter not in the record.</h3>
+
+<p class="pnum">28. The findings recited and adopted include the following. Each is set against what
+the record before the Board actually contained.</p>
+
+<p class="pnum">29. <b>On-street parking.</b> The findings state that the plan &ldquo;reduces the
+need for curb cuts on Calef Road and preserves existing on street parking.&rdquo; Two witnesses had
+told the Board there is no on-street parking on Calef Road to preserve. Kate Marquis: &ldquo;Anything
+south of that, you&rsquo;ll notice if you drive there, there&rsquo;s big no parking signs.&rdquo;
+Jennifer Allard: &ldquo;No one can park on Calef. You&rsquo;re not allowed to park on Calef.&rdquo;</p>
+
+<p class="pnum">30. <b>The enforced buffer.</b> The findings rely upon an &ldquo;enforced
+buffer&rdquo; and upon &ldquo;additional buffers&hellip; beyond what the plan development requires
+in itself.&rdquo; No landscape plan and no buffer design was submitted with the application. The
+City&rsquo;s Zoning Review records a Type 2 buffer as &ldquo;Can comply,&rdquo; which states a
+possibility and not a proposal. An abutter had asked the Board minutes earlier: &ldquo;There&rsquo;s
+no plan that shows how far back he&rsquo;s going to go. Is he going to go right up to that 25 feet
+and take all the trees there?&rdquo;</p>
+
+<p class="pnum">31. <b>Traffic safety.</b> The Vice Chair stated that &ldquo;by removing curb cuts
+into Calef, I think we improve safety tremendously,&rdquo; and found the entrance to be
+&ldquo;off of Titus Avenue, which is in general safer to turn on to than the busier Calef.&rdquo;
+No traffic count, sight-distance analysis, crash history, or professional opinion of any kind
+appears in the file. The comparison between the two streets was made by no witness.</p>
+
+<p class="pnum">32. These are not incidental remarks. They span three of the five statutory criteria,
+they constitute the whole of the Board&rsquo;s stated reasoning, and the decision was voted
+immediately upon their recitation without any other member offering findings of his or her own.</p>
+
+<p class="bucket">C. Errors of process.</p>
+
+<h3>Ground 6. The Board weighed the application against tests the statute does not contain,
+and never reached the test it does, RSA 674:33, I(a)(2) and I(b).</h3>
+
+<p class="pnum">33. In reciting the findings the Vice Chair stated, &ldquo;my overall thought on this
+is that I do believe this is the best plan for this lot.&rdquo; He framed the weighing itself as a
+choice between the application and the conforming five-lot subdivision shown on the applicant&rsquo;s
+own plan: &ldquo;so when I weigh these, I look at, if they&rsquo;re allowed to do or say they did do
+those five houses, is that more in benefit of safety? Is it more in benefit of the neighbors, of the
+spirit?&rdquo; No member offered a different frame, and the vote was taken upon those findings.</p>
+
+<p class="pnum">34. Neither question appears in the statute. RSA 674:33, I(a)(2) enumerates five
+criteria, and whether an application is the best available plan for a lot is not among them. Nor is
+the comparative question. Unnecessary hardship under RSA 674:33, I(b) asks, in both of its branches,
+whether special conditions of the property that distinguish it from other properties in the area
+make conformance unreasonable: under I(b)(1), whether &ldquo;no fair and substantial relationship
+exists between the general public purposes of the ordinance provision and the specific application
+of that provision to the property&rdquo; and whether &ldquo;the proposed use is a reasonable one&rdquo;;
+and, if that is not established, under I(b)(2), whether &ldquo;the property cannot be reasonably used
+in strict conformance with the ordinance.&rdquo; A board that has decided it prefers one lawful
+development to another has answered neither question.</p>
+
+<p class="pnum">35. The substitution was not harmless. Measured against the five-lot subdivision, a
+proposal may appear to reduce curb cuts, add buffers, or concentrate development away from a slope,
+and the findings recite each of those comparisons. Measured against the statute, the same record
+shows a parcel the applicant&rsquo;s own stamped plan proves can be used in conformance with the
+ordinance. The comparative frame permitted the Board to find hardship without ever asking whether
+conformance was unreasonable, which is the only question I(b) puts to it. That is an error of law,
+and it is independent of the sufficiency of the evidence addressed in the grounds above.</p>
+
+
+<h3>Ground 7. Relief was granted from &sect;8.1.2 without any evidence or finding addressing that
+standard.</h3>
+
+<p class="pnum">36. Section 8.1.2 of the Land Use Code governs lot area in a planned development,
+and was among the sections from which relief was granted. The applicant offered no evidence directed
+to that standard, and the Board adopted no finding that mentions it. Nothing in the record states
+what the standard requires on this parcel, by how much the proposal departs from it, or why a
+departure of that size satisfies any of the five criteria.</p>
+
+<p class="pnum">37. The departure is not marginal. The City&rsquo;s Zoning Review states the
+requirement for this proposal as 78,000 square feet of lot area for thirteen dwelling units, which
+is 6,000 square feet per unit, and states the lot has 49,484 square feet of buildable area. At the
+standard the City itself applied, this lot supports eight units. Thirteen were granted.</p>
+
+
+
+<p class="pnum">38. What the applicant did offer on density was directed to the standards of the
+R-M district, under which it asserted seventeen units would be permitted, and to the heights allowed
+for townhouses in districts where townhouses are permitted. This parcel lies in neither. The Board&rsquo;s variance power is not in
+question. RSA 674:33, I(a)(2) authorizes a variance from the terms of the ordinance, and RSA
+674:33, I(b)(3) applies the same definition of unnecessary hardship whether the provision from
+which relief is sought is &ldquo;a restriction on use, a dimensional or other limitation on a
+permitted use, or any other requirement of the ordinance.&rdquo; What the Board cannot do is
+substitute another district&rsquo;s standards for those of the district in which the parcel lies.
+That is reclassification, and under RSA 675 it is reserved to the local legislative body, in
+Manchester the Board of Mayor and Aldermen. Evidence of what the R-M district would permit is
+therefore not evidence upon any of the five criteria as applied to this parcel.</p>
+
+<h3>Ground 8. The relief granted was unconditional, while the findings supporting it rest upon
 mitigation the decision does not require.</h3>
 
-<p class="pnum">38. The motion upon which the Board voted was to &ldquo;grant relief from
+<p class="pnum">39. The motion upon which the Board voted was to &ldquo;grant relief from
 &sect;4.3-A.1.C, &sect;8.1.2, &sect;5.3.1.E, &sect;5.3.1.E.5.B, &sect;5.3.1.E.5.C and &sect;8.7.2.F.2,
 noting that we&rsquo;ve removed the three counts that the applicant&rsquo;s corrected.&rdquo; It was
 seconded and carried four to one. No condition of any kind was attached to the relief.</p>
 
-<p class="pnum">39. The findings recited in support of that motion depend upon mitigation
+<p class="pnum">40. The findings recited in support of that motion depend upon mitigation
 throughout. They recite &ldquo;additional buffers&hellip; beyond what the plan development requires
 in itself,&rdquo; and the Vice Chair had stated that &ldquo;some of the primary concerns that we
 hear over and over are addressed by the enforced buffer in a plan development such as this&rdquo;
@@ -332,7 +350,7 @@ in the decision requires any of it. No landscape plan was submitted, no buffer d
 and no condition obliges the applicant to provide, maintain, or refrain from removing a buffer of
 any depth.</p>
 
-<p class="pnum">40. This is distinct from the objection stated in Ground 2. There the point is that
+<p class="pnum">41. This is distinct from the objection stated in Ground 5. There the point is that
 no evidence in the record supported the buffer finding. Here the point is that even if the finding
 be taken as made, the relief granted secures nothing that the finding assumes. Where a board approves an application subject to
 conditions, RSA 676:3, I requires the written decision to describe those conditions in detail;
@@ -345,22 +363,24 @@ had to be satisfied upon the record before this Board when it voted, and not upo
 later action by another body which this decision does not compel.</p>
 
 
-<h3>Ground 8. No written decision containing specific written findings of fact has been issued,
+<p class="bucket">D. The written decision and the minutes.</p>
+
+<h3>Ground 9. No written decision containing specific written findings of fact has been issued,
 RSA 676:3, I and II.</h3>
 
-<p class="pnum">41. RSA 676:3, I requires a local land use board to issue a final written decision
+<p class="pnum">42. RSA 676:3, I requires a local land use board to issue a final written decision
 and provides that the decision &ldquo;shall include specific written findings of fact that support
 the decision.&rdquo; RSA 676:3, II requires that the minutes of the meeting and the written decision
 be placed on file and made available for public inspection within five business days of the
 vote.</p>
 
-<p class="pnum">42. <span class="blank">[As of the date of this filing, the City has published no
+<p class="pnum">43. <span class="blank">[As of the date of this filing, the City has published no
 minutes of the September 10, 2026 meeting and has issued no written decision in this case, and more
 than five business days have elapsed since the vote. / Confirm the status of the minutes and written
 decision on the date of filing and conform this paragraph to it.]</span> The Movants have requested
 both under RSA 91-A.</p>
 
-<p class="pnum">43. The consequence is not merely one of delay. The only findings of fact in
+<p class="pnum">44. The consequence is not merely one of delay. The only findings of fact in
 existence are those recited orally by one member immediately before the vote, and it is those
 findings the grounds above address. Until a written decision issues, neither the Movants nor this
 Board can know whether the findings the Board is asked to reconsider are the findings the Board
@@ -368,15 +388,7 @@ will ultimately adopt. The Movants accordingly preserve this ground and reserve 
 supplement upon production of the decision and minutes.</p>
 
 
-<h3>Ground 9. Substantial justice was not weighed, RSA 674:33, I(a)(2)(C).</h3>
-
-<p class="pnum">44. The applicant&rsquo;s entire written showing on this criterion is that
-&ldquo;[t]he benefits to the applicant in constructing residential which is far more conducive to
-the property provides substantial justice.&rdquo; The governing question is whether any loss to the
-individual is outweighed by a gain to the general public. The applicant weighed only its own
-benefit, which is the one interest this criterion does not measure. The showing is also
-self-defeating: on the applicant&rsquo;s own plan the parcel yields five conforming lots, so there
-is no loss to weigh.</p>
+<p class="bucket">E. Ground preserved under RSA 677:3, I.</p>
 
 <h3>Ground 10. Preserved: the Board applied a different standard to comparable applications heard
 the same evening.</h3>
