@@ -282,23 +282,37 @@ That is reclassification, and under RSA 675 it is reserved to the local legislat
 Manchester the Board of Mayor and Aldermen. Evidence of what the R-M district would permit is
 therefore not evidence upon any of the five criteria as applied to this parcel.</p>
 
-<h3>Ground 6. The variances are contrary to the public interest and violate the spirit of the
-ordinance, RSA 674:33, I(a)(2)(A) and (B).</h3>
+<h3>Ground 6. The findings on the public interest and the spirit of the ordinance were measured
+against the stated intent of a district in which this parcel does not lie, and no finding was made
+against the intent of the district in which it does, RSA 674:33, I(a)(2)(A) and (B).</h3>
 
-<p class="pnum">35. The stated intent of the R-1B district under Table 3.3-A of the Land Use Code
-is &ldquo;to maintain higher-density neighborhoods of single-family, detached dwellings.&rdquo; The
-applicant quoted the first half of that sentence and omitted the operative half.</p>
+<p class="pnum">35. The statement of the district&rsquo;s intent that reached the Board was not the
+one the Land Use Code contains. Table 3.3-A states the intent of the R-1B district as &ldquo;to
+maintain higher-density neighborhoods of single-family, detached dwellings.&rdquo; The
+applicant&rsquo;s written memorandum told the Board, under the heading &ldquo;The spirit of the
+Ordinance is observed because,&rdquo; that &ldquo;[t]he spirit of the zoning Ordinance in the R-1B
+zone is to provide higher density residential neighborhoods,&rdquo; and stated the same proposition
+again in its hardship section. That rendering substitutes &ldquo;provide&rdquo; for
+&ldquo;maintain&rdquo; and omits &ldquo;of single-family, detached dwellings,&rdquo; which are the
+words that decide whether a thirteen-unit townhouse development observes the district&rsquo;s
+intent. No accurate statement of the R-1B intent appears anywhere in the record, and the Board was
+not directed to one.</p>
 
-<p class="pnum">36. The findings describe the area as a &ldquo;transitional area.&rdquo; That is not
-a designation this parcel carries. Table 3.3-A assigns the transitional role to the R-2 district,
-which &ldquo;forms a loose band around the more densely developed areas of the City, transitioning
-between mixed-use centers and the lower densities of the single-family districts.&rdquo; Deciding
-the case as though the parcel were in R-2 applies the wrong district&rsquo;s purpose.</p>
+<p class="pnum">36. The findings recited and adopted place the parcel in &ldquo;a transitional
+area.&rdquo; R-1B carries no such designation. Table 3.3-A assigns the transitional role to the R-2
+district, which &ldquo;forms a loose band around the more densely developed areas of the City,
+transitioning between mixed-use centers and the lower densities of the single-family
+districts.&rdquo; The spirit of the ordinance was therefore weighed against the stated purpose of a
+district other than the one that governs this parcel.</p>
 
-<p class="pnum">37. Granting a use the district does not permit, in a building type the district
-does not permit, at a density twice what the planned-development standard allows, upon a lot with
-63% of the required area, alters the essential character of the locality and conflicts with the
-ordinance&rsquo;s basic objectives to a marked degree.</p>
+<p class="pnum">37. The defect is an absent finding rather than a disputed one. RSA 674:33,
+I(a)(2)(A) and (B) require affirmative findings that the variance is not contrary to the public
+interest and that the spirit of the ordinance is observed, and the spirit of an ordinance is
+measured by that ordinance&rsquo;s own statement of intent for the district in which the parcel
+lies. The record contains no finding identifying the intent of R-1B, and none reconciling that
+intent with the relief granted. Upon this record the Board could not have made such a finding, the
+only statement of R-1B&rsquo;s intent before it having been the applicant&rsquo;s altered one.</p>
+
 
 <h3>Ground 7. Substantial justice was not weighed, RSA 674:33, I(a)(2)(C).</h3>
 
