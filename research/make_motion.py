@@ -110,16 +110,18 @@ Town of New Hampton</i>, 139 N.H. 723 (1995).</p>
 
 <p class="pnum">9. At the close of the hearing the Chair asked Vice Chair St. Pierre to state the
 findings of fact. He did so, speaking for approximately two minutes, pausing only to
-decline a member&rsquo;s request that he repeat a finding, and then immediately moved that relief be
+decline a request from the City&rsquo;s staff that he repeat a finding, and then immediately moved that relief be
 granted from all six sections. The motion was seconded and carried four to one.</p>
 
 <p class="pnum">10. No other member stated findings of fact. No other member discussed the findings
-recited. Partway through the recitation a member interrupted to say: &ldquo;Craig, could you please
-repeat that &mdash; you&rsquo;re going really fast.&rdquo; The finding was not repeated. The Vice
-Chair answered to the effect that he would come back to the member later, continued to the end of
+recited. The Vice Chair prefaced the recitation by saying he would &ldquo;get into some findings
+of fact, for Michael&rsquo;s purposes&rdquo; &mdash; that is, for the member of the City&rsquo;s
+staff who records them. Partway through, that staff member addressed the Chair: &ldquo;Craig, could
+you please repeat that &mdash; you&rsquo;re going really fast.&rdquo; The finding was not repeated.
+The Vice Chair answered to the effect that he would come back to him later, continued to the end of
 the recitation, and moved the relief approximately seventy seconds after the request was made. The
 vote was taken about thirty seconds after that. The findings were never repeated, never read back,
-never reduced to writing, and never discussed.</p>
+and never discussed.</p>
 
 <p class="pnum">11. Those statements are therefore not stray commentary from the bench. They are the
 findings of fact the Board adopted, by the same vote that granted the relief, and they are the only
